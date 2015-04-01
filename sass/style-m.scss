@@ -1,0 +1,540 @@
+﻿@import 'compass/reset';
+@import 'compass/css3';
+
+html, body {
+	font : 12px/1.6em 'Century Gothic', sans-serif, serif, '黑體', 'Heiti TC', '新細明體', 'PMingLiU';
+}
+
+button {
+	padding     : 0;
+	background  : transparent;
+	border      : 0;
+	font-family : 'Century Gothic', sans-serif, serif, '黑體', 'Heiti TC', '新細明體', 'PMingLiU';
+}
+
+a, a:hover {
+	text-decoration : none;
+}
+
+.both {
+	height   : 100%;
+	clear    : both;
+	overflow : hidden;
+	zoom     : 1;
+}
+
+.middleSet {
+	position  : relative;
+	height    : 100%;
+	font-size : 0;
+
+	&:before {
+		content        : '';
+		display        : inline-block;
+		vertical-align : middle;
+		height         : 100%;
+	}
+
+	* {
+		font-size      : auto;
+		display        : inline-block;
+		vertical-align : middle;
+	}
+}
+
+.hide-text {
+	white-space : nowrap;
+	text-indent : 100%;
+	overflow    : hidden;
+}
+
+.header {
+	@include transition(ease-in-out all 0.3s);
+	display  : block;
+	width    : 100%;
+	height   : 45px;
+	position : fixed;
+	top      : 0;
+	left     : 0;
+	z-index  : 5;
+
+	&.show {
+		background : #fff;
+
+		.logo {
+			opacity : 1;
+		}
+
+		.btn-menu {
+			&:before, &:after, .icon {
+				background : #5894DD;
+			}
+		}
+	}
+
+	.logo {
+		margin          : 6px 0 0 9px;
+		background      : inline-image('mobile/logo-m.png') no-repeat 0 0;
+		background-size : 100%;
+		display         : block;
+		width           : 75px;
+		height          : 38px;
+		opacity         : 0;
+	}
+
+	.btn-menu {
+		width    : 45px;
+		height   : 100%;
+		position : absolute;
+		top      : 0;
+		right    : 0;
+
+		&:before, &:after, .icon {
+			@include transition(ease-in-out all 0.3s);
+			content       : '';
+			margin        : -1px 0 0 -12px;
+			background    : #fff;
+			width         : 24px;
+			height        : 2px;
+			position      : absolute;
+			top           : 50%;
+			left          : 50%;
+			border-radius : 1px;
+		}
+
+		&:before {
+			margin-top : -8px;
+		}
+
+		&:after {
+			margin-top : 6px;
+		}
+
+		&.trigger {
+			&:before, &:after {
+				@include rotate(-45deg);
+				margin-top : 0;
+			}
+
+			&:after {
+				@include rotate(45deg);
+			}
+
+			.icon {
+				display : none;
+			}
+		}
+	}
+}
+
+.midWrap {
+	padding  : 50px 0 0 0;
+	position : relative;
+
+	&:before, &:after {
+		content    : '';
+		background : #5894DD;
+		display    : block;
+		width      : 100%;
+		height     : 423px;
+		position   : absolute;
+		top        : 0;
+		left       : 0;
+	}
+
+	&:after {
+		height : 42px;
+		top    : auto;
+		bottom : 0;
+	}
+
+	&.about .mainWrap.frontend {
+		display : none;
+	}
+
+	.mainWrap {
+		position : relative;
+		z-index  : 1;
+
+		&.about {
+			background : #5894DD;
+		}
+	}
+
+	.signature {
+		margin  : 0 auto;
+		display : block;
+
+		.stroke {
+			fill              : none;
+			stroke            : #5894DD;
+			stroke-dasharray  : 1000;
+			stroke-dashoffset : 1000;
+			stroke-linecap    : round;
+			stroke-linejoin   : round;
+			stroke-width      : 25px;
+
+			&.path1 {
+				-webkit-animation : dash 1s linear forwards 1s;
+				-moz-animation    : dash 1s linear forwards 1s;
+				animation         : dash 1s linear forwards 1s;
+			}
+
+			&.path2 {
+				-webkit-animation : dash 1s linear forwards 1.7s;
+				-moz-animation    : dash 1s linear forwards 1.7s;
+				animation         : dash 1s linear forwards 1.7s;
+			}
+
+			&.path3 {
+				-webkit-animation : dash2 1.2s linear forwards 2.4s;
+				-moz-animation    : dash2 1.2s linear forwards 2.4s;
+				animation         : dash2 1.2s linear forwards 2.4s;
+				stroke-dasharray  : 1300;
+				stroke-dashoffset : 1300;
+			}
+		}
+
+		.dot {
+			-webkit-animation : cir .1s linear forwards 4s;
+			-moz-animation    : cir .1s linear forwards 4s;
+			animation         : cir .1s linear forwards 4s;
+			opacity           : 0;
+			fill              : #5894DD;
+			stroke            : #5894DD;
+			stroke-width      : 2;
+		}
+
+		.shadow {
+			opacity           : 0;
+			fill              : #5894DD;
+			-webkit-animation : cir2 .5s linear forwards 4.5s;
+			-moz-animation    : cir2 .5s linear forwards 4.5s;
+			animation         : cir2 .5s linear forwards 4.5s;
+		}
+	}
+
+	.title {
+		margin         : 30px 0 56px 0;
+		color          : #d7df00;
+		font-size      : 16px;
+		letter-spacing : 1px;
+		text-align     : center;
+	}
+
+	.works {
+		margin : 0 auto;
+		width  : 250px;
+
+		.list {
+			display  : block;
+			position : relative;
+
+			img {
+				display : block;
+				width   : 100%;
+			}
+
+			.case-name {
+				@include box-sizing(border-box);
+				padding        : 20px 10px 0 0;
+				background     : -webkit-linear-gradient(transparent, rgba(0, 0, 0, .7));
+				background     : -moz-linear-gradient(transparent, rgba(0, 0, 0, .7));
+				background     : linear-gradient(transparent, rgba(0, 0, 0, .7));
+				display        : block;
+				width          : 100%;
+				height         : 50px;
+				position       : absolute;
+				bottom         : 0;
+				left           : 0;
+				color          : #fff;
+				font-size      : 13px;
+				letter-spacing : 1px;
+				line-height    : 30px;
+				text-align     : right;
+			}
+		}
+	}
+
+	.head-shot {
+		margin        : 13px auto;
+		background    : #d7df00;
+		display       : block;
+		width         : 158px;
+		height        : 158px;
+		border-radius : 79px;
+		overflow      : hidden;
+
+		img {
+			display : block;
+			width   : 100%;
+		}
+	}
+}
+
+.footer {
+	padding    : 30px 0 15px 0;
+	background : #5894DD;
+	text-align : center;
+
+	.contact-info .list {
+		padding     : 0 8px;
+		display     : inline-block;
+		color       : #fff;
+		line-height : 18px;
+
+		&:last-child {
+			display : block;
+		}
+
+		.link {
+			color : #fff;
+		}
+	}
+}
+
+@-webkit-keyframes dash {
+	from {
+		stroke-dashoffset : 1000;
+	}
+	to {
+		stroke-dashoffset : 0;
+	}
+}
+
+@-moz-keyframes dash {
+	from {
+		stroke-dashoffset : 1000;
+	}
+	to {
+		stroke-dashoffset : 0;
+	}
+}
+
+@keyframes dash {
+	from {
+		stroke-dashoffset : 1000;
+	}
+	to {
+		stroke-dashoffset : 0;
+	}
+}
+
+@-webkit-keyframes dash2 {
+	from {
+		stroke-dashoffset : 1300;
+	}
+	to {
+		stroke-dashoffset : 0;
+	}
+}
+
+@-moz-keyframes dash2 {
+	from {
+		stroke-dashoffset : 1300;
+	}
+	to {
+		stroke-dashoffset : 0;
+	}
+}
+
+@keyframes dash2 {
+	from {
+		stroke-dashoffset : 1300;
+	}
+	to {
+		stroke-dashoffset : 0;
+	}
+}
+
+@-webkit-keyframes cir {
+	from {
+		opacity : 0;
+	}
+	to {
+		opacity : 1;
+	}
+}
+
+@-moz-keyframes cir {
+	from {
+		opacity : 0;
+	}
+	to {
+		opacity : 1;
+	}
+}
+
+@keyframes cir {
+	from {
+		opacity : 0;
+	}
+	to {
+		opacity : 1;
+	}
+}
+
+@-webkit-keyframes cir2 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.3;
+	}
+}
+
+@-moz-keyframes cir2 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.3;
+	}
+}
+
+@keyframes cir2 {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.3;
+	}
+}
+
+.animated {
+	-webkit-animation-duration  : 1s;
+	-moz-animation-duration     : 1s;
+	animation-duration          : 1s;
+	-webkit-animation-fill-mode : both;
+	-moz-animation-fill-mode    : both;
+	animation-fill-mode         : both;
+}
+
+@-webkit-keyframes flipInY {
+	0% {
+		-webkit-transform                  : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		-moz-transform                     : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		transform                          : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		-webkit-transition-timing-function : ease-in;
+		-moz-transition-timing-function    : ease-in;
+		transition-timing-function         : ease-in;
+		opacity                            : 0;
+	}
+	
+	40% {
+		-webkit-transform                  : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		-moz-transform                     : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		transform                          : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		-webkit-transition-timing-function : ease-in;
+		-moz-transition-timing-function    : ease-in;
+		transition-timing-function         : ease-in;
+	}
+	
+	60% {
+		-webkit-transform : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		-moz-transform    : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		transform         : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity           : 1;
+	}
+	
+	80% {
+		-webkit-transform : perspective(400px) rotate3d(0, 1, 0, -5deg);
+		-moz-transform    : perspective(400px) rotate3d(0, 1, 0, -5deg);
+		transform         : perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+	
+	100% {
+		-webkit-transform : perspective(400px);
+		-moz-transform    : perspective(400px);
+		transform         : perspective(400px);
+	}
+}
+
+@-moz-keyframes flipInY {
+	0% {
+		-webkit-transform                  : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		-moz-transform                     : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		transform                          : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		-webkit-transition-timing-function : ease-in;
+		-moz-transition-timing-function    : ease-in;
+		transition-timing-function         : ease-in;
+		opacity                            : 0;
+	}
+	
+	40% {
+		-webkit-transform                  : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		-moz-transform                     : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		transform                          : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		-webkit-transition-timing-function : ease-in;
+		-moz-transition-timing-function    : ease-in;
+		transition-timing-function         : ease-in;
+	}
+	
+	60% {
+		-webkit-transform : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		-moz-transform    : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		transform         : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity           : 1;
+	}
+	
+	80% {
+		-webkit-transform : perspective(400px) rotate3d(0, 1, 0, -5deg);
+		-moz-transform    : perspective(400px) rotate3d(0, 1, 0, -5deg);
+		transform         : perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+	
+	100% {
+		-webkit-transform : perspective(400px);
+		-moz-transform    : perspective(400px);
+		transform         : perspective(400px);
+	}
+}
+
+@keyframes flipInY {
+	0% {
+		-webkit-transform                  : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		-moz-transform                     : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		transform                          : perspective(400px) rotate3d(0, 1, 0, 180deg);
+		-webkit-transition-timing-function : ease-in;
+		-moz-transition-timing-function    : ease-in;
+		transition-timing-function         : ease-in;
+		opacity                            : 0;
+	}
+
+	40% {
+		-webkit-transform                  : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		-moz-transform                     : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		transform                          : perspective(400px) rotate3d(0, 1, 0, -40deg);
+		-webkit-transition-timing-function : ease-in;
+		-moz-transition-timing-function    : ease-in;
+		transition-timing-function         : ease-in;
+	}
+
+	60% {
+		-webkit-transform : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		-moz-transform    : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		transform         : perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity           : 1;
+	}
+
+	80% {
+		-webkit-transform : perspective(400px) rotate3d(0, 1, 0, -5deg);
+		-moz-transform    : perspective(400px) rotate3d(0, 1, 0, -5deg);
+		transform         : perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	100% {
+		-webkit-transform : perspective(400px);
+		-moz-transform    : perspective(400px);
+		transform         : perspective(400px);
+	}
+}
+
+.flipInY {
+	-webkit-backface-visibility : visible !important;
+	-moz-backface-visibility    : visible !important;
+	backface-visibility         : visible !important;
+	-webkit-animation-name      : flipInY;
+	-moz-animation-name         : flipInY;
+	animation-name              : flipInY;
+}
