@@ -1,6 +1,9 @@
 ﻿@import 'compass/reset';
 @import 'compass/css3';
 
+$mainBlue : #5894DD;
+$mainGreen : #d7df00;
+
 html, body {
 	font : 12px/1.6em 'Century Gothic', sans-serif, serif, '黑體', 'Heiti TC', '新細明體', 'PMingLiU';
 }
@@ -67,9 +70,13 @@ a, a:hover {
 
 		.btn-menu {
 			&:before, &:after, .icon {
-				background : #5894DD;
+				background : $mainBlue;
 			}
 		}
+	}
+
+	&.blue {
+		background : $mainBlue;
 	}
 
 	.logo {
@@ -133,7 +140,7 @@ a, a:hover {
 
 	&:before, &:after {
 		content    : '';
-		background : #5894DD;
+		background : $mainBlue;
 		display    : block;
 		width      : 100%;
 		height     : 423px;
@@ -148,16 +155,22 @@ a, a:hover {
 		bottom : 0;
 	}
 
-	&.about .mainWrap.frontend {
-		display : none;
+	&.index .mainWrap.frontend {
+		display : block;
+	}
+
+	&.about .mainWrap.about {
+		display : block;
 	}
 
 	.mainWrap {
+		display  : none;
 		position : relative;
 		z-index  : 1;
 
 		&.about {
-			background : #5894DD;
+			padding    : 0 20px 20px 20px;
+			background : $mainBlue;
 		}
 	}
 
@@ -167,7 +180,7 @@ a, a:hover {
 
 		.stroke {
 			fill              : none;
-			stroke            : #5894DD;
+			stroke            : $mainBlue;
 			stroke-dasharray  : 1000;
 			stroke-dashoffset : 1000;
 			stroke-linecap    : round;
@@ -200,14 +213,14 @@ a, a:hover {
 			-moz-animation    : cir .1s linear forwards 4s;
 			animation         : cir .1s linear forwards 4s;
 			opacity           : 0;
-			fill              : #5894DD;
-			stroke            : #5894DD;
+			fill              : $mainBlue;
+			stroke            : $mainBlue;
 			stroke-width      : 2;
 		}
 
 		.shadow {
 			opacity           : 0;
-			fill              : #5894DD;
+			fill              : $mainBlue;
 			-webkit-animation : cir2 .5s linear forwards 4.5s;
 			-moz-animation    : cir2 .5s linear forwards 4.5s;
 			animation         : cir2 .5s linear forwards 4.5s;
@@ -216,7 +229,7 @@ a, a:hover {
 
 	.title {
 		margin         : 30px 0 56px 0;
-		color          : #d7df00;
+		color          : $mainGreen;
 		font-size      : 16px;
 		letter-spacing : 1px;
 		text-align     : center;
@@ -258,7 +271,7 @@ a, a:hover {
 
 	.head-shot {
 		margin        : 13px auto;
-		background    : #d7df00;
+		background    : $mainGreen;
 		display       : block;
 		width         : 158px;
 		height        : 158px;
@@ -270,11 +283,81 @@ a, a:hover {
 			width   : 100%;
 		}
 	}
+
+	.name {
+		margin-bottom  : 36px;
+		color          : $mainGreen;
+		font-size      : 24px;
+		letter-spacing : 1px;
+		text-align     : center;
+	}
+
+	.sub-title {
+		margin-bottom  : 8px;
+		color          : $mainGreen;
+		font-size      : 18px;
+		letter-spacing : 1px;
+	}
+
+	.expConp {
+		margin : 0 20px 30px 20px;
+
+		.list {
+			color          : #fff;
+			letter-spacing : 1px;
+			line-height    : 18px;
+		}
+
+		.time {
+			padding   : 0 12px 0 0;
+			display   : inline-block;
+			min-width : 110px;
+		}
+	}
+
+	.brief {
+		margin : 0 20px 30px 20px;
+
+		.bio {
+			color          : #fff;
+			letter-spacing : 1px;
+			line-height    : 18px;
+		}
+	}
+
+	.skill-list {
+		margin         : -10px 20px 30px 20px;
+		color          : #fff;
+		letter-spacing : 1px;
+		line-height    : 18px;
+
+		.category {
+			margin  : 18px 0 0 0;
+			display : block;
+		}
+
+		.list {
+			padding-left : 13px;
+			position: relative;
+
+			&:before {
+				content       : '';
+				background    : #fff;
+				display       : block;
+				width         : 4px;
+				height        : 4px;
+				position      : absolute;
+				top           : 7px;
+				left          : 3px;
+				border-radius : 2px;
+			}
+		}
+	}
 }
 
 .footer {
 	padding    : 30px 0 15px 0;
-	background : #5894DD;
+	background : $mainBlue;
 	text-align : center;
 
 	.contact-info .list {

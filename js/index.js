@@ -16,7 +16,6 @@
 		_src       = $photoImg.attr('src'),
 		_version   = '?v=' + new Date().getFullYear().toString() + (new Date().getMonth() + 1).toString() + new Date().getDate().toString() + Math.floor((Math.random() * 10000).toString()),
 		_amount    = 14, // 一頁幾筆作品
-		_n         = 0, // 開場動畫從0開始
 		_Array     = [],
 		_ls_loaded = '',
 		_ls_return = '',
@@ -42,7 +41,7 @@
 	}
 
 	// 是否已讀取過動畫
-	if (_ls_loaded == 'loaded') {
+	if (_ls_loaded === 'loaded') {
 		$idx_anim.hide();
 	} else {
 		if (window.localStorage != undefined) {
@@ -51,7 +50,6 @@
 
 		$('.header, .midWrap, .footer').hide();
 		$header.css({'top' : '188px'});
-		// playAnima();
 
 		$idx_anim.delay(7561).fadeOut(1000);
 		$header.delay(8561).fadeIn(1000).animate({
@@ -62,11 +60,11 @@
 	}
 
 	// 記錄最後主題
-	if (_ls_theme == 'design' || _ls_theme == 'about' || _ls_theme == 'skill') {
+	if (_ls_theme === 'design' || _ls_theme === 'about' || _ls_theme === 'skill') {
 		$('.mainWrap.' + _ls_theme).addClass('curr');
 		$('.main_menu .list').find('.' + _ls_theme).addClass('curr');
 
-		if (_ls_theme == 'about') {
+		if (_ls_theme === 'about') {
 			$photoImg.attr('src', _src + _version);
 		}
 	} else {
@@ -78,11 +76,11 @@
 	}
 
 	// 記錄最後的作品種類
-	if (_ls_return == 'front_end' || _ls_return == 'web_design' || _ls_return == 'ad_design' || _ls_return == 'other_design') {
+	if (_ls_return === 'front_end' || _ls_return === 'web_design' || _ls_return === 'ad_design' || _ls_return === 'other_design') {
 		$subLink.removeClass('curr');
 		
 		$('.submenu .link').each(function(){
-			if ($(this).data('type') == _ls_return) {
+			if ($(this).data('type') === _ls_return) {
 				$(this).addClass('curr');
 			}
 		});
@@ -223,20 +221,6 @@
 		}
 	}
 
-	// 開場動畫
-	function playAnima(){
-		$('.idx_anim > img').animate({
-			top : '-60' * _n
-		}, 0);
-
-		if ( _n < 66 ){
-			_n += 1;
-		} else {
-			_n = 66;
-		}
-		setTimeout(playAnima,83);
-	}
-
 	// 作品詳細內容
 	function detailView(_id){
 		var _tab  = ['<li class="back">BACK</li>'],
@@ -270,7 +254,7 @@
 		$box.find('.link').eq(0).show();
 
 		$('.tag').each(function(){
-			if ($(this).index() == 1) {
+			if ($(this).index() === 1) {
 				$(this).delay(300).queue(function(){
 					$(this).addClass('curr');
 				});

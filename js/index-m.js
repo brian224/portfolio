@@ -1,7 +1,7 @@
 ﻿$(function(){
 	var $btn_menu = $('.btn-menu'),
 		$header   = $('.header'),
-		_viewHei  = $('.works').offset().top,
+		$midWrap  = $('.midWrap'),
 		_url      = window.location.href.split('index')[0];
 
 	if ($(window).width() > 860) {
@@ -19,10 +19,12 @@
 	});
 
 	$(window).scroll(function(){
-		if($(window).scrollTop() > _viewHei) {
+		if($(window).scrollTop() > $('.works').offset().top && $midWrap.hasClass('index')) {
 			$header.addClass('show');
+		} else if ($(window).scrollTop() > $('.name').offset().top && $midWrap.hasClass('about')) {
+			$header.addClass('blue');
 		} else {
-			$header.removeClass('show');
+			$header.removeClass('show blue');
 		}
 	});
 });
