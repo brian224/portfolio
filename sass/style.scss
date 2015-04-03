@@ -52,11 +52,16 @@ a, a:hover {
 
 .header {
 	background : inline-image('bg_header.png') repeat-x 0 6px;
+	display    : none;
 	width      : 100%;
 	height     : 135px;
 	position   : absolute;
 	top        : 488px;
 	z-index    : 3;
+
+	&.show {
+		display : block;
+	}
 
 	.logo {
 		margin     : 0 auto;

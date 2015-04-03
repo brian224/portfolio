@@ -1,15 +1,30 @@
 ﻿$(function(){
-	var $btn_menu = $('.btn-menu'),
-		$header   = $('.header'),
-		$midWrap  = $('.midWrap'),
-		_url      = window.location.href.split('index')[0];
+	var $btn_menu  = $('.btn-menu'),
+		$btn_theme = $('.menu .list'),
+		$header    = $('.header'),
+		$midWrap   = $('.midWrap'),
+		$signature = $('.signature'),
+		_url       = window.location.href.split('index')[0];
 
 	if ($(window).width() > 860) {
 		window.location.replace(_url + 'index.html');
 	}
 
+	$midWrap.delay(5000).queue(function(){
+		$signature.attr('class', 'signature');
+	});
+
 	$btn_menu.on('click', function(){
-		$(this).toggleClass('trigger');
+		$header.toggleClass('trigger');
+	});
+
+	$btn_theme.on('click', function(){
+		$midWrap.attr('class', 'midWrap ' + $(this).data('menu'));
+		$header.attr('class', 'header');
+		$('body').scrollTop(0);
+		// $('body').animate({
+		// 	scrollTop : 0
+		// }, 500);
 	});
 
 	$(window).resize(function(){
