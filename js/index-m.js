@@ -2,6 +2,7 @@
 	var $btn_menu  = $('.btn-menu'),
 		$btn_theme = $('.menu .list'),
 		$header    = $('.header'),
+		$logo      = $('.logo'),
 		$midWrap   = $('.midWrap'),
 		$signature = $('.signature'),
 		_url       = window.location.href.split('index')[0];
@@ -12,6 +13,7 @@
 
 	$midWrap.delay(5000).queue(function(){
 		$signature.attr('class', 'signature');
+		// $logo.html('<h1 class="logo-img"><img src="img/mobile/Brian_sign.png" alt="Brian Lin signature"></h1>');
 	});
 
 	$btn_menu.on('click', function(){
@@ -22,9 +24,6 @@
 		$midWrap.attr('class', 'midWrap ' + $(this).data('menu'));
 		$header.attr('class', 'header');
 		$('body').scrollTop(0);
-		// $('body').animate({
-		// 	scrollTop : 0
-		// }, 500);
 	});
 
 	$(window).resize(function(){

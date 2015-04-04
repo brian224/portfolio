@@ -202,6 +202,21 @@ a, a:hover {
 		}
 	}
 
+	.logo {
+		height: 184px;
+		overflow : hidden;
+
+		.logo-img {
+			margin : 13px auto;
+			width  : 158px;
+
+			img {
+				display : block;
+				width   : 100%;
+			}
+		}
+	}
+
 	.signature {
 		margin  : 0 auto;
 		display : block;

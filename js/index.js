@@ -4,7 +4,6 @@
 		$easterEgg = $('.easter-egg'),
 		$footer    = $('.footer'),
 		$header    = $('.header'),
-		$idx_anim  = $('.idx_anim'),
 		$mainLink  = $('.main_menu .link'),
 		$mainWrap  = $('.mainWrap'),
 		$midWrap   = $('.midWrap'),
@@ -13,51 +12,52 @@
 		$slideShow = $('.slideShow'),
 		$subLink   = $('.submenu .link'),
 		$tab       = $('.tab'),
-		_src       = $photoImg.attr('src'),
-		_version   = '?v=' + new Date().getFullYear().toString() + (new Date().getMonth() + 1).toString() + new Date().getDate().toString() + Math.floor((Math.random() * 10000).toString()),
 		_amount    = 14, // 一頁幾筆作品
 		_Array     = [],
 		_ls_loaded = '',
 		_ls_return = '',
 		_ls_theme  = '',
+		_src       = $photoImg.attr('src'),
 		_url       = window.location.href.split('index')[0],
+		_version   = '?v=' + new Date().getFullYear().toString() + (new Date().getMonth() + 1).toString() + new Date().getDate().toString() + Math.floor((Math.random() * 10000).toString()),
 		easter_egg = new Konami(function() {svgSign()}),
 		is_firefox = navigator.userAgent.indexOf("Firefox") > -1,
 		is_safari  = navigator.userAgent.indexOf("Safari") > -1,
 		is_chrome  = navigator.userAgent.indexOf('Chrome') > -1;
 
-	if ( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) || $(window).width() < 860 ) {
+	// 判斷是否為手機 / 平板
+	if ( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) && $(window).width() < 860 ) {
 		window.location.replace(_url + 'index-m.html');
-	}
-
-	// IE 本地端無法使用 localStorage
-	if (window.localStorage != undefined) {
-		_ls_loaded = window.localStorage.getItem('loadAnimate');
-		_ls_return = window.localStorage.getItem('returnPage');
-		_ls_theme  = window.localStorage.getItem('theme');
 	} else {
-		_ls_return = 'front_end';
-		_ls_theme  = 'design';
-	}
-
-	// 是否已讀取過動畫
-	if (_ls_loaded === 'loaded') {
-		$idx_anim.hide();
-		$header.addClass('show');
-	} else {
+		// IE 本地端無法使用 localStorage
 		if (window.localStorage != undefined) {
-			window.localStorage.setItem('loadAnimate', 'loaded');
+			_ls_loaded = window.localStorage.getItem('loadAnimate');
+			_ls_return = window.localStorage.getItem('returnPage');
+			_ls_theme  = window.localStorage.getItem('theme');
+		} else {
+			_ls_return = 'front_end';
+			_ls_theme  = 'design';
 		}
 
-		$('.header, .midWrap, .footer').hide();
-		$header.css({'top' : '188px'});
+		// 是否已讀取過動畫
+		if (_ls_loaded === 'loaded') {
+			$header.addClass('show');
+		} else {
+			if (window.localStorage != undefined) {
+				window.localStorage.setItem('loadAnimate', 'loaded');
+			}
 
-		$idx_anim.delay(7561).fadeOut(1000);
-		$header.delay(8561).fadeIn(1000).animate({
-			top : 488
-		}, 500);
-		$midWrap.delay(10061).fadeIn(1000);
-		$footer.delay(10061).fadeIn(1000);
+			$('.header, .midWrap, .footer').hide();
+			$header.css({'top' : '188px'});
+			$('body').append('<div class="idx_anim"></div>');
+
+			$('.idx_anim').delay(7561).fadeOut(1000);
+			$header.delay(8561).fadeIn(1000).animate({
+				top : 488
+			}, 500);
+			$midWrap.delay(10061).fadeIn(1000);
+			$footer.delay(10061).fadeIn(1000);
+		}
 	}
 
 	// 記錄最後主題
