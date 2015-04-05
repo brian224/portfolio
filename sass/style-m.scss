@@ -120,11 +120,32 @@ a, a:hover {
 		}
 
 		.list {
-			display        : block;
-			color          : $mainBlue;
-			font-size      : 24px;
-			letter-spacing : 1px;
-			line-height    : 36px;
+			display : block;
+
+			.btn-theme {
+				position       : relative;
+				color          : $mainBlue;
+				font-size      : 24px;
+				letter-spacing : 1px;
+				line-height    : 36px;
+
+				&.curr:before, &.curr:after {
+					content    : '';
+					margin     : -1px 0 0 0;
+					background : $mainBlue;
+					display    : block;
+					width      : 16px;
+					height     : 2px;
+					position   : absolute;
+					top        : 50%;
+					left       : -24px;
+				}
+
+				&.curr:after {
+					left  : auto;
+					right : -24px;
+				}
+			}
 		}
 	}
 
@@ -183,7 +204,7 @@ a, a:hover {
 		bottom : 0;
 	}
 
-	&.index .mainWrap.frontend {
+	&.index .mainWrap.front-end {
 		display : block;
 	}
 
@@ -203,12 +224,15 @@ a, a:hover {
 	}
 
 	.logo {
-		height: 184px;
+		height   : 184px;
 		overflow : hidden;
 
 		.logo-img {
-			margin : 13px auto;
-			width  : 158px;
+			margin   : 14px 14px 14px -79px;
+			width    : 158px;
+			position : absolute;
+			left     : 50%;
+			z-index  : 1;
 
 			img {
 				display : block;
@@ -218,8 +242,17 @@ a, a:hover {
 	}
 
 	.signature {
-		margin  : 0 auto;
-		display : block;
+		margin   : 0 0 0 -92px;
+		display  : block;
+		position : absolute;
+		left     : 50%;
+		z-index  : 2;
+
+		.bg {
+			clip-rule : evenodd;
+			fill      : $mainGreen;
+			fill-rule : evenodd;
+		}
 
 		.stroke {
 			fill              : none;
@@ -228,7 +261,7 @@ a, a:hover {
 			stroke-dashoffset : 1000;
 			stroke-linecap    : round;
 			stroke-linejoin   : round;
-			stroke-width      : 25px;
+			stroke-width      : 30px;
 
 			&.path1 {
 				-webkit-animation : dash 1s linear forwards 1s;

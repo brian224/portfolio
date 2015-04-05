@@ -95,6 +95,7 @@
 	appendItem();
 	console.log('    ██╗      ██╗      ██       ██      ██╗        ██╗    ██╗        ██╗  ██████╗  █████╗ \n  ██████╗  ██████╗    ██║      ██║    ██╔╝        ╚██╗  ██╔╝        ╚██╗ ██╔══██╗██╔══██╗\n ██╔██║██╗██╔██║██╗██╗██║██╗██╗██║██╗████████╗████████╗████████╗████████╗██████╔╝███████║\n ╚═╝██║╚═╝╚═╝██║╚═╝╚██████╔╝╚██████╔╝╚██╔════╝╚════██╔╝╚██╔════╝╚════██╔╝██╔══██╗██╔══██║\n    ██║      ██║     ╚██╔╝    ╚██╔╝   ╚██╗        ██╔╝  ╚██╗        ██╔╝ ██████╔╝██║  ██║\n    ╚═╝      ╚═╝      ╚═╝      ╚═╝     ╚═╝        ╚═╝    ╚═╝        ╚═╝  ╚═════╝ ╚═╝  ╚═╝');
 
+	// 主題切換
 	$mainLink.on('click', function(){
 		if (!$(this).hasClass('.curr')) {
 			var _theme = $(this).data('theme');
@@ -108,6 +109,7 @@
 		}
 	});
 
+	// 作品種類切換
 	$subLink.on('click', function(){
 		if (!$(this).hasClass('.curr')) {
 			var _type = $(this).data('type'),
@@ -141,6 +143,7 @@
 		}
 	});
 
+	// 進入詳目頁
 	$midWrap.on('click', '.list_item', function(){
 		if (!$(this).hasClass('empty')) {
 			if (window.localStorage != undefined) {
@@ -154,6 +157,7 @@
 		}
 	});
 
+	// 切換至M版
 	$(window).resize(function(){
 		if ($(window).width() < 860) {
 			window.location.href = _url + 'index-m.html';
@@ -173,7 +177,7 @@
 			for ( var j = 0 ; j < _amount ; j ++ , k ++ ) {
 				if ( k >= 0 && k < Datas.Data[_type].length ) {
 					_Str.push('<li class="list_item" data-id="' + Datas.Data[_type][k].CaseType + '_' + Datas.Data[_type][k].CaseID + '">');
-					_Str.push('	<span class="pic middleSet"><img src="img/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '"></span>');
+					_Str.push('	<span class="pic middleSet"><img src="img/pc/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '"></span>');
 					_Str.push('	<h3 class="name">' + Datas.Data[_type][k].CaseName + '</h3>');
 					_Str.push('</li>');
 				} else {
@@ -231,7 +235,7 @@
 			if (Datas.Data[_ls_return][i].CaseType + '_' + Datas.Data[_ls_return][i].CaseID == _id) {
 				for (var j = 1; j <= parseInt(Datas.Data[_ls_return][i].PhotoCount); j++) {
 					_tab.push('<li class="tag">' + j + '</li>');
-					_list.push('<li class="list middleSet"><img src="img/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214"></li>');
+					_list.push('<li class="list middleSet"><img src="img/pc/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214"></li>');
 				}
 
 				if (Datas.Data[_ls_return][i].webLink != '' && Datas.Data[_ls_return][i].webDesc != '') {
@@ -266,6 +270,7 @@
 			}
 		});
 
+		// 切換圖片
 		$('.tag').on('click', function(){
 			var _idx = $(this).index() - 1;
 
@@ -282,6 +287,7 @@
 			}
 		});
 
+		// 回上層
 		$('.back').on('click', function(){
 			$mainWrap.removeClass('curr');
 			$('.mainWrap.design').addClass('curr');

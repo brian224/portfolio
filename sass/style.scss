@@ -51,7 +51,7 @@ a, a:hover {
 }
 
 .header {
-	background : inline-image('bg_header.png') repeat-x 0 6px;
+	background : url('../img/pc/bg_header.png') repeat-x 0 6px;
 	display    : none;
 	width      : 100%;
 	height     : 135px;
@@ -65,7 +65,7 @@ a, a:hover {
 
 	.logo {
 		margin     : 0 auto;
-		background : inline-image('logo.png') no-repeat 0 0;
+		background : url('../img/pc/logo.png') no-repeat 0 0;
 		display    : block;
 		width      : 459px;
 		height     : 194px;
@@ -140,7 +140,7 @@ a, a:hover {
 
 		.highlight {
 			margin     : 0 5px -6px 5px;
-			background : inline-image('main_title.png') no-repeat 0 0;
+			background : url('../img/pc/main_title.png') no-repeat 0 0;
 			display    : inline-block;
 			width      : 140px;
 			height     : 21px;
@@ -397,7 +397,7 @@ a, a:hover {
 
 				.title {
 					margin     : 0 0 5px 0;
-					background : inline-image('about_title.png') no-repeat 0 bottom;
+					background : url('../img/pc/about_title.png') no-repeat 0 bottom;
 					display    : block;
 					width      : 116px;
 					height     : 18px;
@@ -443,7 +443,7 @@ a, a:hover {
 
 	.mainContent {
 		margin     : 52px auto 0 auto;
-		background : inline-image('skill_bg.png') no-repeat center center;
+		background : url('../img/pc/skill_bg.png') no-repeat center center;
 		width      : 660px;
 		min-height : 260px;
 
@@ -653,7 +653,7 @@ a, a:hover {
 
 .idx_anim {
 	margin            : 0 0 0 -215px;
-	background        : url('../img/idx.png') no-repeat 0 0;
+	background        : url('../img/pc/idx.png') no-repeat 0 0;
 	width             : 430px;
 	height            : 60px;
 	position          : absolute;
