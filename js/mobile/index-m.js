@@ -29,8 +29,8 @@
 	$btn_theme.on('click', function(){
 		$midWrap.attr('class', 'midWrap ' + $(this).data('menu'));
 		$header.attr('class', 'header');
-		$btn_theme.removeClass('curr');
-		$(this).addClass('curr');
+		$('.menu .list').removeClass('curr');
+		$(this).parent().addClass('curr');
 		$('body').scrollTop(0);
 	});
 
@@ -43,7 +43,7 @@
 
 	// 切換menu顏色
 	$(window).scroll(function(){
-		if($(window).scrollTop() > $('.works').offset().top && $midWrap.hasClass('index')) {
+		if($(window).scrollTop() > $('.works').offset().top && $midWrap.hasClass('front-end')) {
 			$header.addClass('show');
 		} else if ($(window).scrollTop() > $('.name').offset().top && $midWrap.hasClass('about')) {
 			$header.addClass('blue');

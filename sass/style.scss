@@ -386,6 +386,34 @@ a, a:hover {
 					}
 				}
 			}
+
+			.community {
+				margin : 15px 15px 0 0;
+				float  : left;
+
+				.link {
+					background : url(../img/pc/icons.png) no-repeat 0 0;
+					display    : block;
+					width      : 32px;
+					height     : 32px;
+
+					&.instagram {
+						background-position : 0 -32px;
+					}
+
+					&.github {
+						background-position : 0 -64px;
+					}
+
+					&.linkedin {
+						background-position : 0 -96px;
+					}
+				}
+
+				&:last-child {
+					margin-right : 0;
+				}
+			}
 		}
 
 		.rightPart {
