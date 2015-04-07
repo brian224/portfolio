@@ -361,7 +361,7 @@ a, a:hover {
 			width  : 183px;
 			float  : left;
 
-			.list {
+			.info .list {
 				color          : #fff;
 				letter-spacing : 1px;
 				line-height    : 18px;
@@ -387,7 +387,7 @@ a, a:hover {
 				}
 			}
 
-			.community {
+			.community .list {
 				margin : 15px 15px 0 0;
 				float  : left;
 
@@ -397,16 +397,32 @@ a, a:hover {
 					width      : 32px;
 					height     : 32px;
 
+					&:hover {
+						background-position : -32px 0;
+					}
+
 					&.instagram {
 						background-position : 0 -32px;
+
+						&:hover {
+							background-position : -32px -32px;
+						}
 					}
 
 					&.github {
 						background-position : 0 -64px;
+
+						&:hover {
+							background-position : -32px -64px;
+						}
 					}
 
 					&.linkedin {
 						background-position : 0 -96px;
+
+						&:hover {
+							background-position : -32px -96px;
+						}
 					}
 				}
 
@@ -590,6 +606,14 @@ a, a:hover {
 							border-left : 3px solid #addee3;
 						}
 					}
+				}
+
+				.hint {
+					margin         : 0 0 0 7px;
+					position       : relative;
+					color          : #fff;
+					font-size      : 11px;
+					letter-spacing : 1px;
 				}
 			}
 		}

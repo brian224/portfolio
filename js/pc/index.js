@@ -14,6 +14,7 @@
 		$tab       = $('.tab'),
 		_amount    = 14, // 一頁幾筆作品
 		_Array     = [],
+		_config    = '',
 		_ls_loaded = '',
 		_ls_return = '',
 		_ls_theme  = '',
@@ -24,6 +25,11 @@
 		is_firefox = navigator.userAgent.indexOf("Firefox") > -1,
 		is_safari  = navigator.userAgent.indexOf("Safari") > -1,
 		is_chrome  = navigator.userAgent.indexOf('Chrome') > -1;
+
+	// 由本機開啟檔案
+	// if (window.location.href.split('http')[1] === undefined) {
+	// 	_config = 'http://brianlin224.theweb.tw/';
+	// }
 
 	// 判斷是否為手機 / 平板
 	if ( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) && $(window).width() < 860 ) {
@@ -177,7 +183,7 @@
 			for ( var j = 0 ; j < _amount ; j ++ , k ++ ) {
 				if ( k >= 0 && k < Datas.Data[_type].length ) {
 					_Str.push('<li class="list_item" data-id="' + Datas.Data[_type][k].CaseType + '_' + Datas.Data[_type][k].CaseID + '">');
-					_Str.push('	<span class="pic middleSet"><img src="img/pc/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '"></span>');
+					_Str.push('	<span class="pic middleSet"><img src="' + _config + 'img/pc/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '"></span>');
 					_Str.push('	<h3 class="name">' + Datas.Data[_type][k].CaseName + '</h3>');
 					_Str.push('</li>');
 				} else {
@@ -235,7 +241,7 @@
 			if (Datas.Data[_ls_return][i].CaseType + '_' + Datas.Data[_ls_return][i].CaseID == _id) {
 				for (var j = 1; j <= parseInt(Datas.Data[_ls_return][i].PhotoCount); j++) {
 					_tab.push('<li class="tag">' + j + '</li>');
-					_list.push('<li class="list middleSet"><img src="img/pc/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214"></li>');
+					_list.push('<li class="list middleSet"><img src="' + _config + 'img/pc/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214"></li>');
 				}
 
 				if (Datas.Data[_ls_return][i].webLink != '' && Datas.Data[_ls_return][i].webDesc != '') {
@@ -245,6 +251,8 @@
 					for (var k = 0; k < _webLink.length; k++) {
 						_list.push('<li class="link"><a class="webUrl" href="' + _webLink[k] + '" target="_blank">' + _webDesc[k] + '</a></li>');
 					}
+				} else if (Datas.Data[_ls_return][i].webLink === '' && Datas.Data[_ls_return][i].webDesc != '') {
+					_list.push('<li class="link"><span class="hint">' + Datas.Data[_ls_return][i].webDesc + '</span></li>');
 				}
 			}
 		}

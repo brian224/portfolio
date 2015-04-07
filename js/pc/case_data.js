@@ -21,13 +21,13 @@ $(function () {
 					"webDesc": "好房網市場週報"
 				},
 				{
-					"CaseName": "正宇生技",
-					"CaseID": "34",
+					"CaseName": "好房網M版",
+					"CaseID": "38",
 					"CaseType": "web",
-					"CoverImg": "web_34.png",
-					"PhotoCount": "3",
-					"webLink": "http://zybio.com.tw/",
-					"webDesc": "正宇生技"
+					"CoverImg": "web_38.png",
+					"PhotoCount": "1",
+					"webLink": "http://buy.housefun.com.tw/mobile",
+					"webDesc": "好房網M版"
 				},
 				{
 					"CaseName": "全家鮮食平台",
@@ -99,7 +99,7 @@ $(function () {
 					"CoverImg": "web_35.png",
 					"PhotoCount": "1",
 					"webLink": "",
-					"webDesc": "好房網物件即時通"
+					"webDesc": "※ 此專案尚未上線，不便公開"
 				},
 				{
 					"CaseName": "好房網<br>新屋博覽會",
@@ -127,6 +127,15 @@ $(function () {
 					"PhotoCount": "4",
 					"webLink": "https://www.ctbcbank.com/",
 					"webDesc": "中國信託商業銀行"
+				},
+				{
+					"CaseName": "正宇生技",
+					"CaseID": "34",
+					"CaseType": "web",
+					"CoverImg": "web_34.png",
+					"PhotoCount": "3",
+					"webLink": "http://zybio.com.tw/",
+					"webDesc": "正宇生技"
 				},
 				{
 					"CaseName": "中國信託CI",
