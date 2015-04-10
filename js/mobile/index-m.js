@@ -58,11 +58,18 @@
 
 		for (var i = 0; i < _data.length; i++) {
 			_Str.push('<li class="list">');
-			_Str.push('	<img src="img/mobile/' + _data[i].CoverImg + '" alt="' + _data[i].CaseName + '">');
+			_Str.push('	<img src="https://cdn.rawgit.com/brian224/portfolio/master/img/mobile/' + _data[i].CoverImg + '" alt="' + _data[i].CaseName + '">');
 			_Str.push('	<em class="case-name">' + _data[i].CaseName + '</em>');
+			_Str.push('	<span class="load-Wrap"><em class="text">- loading -</em></span>');
 			_Str.push('</li>');
 		}
 
 		$works.html(_Str.join(''));
+
+		$('img', $works).one('load', function() {
+			$('.load-Wrap', $(this).parents('.list')).hide();
+		}).each(function() {
+			if(this.complete) $(this).load();
+		});
 	}
 });

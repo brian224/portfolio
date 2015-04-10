@@ -327,7 +327,9 @@ a, a:hover {
 
 		.list {
 			display  : block;
+			height   : 250px;
 			position : relative;
+			overflow : hidden;
 
 			img {
 				display : block;
@@ -337,9 +339,9 @@ a, a:hover {
 			.case-name {
 				@include box-sizing(border-box);
 				padding        : 40px 10px 0 0;
-				background     : -webkit-linear-gradient(transparent, rgba(0, 0, 0, .7));
-				background     : -moz-linear-gradient(transparent, rgba(0, 0, 0, .7));
-				background     : linear-gradient(transparent, rgba(0, 0, 0, .7));
+				background     : -webkit-linear-gradient(transparent, rgba(0, 0, 0, .5));
+				background     : -moz-linear-gradient(transparent, rgba(0, 0, 0, .5));
+				background     : linear-gradient(transparent, rgba(0, 0, 0, .5));
 				display        : block;
 				width          : 100%;
 				height         : 70px;
@@ -351,6 +353,38 @@ a, a:hover {
 				letter-spacing : 1px;
 				line-height    : 30px;
 				text-align     : right;
+			}
+
+			.load-Wrap {
+				margin   : -25px 0 0 -25px;
+				display  : block;
+				width    : 50px;
+				height   : 50px;
+				position : absolute;
+				top      : 50%;
+				left     : 50%;
+				z-index  : 2;
+
+				&:before {
+					content         : '';
+					background      : image-url('mobile/loading.gif') center center no-repeat;
+					background-size : 100%;
+					display         : block;
+					width           : 100%;
+					height          : 100%;
+				}
+
+				.text {
+					display     : block;
+					width       : 100%;
+					height      : 20px;
+					position    : absolute;
+					bottom      : -30px;
+					color       : $mainBlue;
+					font-size   : 13px;
+					text-align  : center;
+					white-space : nowrap;
+				}
 			}
 		}
 	}
