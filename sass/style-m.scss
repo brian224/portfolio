@@ -101,6 +101,18 @@ a, a:hover {
 		display : block;
 	}
 
+	&.detail {
+		padding-top : 0;
+
+		&:before, &:after {
+			display : none;
+		}
+
+		.mainWrap.detail, .arrow {
+			display : block;
+		}
+	}
+
 	.mainWrap {
 		display  : none;
 		position : relative;
@@ -109,6 +121,11 @@ a, a:hover {
 		&.about, &.skills {
 			padding    : 0 20px 20px 20px;
 			background : $mainBlue;
+		}
+
+		&.detail {
+			background : #fff;
+			min-height : 375px;
 		}
 	}
 
@@ -352,6 +369,104 @@ a, a:hover {
 			}
 		}
 	}
+
+	.img_bg {
+		padding-top     : 375px;
+		background      : no-repeat center 0;
+		background-size : cover;
+		display         : block;
+	}
+
+	.project-info {
+		padding        : 20px;
+		color          : $mainBlue;
+		letter-spacing : 1px;
+
+		.project-name {
+			margin      : 0 0 10px 0;
+			font-size   : 18px;
+			line-height : 30px;
+		}
+
+		.info-desc {
+			padding     : 0 0 0 65px;
+			display     : block;
+			text-indent : -65px;
+
+			&.url {
+				padding     : 0 0 0 39px;
+				text-indent : -39px;
+			}
+		}
+
+		.link {
+			color           : $mainBlue;
+			text-decoration : underline;
+			word-break      : break-all;
+		}
+
+		.photo-list {
+			margin : 20px 0 0 0;
+
+			.list {
+				margin   : 0 0 10px 0;
+				width    : 100%;
+				overflow : hidden;
+
+				img {
+					display : block;
+					width   : 100%;
+				}
+			}
+		}
+	}
+
+	.arrow {
+		margin-top    : -30px;
+		background    : rgba(0,0,0,0.3);
+		display       : none;
+		width         : 60px;
+		height        : 60px;
+		position      : fixed;
+		top           : 50%;
+		left          : -30px;
+		border-radius : 30px;
+		z-index       : 2;
+
+		&:before, &:after {
+			@include rotate(-45deg);
+			margin-top : -4px;
+			content    : '';
+			background : #fff;
+			display    : block;
+			width      : 12px;
+			height     : 2px;
+			position   : absolute;
+			top        : 50%;
+			left       : 60%;
+		}
+
+		&:after {
+			@include rotate(45deg);
+			margin-top : 4px;
+		}
+
+		&.next {
+			left  : auto;
+			right : -30px;
+
+			&:before, &:after {
+				@include rotate(45deg);
+				left  : auto;
+				right : 60%;
+			}
+
+			&:after {
+				@include rotate(-45deg);
+				margin-top : 4px;
+			}
+		}
+	}
 }
 
 .footer {
@@ -414,19 +529,6 @@ a, a:hover {
 	top      : 0;
 	right    : -70%;
 	z-index  : 5;
-
-	&:after {
-		content       : '';
-		background    : $mainBlue;
-		display       : block;
-		width         : 60px;
-		height        : 60px;
-		position      : fixed;
-		top           : -9px;
-		right         : -9px;
-		border-radius : 30px;
-		z-index       : 1;
-	}
 
 	.menu-bar {
 		@include transition(ease-in-out all 0.3s);
@@ -494,17 +596,24 @@ a, a:hover {
 }
 
 .btn-menu {
-	width    : 45px;
-	height   : 45px;
-	position : fixed;
-	top      : 0;
-	right    : 0;
-	z-index  : 6;
+	background    : $mainBlue;
+	display       : block;
+	width         : 60px;
+	height        : 60px;
+	position      : fixed;
+	top           : -9px;
+	right         : -9px;
+	border-radius : 30px;
+	z-index       : 6;
+
+	&.no-bg {
+		background : transparent;
+	}
 
 	&:before, &:after, .icon {
 		@include transition(ease-in-out all 0.3s);
 		content       : '';
-		margin        : -1px 0 0 -12px;
+		margin        : 1px 0 0 -13px;
 		background    : #fff;
 		width         : 24px;
 		height        : 2px;
@@ -515,11 +624,11 @@ a, a:hover {
 	}
 
 	&:before {
-		margin-top : -8px;
+		margin-top : -6px;
 	}
 
 	&:after {
-		margin-top : 6px;
+		margin-top : 8px;
 	}
 }
 
@@ -531,6 +640,7 @@ a, a:hover {
 	top        : 0;
 	left       : 0;
 	opacity    : 0;
+	z-index    : -1;
 
 	&.show {
 		opacity : 0.4;
