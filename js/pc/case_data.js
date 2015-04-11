@@ -48,13 +48,13 @@ $(function () {
 					"webDesc": "遠傳電信"
 				},
 				{
-					"CaseName": "好房網雙訊",
-					"CaseID": "10",
-					"CaseType": "other",
-					"CoverImg": "other_10.png",
-					"PhotoCount": "2",
-					"webLink": "https://itunes.apple.com/tw/app/hao-fang-wang-shuang-xun/id838108164?mt=8,https://play.google.com/store/apps/details?id=com.housefun.doubleSMS&hl=zh_TW",
-					"webDesc": "iTunes - 好房網雙訊,Google play - 好房網雙訊"
+					"CaseName": "華南財富管理",
+					"CaseID": "39",
+					"CaseType": "web",
+					"CoverImg": "web_39.png",
+					"PhotoCount": "4",
+					"webLink": "http://wealth.hncb.com.tw/",
+					"webDesc": "華南財富管理"
 				},
 				{
 					"CaseName": "中租租車",
@@ -136,6 +136,15 @@ $(function () {
 					"PhotoCount": "3",
 					"webLink": "http://zybio.com.tw/",
 					"webDesc": "正宇生技"
+				},
+				{
+					"CaseName": "好房網雙訊",
+					"CaseID": "10",
+					"CaseType": "other",
+					"CoverImg": "other_10.png",
+					"PhotoCount": "2",
+					"webLink": "https://itunes.apple.com/tw/app/hao-fang-wang-shuang-xun/id838108164?mt=8,https://play.google.com/store/apps/details?id=com.housefun.doubleSMS&hl=zh_TW",
+					"webDesc": "iTunes - 好房網雙訊,Google play - 好房網雙訊"
 				},
 				{
 					"CaseName": "中國信託CI",

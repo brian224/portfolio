@@ -1,9 +1,11 @@
 ﻿$(function(){
 	var $btn_menu  = $('.btn-menu'),
 		$btn_theme = $('.btn-theme'),
-		$header    = $('.header'),
+		$filter    = $('.filter'),
+		$subWrap   = $('.subWrap'),
 		$logo      = $('.logo'),
 		$midWrap   = $('.midWrap'),
+		$screen    = $('.screen'),
 		$signature = $('.signature'),
 		$works     = $('.works'),
 		_url       = window.location.href.split('index')[0];
@@ -22,33 +24,33 @@
 
 	// 開關選單
 	$btn_menu.on('click', function(){
-		$header.toggleClass('trigger');
+		$subWrap.toggleClass('trigger');
+		$screen.toggleClass('scale');
+		$filter.toggleClass('show');
 	});
 
 	// 切換主題
 	$btn_theme.on('click', function(){
 		$midWrap.attr('class', 'midWrap ' + $(this).data('menu'));
-		$header.attr('class', 'header');
+		$subWrap.attr('class', 'subWrap');
 		$('.menu .list').removeClass('curr');
 		$(this).parent().addClass('curr');
 		$('body').scrollTop(0);
+		$screen.removeClass('scale');
+		$filter.removeClass('show');
+	});
+
+	// 點擊背景關閉選單
+	$filter.on('click', function(){
+		$subWrap.attr('class', 'subWrap');
+		$screen.removeClass('scale');
+		$filter.removeClass('show');
 	});
 
 	// 切換至PC版
 	$(window).resize(function(){
 		if ($(window).width() > 860) {
 			window.location.href = _url + 'index.html';
-		}
-	});
-
-	// 切換menu顏色
-	$(window).scroll(function(){
-		if($(window).scrollTop() > $('.works').offset().top && $midWrap.hasClass('front-end')) {
-			$header.addClass('show');
-		} else if ($(window).scrollTop() > $('.name').offset().top && $midWrap.hasClass('about')) {
-			$header.addClass('blue');
-		} else {
-			$header.removeClass('show blue');
 		}
 	});
 
