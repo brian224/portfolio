@@ -19,7 +19,6 @@
 		_ls_return = '',
 		_ls_theme  = '',
 		_src       = $photoImg.attr('src'),
-		_url       = window.location.href.split('index')[0],
 		_version   = '?v=' + new Date().getFullYear().toString() + (new Date().getMonth() + 1).toString() + new Date().getDate().toString() + Math.floor((Math.random() * 10000).toString()),
 		easter_egg = new Konami(function() {svgSign()}),
 		is_firefox = navigator.userAgent.indexOf("Firefox") > -1,
@@ -27,13 +26,13 @@
 		is_chrome  = navigator.userAgent.indexOf('Chrome') > -1;
 
 	// 由本機開啟檔案
-	// if (window.location.href.split('http')[1] === undefined) {
-	// 	_host = 'http://brianlin224.theweb.tw/';
-	// }
+	if (window.location.href.split('http')[1] === undefined) {
+		_host = 'http://brianlin224.theweb.tw/';
+	}
 
 	// 判斷是否為手機 / 平板
 	if ( /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent) && $(window).width() < 860 ) {
-		window.location.replace(_url + 'index-m.html');
+		window.location.replace(_host + 'index-m.html');
 	} else {
 		// IE 本地端無法使用 localStorage
 		if (window.localStorage != undefined) {
@@ -135,6 +134,7 @@
 				$('.works').each(function(){
 					$(this).find('.list_item').eq(_amount / 2).addClass('both');
 				});
+				$('.loading').hide();
 				cycle();
 			} else {
 				appendItem();
@@ -166,7 +166,7 @@
 	// 切換至M版
 	$(window).resize(function(){
 		if ($(window).width() < 860) {
-			window.location.href = _url + 'index-m.html';
+			window.location.href = _host + 'index-m.html';
 		}
 	});
 
@@ -183,7 +183,10 @@
 			for ( var j = 0 ; j < _amount ; j ++ , k ++ ) {
 				if ( k >= 0 && k < Datas.Data[_type].length ) {
 					_Str.push('<li class="list_item" data-id="' + Datas.Data[_type][k].CaseType + '_' + Datas.Data[_type][k].CaseID + '">');
-					_Str.push('	<span class="pic middleSet"><img src="' + _host + 'img/pc/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '"></span>');
+					_Str.push('	<span class="pic middleSet">');
+					_Str.push('		<img src="' + _host + 'img/pc/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '">');
+					_Str.push('		<div class="loading"></div>');
+					_Str.push('	</span>');
 					_Str.push('	<h3 class="name">' + Datas.Data[_type][k].CaseName + '</h3>');
 					_Str.push('</li>');
 				} else {
@@ -202,6 +205,12 @@
 
 		$('.works').each(function(){
 			$(this).find('.list_item').eq(_amount / 2).addClass('both');
+		});
+
+		$('img', '.list_item').one('load', function() {
+			$('.loading', $(this).parents('.pic')).hide();
+		}).each(function() {
+			if(this.complete) $(this).load();
 		});
 
 		cycle();
@@ -241,7 +250,7 @@
 			if (Datas.Data[_ls_return][i].CaseType + '_' + Datas.Data[_ls_return][i].CaseID == _id) {
 				for (var j = 1; j <= parseInt(Datas.Data[_ls_return][i].PhotoCount); j++) {
 					_tab.push('<li class="tag">' + j + '</li>');
-					_list.push('<li class="list middleSet"><img src="' + _host + 'img/pc/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214"></li>');
+					_list.push('<li class="list middleSet"><img src="' + _host + 'img/pc/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214" alt="' + Datas.Data[_ls_return][i].webDesc + '"><div class="loading"></div></li>');
 				}
 
 				if (Datas.Data[_ls_return][i].webLink != '' && Datas.Data[_ls_return][i].webDesc != '') {
@@ -276,6 +285,12 @@
 					$(this).addClass('move');
 				});
 			}
+		});
+
+		$('img', '.list').one('load', function() {
+			$('.loading', $(this).parents('.list')).hide();
+		}).each(function() {
+			if(this.complete) $(this).load();
 		});
 
 		// 切換圖片

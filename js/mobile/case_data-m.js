@@ -15,7 +15,7 @@ $(function () {
 					"CaseName": "好房網",
 					"CaseID": "03",
 					"CoverImg": "work_03.png",
-					"PhotoCount": "4",
+					"PhotoCount": "5",
 					"SpecialTech": "AngularJS、Google Map API、Web fonts、Ajax",
 					"Time": "2014年 7月",
 					"webLink": "http://www.housefun.com.tw/"
@@ -25,7 +25,7 @@ $(function () {
 					"CaseID": "01",
 					"CoverImg": "work_01.png",
 					"PhotoCount": "3",
-					"SpecialTech": "",
+					"SpecialTech": "無",
 					"Time": "2012年 11月",
 					"webLink": "http://www.rentalcar.com.tw"
 				},
@@ -43,7 +43,7 @@ $(function () {
 					"CaseID": "07",
 					"CoverImg": "work_07.png",
 					"PhotoCount": "3",
-					"SpecialTech": "",
+					"SpecialTech": "無",
 					"Time": "2014年 1月",
 					"webLink": "http://event.housefun.com.tw/salesjvv/"
 				},
@@ -61,7 +61,7 @@ $(function () {
 					"CaseID": "02",
 					"CoverImg": "work_02.png",
 					"PhotoCount": "3",
-					"SpecialTech": "",
+					"SpecialTech": "無",
 					"Time": "2012年 12月",
 					"webLink": "http://www.ctbcinsbrokers.com/Main"
 				},
@@ -80,17 +80,17 @@ $(function () {
 					"CaseName": "全家咖哩祭",
 					"CaseID": "08",
 					"CoverImg": "work_08.png",
-					"PhotoCount": "4",
-					"SpecialTech": "mobile web",
+					"PhotoCount": "2",
+					"SpecialTech": "無",
 					"Time": "2012年 10月",
-					"webLink": "http://www.family.com.tw/Marketing/curry/,http://www.family.com.tw/Marketing/superbread/index.html,http://www.family.com.tw/marketing/oden/"
+					"webLink": "http://www.family.com.tw/Marketing/curry/"
 				},
 				{
 					"CaseName": "中國信託 商業銀行",
 					"CaseID": "10",
 					"CoverImg": "work_10.png",
 					"PhotoCount": "4",
-					"SpecialTech": "",
+					"SpecialTech": "無",
 					"Time": "2013年 2月",
 					"webLink": "https://www.ctbcbank.com/"
 				},
@@ -99,7 +99,7 @@ $(function () {
 					"CaseID": "11",
 					"CoverImg": "work_11.png",
 					"PhotoCount": "4",
-					"SpecialTech": "",
+					"SpecialTech": "無",
 					"Time": "2012年 11月",
 					"webLink": "http://www.fetnet.net/Home/index.html"
 				}
