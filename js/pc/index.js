@@ -1,19 +1,20 @@
 ﻿$(function(){
-	var $arrow     = $('.arrow'),
-		$box       = $('.box'),
-		$easterEgg = $('.easter-egg'),
-		$footer    = $('.footer'),
-		$header    = $('.header'),
-		$mainLink  = $('.main_menu .link'),
-		$mainWrap  = $('.mainWrap'),
-		$midWrap   = $('.midWrap'),
-		$photoImg  = $('.photo > img'),
+	var $easterEgg = $('.easter-egg'),
 		$showTime  = $('.showTime'),
-		$slideShow = $('.slideShow'),
-		$subLink   = $('.submenu .link'),
-		$tab       = $('.tab'),
+		$footer    = $showTime.find('.footer'),
+		$header    = $showTime.find('.header'),
+		$midWrap   = $showTime.find('.midWrap'),
+		$mainLink  = $header.find('.main_menu .link'),
+		$mainWrap  = $midWrap.find('.mainWrap'),
+		$arrow     = $mainWrap.find('.arrow'),
+		$box       = $mainWrap.find('.box'),
+		$photoImg  = $mainWrap.find('.photo > img'),
+		$slideShow = $mainWrap.find('.slideShow'),
+		$subLink   = $mainWrap.find('.submenu .link'),
+		$tab       = $mainWrap.find('.tab'),
 		_amount    = 14, // 一頁幾筆作品
 		_Array     = [],
+		_cdnUrl    = 'https://cdn.rawgit.com/brian224/portfolio/master/',
 		_host      = '',
 		_ls_loaded = '',
 		_ls_return = '',
@@ -35,7 +36,7 @@
 		window.location.replace(_host + 'index-m.html');
 	} else {
 		// IE 本地端無法使用 localStorage
-		if (window.localStorage != undefined) {
+		if (window.localStorage !== undefined) {
 			_ls_loaded = window.localStorage.getItem('loadAnimate');
 			_ls_return = window.localStorage.getItem('returnPage');
 			_ls_theme  = window.localStorage.getItem('theme');
@@ -48,7 +49,7 @@
 		if (_ls_loaded === 'loaded') {
 			$header.addClass('show');
 		} else {
-			if (window.localStorage != undefined) {
+			if (window.localStorage !== undefined) {
 				window.localStorage.setItem('loadAnimate', 'loaded');
 			}
 
@@ -76,7 +77,7 @@
 	} else {
 		$mainWrap.eq(0).addClass('curr');
 		$('.main_menu .list').eq(0).find('.link').addClass('curr');
-		if (window.localStorage != undefined) {
+		if (window.localStorage !== undefined) {
 			window.localStorage.setItem('theme', $('.main_menu .list').eq(0).find('.link').data('theme'));
 		}
 	}
@@ -92,7 +93,7 @@
 		});
 	} else {
 		$subLink.eq(0).addClass('curr');
-		if (window.localStorage != undefined) {
+		if (window.localStorage !== undefined) {
 			window.localStorage.setItem('returnPage', 'front_end');
 		}
 	}
@@ -108,7 +109,7 @@
 			$mainLink.removeClass('curr');
 			$(this).addClass('curr');
 			$('.mainWrap.' + _theme).addClass('curr').siblings().removeClass('curr');
-			if (window.localStorage != undefined) {
+			if (window.localStorage !== undefined) {
 				window.localStorage.setItem('theme', _theme);
 			}
 		}
@@ -123,12 +124,12 @@
 			$(this).addClass('curr').parent('.list').siblings().find('.link').removeClass('curr');
 
 			for (var i = 0; i < _Array.length; i++) {
-				if (_Array[i].type == _type) {
+				if (_Array[i].type === _type) {
 					_num = i;
 				}
 			}
 
-			if (_num != undefined) {
+			if (_num !== undefined) {
 				$slideShow.html(_Array[_num].str);
 
 				$('.works').each(function(){
@@ -140,7 +141,7 @@
 				appendItem();
 			}
 
-			if (window.localStorage != undefined) {
+			if (window.localStorage !== undefined) {
 				window.localStorage.setItem('returnPage', _type);
 				window.localStorage.setItem('work_idx', $('.works:visible').index());
 			} else {
@@ -152,7 +153,7 @@
 	// 進入詳目頁
 	$midWrap.on('click', '.list_item', function(){
 		if (!$(this).hasClass('empty')) {
-			if (window.localStorage != undefined) {
+			if (window.localStorage !== undefined) {
 				_ls_return = window.localStorage.getItem('returnPage');
 				window.localStorage.setItem('work_idx', $('.works:visible').index());
 			}
@@ -184,7 +185,7 @@
 				if ( k >= 0 && k < Datas.Data[_type].length ) {
 					_Str.push('<li class="list_item" data-id="' + Datas.Data[_type][k].CaseType + '_' + Datas.Data[_type][k].CaseID + '">');
 					_Str.push('	<span class="pic middleSet">');
-					_Str.push('		<img src="' + _host + 'img/pc/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '">');
+					_Str.push('		<img src="' + _cdnUrl + 'img/pc/' + Datas.Data[_type][k].CaseType + '/' + Datas.Data[_type][k].CoverImg + '" alt="' + Datas.Data[_type][k].CaseName + '">');
 					_Str.push('		<div class="loading"></div>');
 					_Str.push('	</span>');
 					_Str.push('	<h3 class="name">' + Datas.Data[_type][k].CaseName + '</h3>');
@@ -220,7 +221,7 @@
 	function cycle(){
 		var _start = 0;
 
-		if (window.localStorage != undefined && window.localStorage.getItem('work_idx') != 0 && window.localStorage.getItem('work_idx') != null) {
+		if (window.localStorage !== undefined && window.localStorage.getItem('work_idx') !== 0 && window.localStorage.getItem('work_idx') !== null) {
 			_start = window.localStorage.getItem('work_idx');
 		}
 
@@ -247,20 +248,20 @@
 			_list = [];
 
 		for (var i = 0; i < Datas.Data[_ls_return].length; i++) {
-			if (Datas.Data[_ls_return][i].CaseType + '_' + Datas.Data[_ls_return][i].CaseID == _id) {
-				for (var j = 1; j <= parseInt(Datas.Data[_ls_return][i].PhotoCount); j++) {
+			if (Datas.Data[_ls_return][i].CaseType + '_' + Datas.Data[_ls_return][i].CaseID === _id) {
+				for (var j = 1; j <= parseInt(Datas.Data[_ls_return][i].PhotoCount, 10); j++) {
 					_tab.push('<li class="tag">' + j + '</li>');
-					_list.push('<li class="list middleSet"><img src="' + _host + 'img/pc/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214" alt="' + Datas.Data[_ls_return][i].webDesc + '"><div class="loading"></div></li>');
+					_list.push('<li class="list middleSet"><img src="' + _cdnUrl + 'img/pc/' + Datas.Data[_ls_return][i].CaseType + '/detail/' + Datas.Data[_ls_return][i].CaseType + Datas.Data[_ls_return][i].CaseID + '_0' + j + '.png?v=20150214" alt="' + Datas.Data[_ls_return][i].webDesc + '"><div class="loading"></div></li>');
 				}
 
-				if (Datas.Data[_ls_return][i].webLink != '' && Datas.Data[_ls_return][i].webDesc != '') {
+				if (Datas.Data[_ls_return][i].webLink !== '' && Datas.Data[_ls_return][i].webDesc !== '') {
 					var _webLink = Datas.Data[_ls_return][i].webLink.split(','),
 						_webDesc = Datas.Data[_ls_return][i].webDesc.split(',');
 
 					for (var k = 0; k < _webLink.length; k++) {
 						_list.push('<li class="link"><a class="webUrl" href="' + _webLink[k] + '" target="_blank">' + _webDesc[k] + '</a></li>');
 					}
-				} else if (Datas.Data[_ls_return][i].webLink === '' && Datas.Data[_ls_return][i].webDesc != '') {
+				} else if (Datas.Data[_ls_return][i].webLink === '' && Datas.Data[_ls_return][i].webDesc !== '') {
 					_list.push('<li class="link"><span class="hint">' + Datas.Data[_ls_return][i].webDesc + '</span></li>');
 				}
 			}
@@ -301,8 +302,8 @@
 
 			$('.box .list').eq(_idx).show().siblings('.list').hide();
 
-			if ($('.box .link').length != 1) {
-				if ($('.box .link').eq(_idx).length != 0) {
+			if ($('.box .link').length !== 1) {
+				if ($('.box .link').eq(_idx).length !== 0) {
 					$('.box .link').eq(_idx).show().siblings('.link').hide();
 				} else {
 					$('.box .link').hide();

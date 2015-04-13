@@ -1,14 +1,15 @@
 ﻿$(function(){
-	var $arrow     = $('.arrow'),
-		$btn_menu  = $('.btn-menu'),
-		$btn_theme = $('.btn-theme'),
-		$filter    = $('.filter'),
+	var $screen    = $('.screen'),
 		$subWrap   = $('.subWrap'),
-		$logo      = $('.logo'),
-		$midWrap   = $('.midWrap'),
-		$screen    = $('.screen'),
-		$signature = $('.signature'),
-		$works     = $('.works'),
+		$btn_menu  = $('.btn-menu'),
+		$filter    = $('.filter'),
+		$midWrap   = $screen.find('.midWrap'),
+		$btn_theme = $subWrap.find('.btn-theme'),
+		$arrow     = $midWrap.find('.arrow'),
+		$logo      = $midWrap.find('.logo'),
+		$works     = $midWrap.find('.works'),
+		$signature = $logo.find('.signature'),
+		_cdnUrl    = 'https://cdn.rawgit.com/brian224/portfolio/master/',
 		_url       = window.location.href.split('index')[0],
 		_idx       = 0;
 
@@ -36,6 +37,7 @@
 	$btn_theme.on('click', function(){
 		$midWrap.attr('class', 'midWrap ' + $(this).data('menu'));
 		$subWrap.attr('class', 'subWrap');
+		$arrow.removeAttr('style');
 		$('.menu .list').removeClass('curr');
 		$(this).parent().addClass('curr');
 		$screen.removeClass('scale');
@@ -87,7 +89,7 @@
 
 		for (var i = 0; i < _data.length; i++) {
 			_Str.push('<li class="list" data-id="' + _data[i].CaseID + '">');
-			_Str.push('	<img src="img/mobile/works/' + _data[i].CoverImg + '" alt="' + _data[i].CaseName + '">');
+			_Str.push('	<img src="' + _cdnUrl + 'img/mobile/works/' + _data[i].CoverImg + '" alt="' + _data[i].CaseName + '">');
 			_Str.push('	<em class="case-name">' + _data[i].CaseName + '</em>');
 			_Str.push('	<span class="load-Wrap"><em class="text">- loading -</em></span>');
 			_Str.push('</li>');
@@ -107,14 +109,15 @@
 		var _data = Datas.Data['front_end'],
 			_Str  = [];
 
+		// 由上下頁點擊切換
 		if (_id === 0) {
-			_Str.push('<span class="img_bg"><img src="img/mobile/detail/work' + _data[_index].CaseID + '_bg.png" alt="' + _data[_index].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></span>');
+			_Str.push('<span class="img_bg"><img src="' + _cdnUrl + 'img/mobile/detail/work' + _data[_index].CaseID + '_bg.png" alt="' + _data[_index].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></span>');
 			_Str.push('<div class="project-info">');
 			_Str.push('	<h2 class="project-name">' + _data[_index].CaseName + '</h2>');
 			_Str.push('	<span class="info-desc">專案時間：<em class="time">' + _data[_index].Time + '</em></span>');
 			_Str.push('	<span class="info-desc">特色說明：<em class="tech">' + _data[_index].SpecialTech + '</em></span>');
 			
-			if (_data[_index].webLink != '') {
+			if (_data[_index].webLink !== '') {
 				_Str.push('	<span class="info-desc url">網址：<a class="link" href="' + _data[_index].webLink + '" target="_blank">' + _data[_index].webLink.split('://')[1] + '</a></span>');
 			} else {
 				_Str.push('	<span class="info-desc url">網址：專案尚未上線，不便公開</span>');
@@ -123,7 +126,7 @@
 			_Str.push('	<ul class="photo-list">');
 
 			for (var j = 0; j < parseInt(_data[_index].PhotoCount, 10); j++) {
-				_Str.push('		<li class="list"><img src="img/mobile/detail/work' + _data[_index].CaseID + '_0' + (j + 1) + '.png" alt="' + _data[_index].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></li>');
+				_Str.push('		<li class="list"><img src="' + _cdnUrl + 'img/mobile/detail/work' + _data[_index].CaseID + '_0' + (j + 1) + '.png" alt="' + _data[_index].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></li>');
 			}
 
 			_Str.push('	</ul>');
@@ -139,25 +142,26 @@
 			} else {
 				$('.arrow.next').show();
 			}
+		// 由首頁進入
 		} else {
 			for (var i = 0; i < _data.length; i++) {
-				if (_data[i].CaseID == _id) {
-					_Str.push('<span class="img_bg"><img src="img/mobile/detail/work' + _data[i].CaseID + '_bg.png" alt="' + _data[i].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></span>');
+				if (_data[i].CaseID === _id.toString()) {
+					_Str.push('<span class="img_bg"><img src="' + _cdnUrl + 'img/mobile/detail/work' + _data[i].CaseID + '_bg.png" alt="' + _data[i].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></span>');
 					_Str.push('<div class="project-info">');
 					_Str.push('	<h2 class="project-name">' + _data[i].CaseName + '</h2>');
 					_Str.push('	<span class="info-desc">專案時間：<em class="time">' + _data[i].Time + '</em></span>');
 					_Str.push('	<span class="info-desc">特色說明：<em class="tech">' + _data[i].SpecialTech + '</em></span>');
 
-					if (_data[i].webLink != '') {
+					if (_data[i].webLink !== '') {
 						_Str.push('	<span class="info-desc url">網址：<a class="link" href="' + _data[i].webLink + '" target="_blank">' + _data[i].webLink.split('://')[1] + '</a></span>');
 					} else {
-						_Str.push('	<span class="info-desc url">網址：專案尚未上線，不便公開</span>');
+						_Str.push('	<span class="info-desc url">網址：此專案尚未上線，不便公開</span>');
 					}
 
 					_Str.push('	<ul class="photo-list">');
 
 					for (var j = 0; j < parseInt(_data[i].PhotoCount, 10); j++) {
-						_Str.push('		<li class="list"><img src="img/mobile/detail/work' + _data[i].CaseID + '_0' + (j + 1) + '.png" alt="' + _data[i].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></li>');
+						_Str.push('		<li class="list"><img src="' + _cdnUrl + 'img/mobile/detail/work' + _data[i].CaseID + '_0' + (j + 1) + '.png" alt="' + _data[i].CaseName + '"><span class="load-Wrap"><em class="text">- loading -</em></span></li>');
 					}
 
 					_Str.push('	</ul>');
@@ -177,6 +181,7 @@
 				}
 			}
 		}
+
 		$('.mainWrap.detail').html(_Str.join(''));
 		$('body').scrollTop(0);
 
