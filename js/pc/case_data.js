@@ -111,13 +111,13 @@ $(function () {
 					"webDesc": "好房網新屋博覽會"
 				},
 				{
-					"CaseName": "好房網新聞<br>活動網頁",
-					"CaseID": "30",
+					"CaseName": "澳盛銀行",
+					"CaseID": "40",
 					"CaseType": "web",
-					"CoverImg": "web_30.png",
+					"CoverImg": "web_40.png",
 					"PhotoCount": "3",
-					"webLink": "http://event.housefun.com.tw/329mag_press_conference/,http://event.news.housefun.com.tw/taoyuan/,http://event.housefun.com.tw/salesjvv/",
-					"webDesc": "好房網不動產市場週報 創刊發表暨記者會,輕總價 藝術生活 桃園藝文特區,馬來西亞皇萱灣"
+					"webLink": "",
+					"webDesc": "※ 此專案尚未上線，不便公開"
 				},
 				{
 					"CaseName": "中國信託<br>商業銀行",
@@ -145,6 +145,15 @@ $(function () {
 					"PhotoCount": "2",
 					"webLink": "https://itunes.apple.com/tw/app/hao-fang-wang-shuang-xun/id838108164?mt=8,https://play.google.com/store/apps/details?id=com.housefun.doubleSMS&hl=zh_TW",
 					"webDesc": "iTunes - 好房網雙訊,Google play - 好房網雙訊"
+				},
+				{
+					"CaseName": "好房網新聞活動",
+					"CaseID": "30",
+					"CaseType": "web",
+					"CoverImg": "web_30.png",
+					"PhotoCount": "3",
+					"webLink": "http://event.housefun.com.tw/329mag_press_conference/,http://event.news.housefun.com.tw/taoyuan/,http://event.housefun.com.tw/salesjvv/",
+					"webDesc": "好房網不動產市場週報 創刊發表暨記者會,輕總價 藝術生活 桃園藝文特區,馬來西亞皇萱灣"
 				},
 				{
 					"CaseName": "中國信託CI",
