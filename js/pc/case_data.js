@@ -147,6 +147,15 @@ $(function () {
 					"webDesc": "iTunes - 好房網雙訊,Google play - 好房網雙訊"
 				},
 				{
+					"CaseName": "LUXGEN",
+					"CaseID": "41",
+					"CaseType": "web",
+					"CoverImg": "web_41.png",
+					"PhotoCount": "5",
+					"webLink": "",
+					"webDesc": "LUXGEN 納智捷汽車"
+				},
+				{
 					"CaseName": "好房網新聞活動",
 					"CaseID": "30",
 					"CaseType": "web",
