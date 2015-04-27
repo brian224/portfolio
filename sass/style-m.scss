@@ -129,11 +129,13 @@ a, a:hover {
 	}
 
 	.logo {
+		@include transition(ease-in-out all 0.5s);
 		height   : 184px;
 		overflow : hidden;
 
 		.logo-img {
 			margin   : 14px 14px 14px -79px;
+			display  : none;
 			width    : 158px;
 			position : absolute;
 			left     : 50%;
@@ -144,12 +146,26 @@ a, a:hover {
 				width   : 100%;
 			}
 		}
+
+		&.animate {
+			@include transition(ease-in-out all 0.5s);
+			background : $mainBlue;
+			height     : 100vh;
+			position   : relative;
+
+			.signature {
+				@include transition(ease-in-out all 0.5s);
+				top : 100px;
+			}
+		}
 	}
 
 	.signature {
+		@include transition(ease-in-out all 0.5s);
 		margin   : 0 0 0 -92px;
 		display  : block;
 		position : absolute;
+		top      : 0;
 		left     : 50%;
 		z-index  : 2;
 
@@ -460,7 +476,7 @@ a, a:hover {
 		}
 
 		.link {
-			background      : url(../img/mobile/icons.png) no-repeat 0 0;
+			background      : image-url('mobile/icons.png') no-repeat 0 0;
 			background-size : 100%;
 			display         : block;
 			height          : 100%;

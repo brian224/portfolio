@@ -23,7 +23,13 @@
 
 	// 移除SVG（思考是否有存在必要）
 	$midWrap.delay(5000).queue(function(){
+		$('.logo').removeClass('animate');
+		$(this).dequeue();
+	});
+
+	$('.logo').delay(6000).queue(function(){
 		$signature.remove();
+		$('.logo-img').show();
 	});
 
 	// 開關選單
