@@ -143,7 +143,7 @@
 
 			if (window.localStorage !== undefined) {
 				window.localStorage.setItem('returnPage', _type);
-				window.localStorage.setItem('work_idx', $('.works:visible').index());
+				window.localStorage.setItem('work_idx', 0);
 			} else {
 				_ls_return = _type;
 			}
@@ -226,20 +226,26 @@
 		}
 
 		if ($slideShow.find('ul.works').length > 1) {
-			$slideShow.cycle({
+			$slideShow.cycle('destroy').cycle({
+				after         : setIndex,
 				fx            : 'scrollHorz',
 				timeout       : 9999999,
 				speed         : 500,
 				startingSlide : _start,
 				next          : '.arrow.right',
 				prev          : '.arrow.left',
-				pager         : '#promoindex',
+				pager         : null,
 				pause         : 1
 			});
 			$arrow.show();
 		} else {
 			$arrow.hide();
 		}
+	}
+
+	// 記錄左右鍵後前往的slideshow index
+	function setIndex(curr, next, opts){
+		window.localStorage.setItem('work_idx', opts.currSlide);
 	}
 
 	// 作品詳細內容
