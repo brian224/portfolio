@@ -21,12 +21,13 @@
 		appendItem();
 	}
 
-	// 移除SVG（思考是否有存在必要）
+	// 顯示第二屏
 	$midWrap.delay(5000).queue(function(){
 		$('.logo').removeClass('animate');
 		$(this).dequeue();
 	});
 
+	// 移除SVG
 	$('.logo').delay(6000).queue(function(){
 		$signature.remove();
 		$('.logo-img').show();
@@ -164,6 +165,7 @@
 		});
 	}
 
+	// 作品的view
 	function detailView(data){
 		var _url  = '',
 			_list = '';
