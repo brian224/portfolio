@@ -1,4 +1,4 @@
-﻿$(function(){
+﻿$(window).load(function(){
 	var $easterEgg = $('.easter-egg'),
 		$showTime  = $('.showTime'),
 		$footer    = $showTime.find('.footer'),
@@ -20,6 +20,7 @@
 		_ls_return = '',
 		_ls_theme  = '',
 		_src       = $photoImg.attr('src'),
+		_timer     = null,
 		_version   = '?v=' + new Date().getFullYear().toString() + (new Date().getMonth() + 1).toString() + new Date().getDate().toString() + Math.floor((Math.random() * 10000).toString()),
 		easter_egg = new Konami(function() {svgSign()}),
 		is_firefox = navigator.userAgent.indexOf("Firefox") > -1,
@@ -166,9 +167,15 @@
 
 	// 切換至M版
 	$(window).resize(function(){
-		if ($(window).width() < 860) {
-			window.location.href = _host + 'index-m.html';
+		if (_timer) {
+			clearTimeout(_timer);
 		}
+		
+		_timer = setTimeout(function(){
+			if ($(window).width() < 860) {
+				window.location.href = _host + 'index-m.html';
+			}			
+		}, 1000);
 	});
 
 	// 作品的view
