@@ -12,8 +12,7 @@
 		_cdnUrl    = 'https://cdn.rawgit.com/brian224/portfolio/master/',
 		_url       = window.location.href.split('index')[0],
 		_idx       = 0,
-		_str       = [],
-		_timer     = null;
+		_str       = [];
 
 	// 切換至PC版
 	if ($(window).width() > 860) {
@@ -83,17 +82,11 @@
 	});
 
 	// 切換至PC版
-	$(window).resize(function(){
-		if (_timer) {
-			clearTimeout(_timer);
+	$(window).on('resize', _.debounce(function(){
+		if ($(window).width() > 860) {
+			window.location.href = _url + 'index.html';
 		}
-		
-		_timer = setTimeout(function(){
-			if ($(window).width() > 860) {
-				window.location.href = _url + 'index.html';
-			}
-		}, 1000);
-	});
+	}, 100));
 
 	// 組成作品集列表
 	function appendItem(){
