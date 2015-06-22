@@ -116,8 +116,8 @@ $(function () {
 					"CaseType": "web",
 					"CoverImg": "web_40.png",
 					"PhotoCount": "3",
-					"webLink": "",
-					"webDesc": "※ 此專案尚未上線，不便公開"
+					"webLink": "http://anz.tw/zh/personal/digital/digitalbank.jsp",
+					"webDesc": "澳盛銀行 - 遙控理財"
 				},
 				{
 					"CaseName": "中國信託<br>商業銀行",
