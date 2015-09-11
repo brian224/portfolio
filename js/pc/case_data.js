@@ -93,6 +93,15 @@ $(function () {
 					"webDesc": "中國信託網路銀行2013全新風貌邀您立即體驗"
 				},
 				{
+					"CaseName": "家在雙和<br>活力 UP UP!",
+					"CaseID": "42",
+					"CaseType": "web",
+					"CoverImg": "web_42.png",
+					"PhotoCount": "1",
+					"webLink": "",
+					"webDesc": "※ 此專案尚未上線，不便公開"
+				},
+				{
 					"CaseName": "好房網<br>物件即時通",
 					"CaseID": "35",
 					"CaseType": "web",
