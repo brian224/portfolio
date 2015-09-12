@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 $(function () {
 	var Datas = {
 		Data : {
@@ -114,6 +115,8 @@ $(function () {
 		window.Datas = $.extend({}, window.Datas, Datas);
 	}
 =======
+=======
+>>>>>>> master
 $(function () {
 	var Datas = {
 		Data : {
@@ -228,5 +231,8 @@ $(function () {
 	} else {
 		window.Datas = $.extend({}, window.Datas, Datas);
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 });

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿$(window).load(function(){
 	var $easterEgg = $('.easter-egg'),
 		$showTime  = $('.showTime'),
@@ -351,6 +352,8 @@
 		}
 	}
 =======
+=======
+>>>>>>> master
 ﻿$(window).load(function(){
 	var $easterEgg = $('.easter-egg'),
 		$showTime  = $('.showTime'),
@@ -702,5 +705,8 @@
 			alert('請使用 Chrome 或 Safari 或 Firefox 來操作');
 		}
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 });

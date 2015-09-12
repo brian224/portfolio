@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿$(window).load(function(){
 	var $screen    = $('.screen'),
 		$subWrap   = $('.subWrap'),
@@ -195,6 +196,8 @@
 			];
 	}
 =======
+=======
+>>>>>>> master
 ﻿$(window).load(function(){
 	var $screen    = $('.screen'),
 		$subWrap   = $('.subWrap'),
@@ -390,5 +393,8 @@
 				'</div>'
 			];
 	}
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 });
