@@ -71,7 +71,7 @@ $(function () {
 					"CaseType": "web",
 					"CoverImg": "web_31.png",
 					"PhotoCount": "3",
-					"webLink": "http://event.yungching.com.tw/brand/201409brand",
+					"webLink": "http://brianlin224.theweb.tw/webLink/yc_brand/index.html",
 					"webDesc": "永慶房屋「房仲科技 3.0」"
 				},
 				{
@@ -179,7 +179,7 @@ $(function () {
 					"CaseType": "web",
 					"CoverImg": "web_25.png",
 					"PhotoCount": "3",
-					"webLink": "webLink/CTCB_CI/global.html",
+					"webLink": "http://brianlin224.theweb.tw/webLink/CTCB_CI/global.html",
 					"webDesc": "前往網頁"
 				}
 			],
@@ -190,7 +190,7 @@ $(function () {
 					"CaseType": "web",
 					"CoverImg": "web_16.png",
 					"PhotoCount": "2",
-					"webLink": "webLink/wine95/wine_blog.html,webLink/wine95/post.html",
+					"webLink": "http://brianlin224.theweb.tw/webLink/wine95/wine_blog.html,webLink/wine95/post.html",
 					"webDesc": "前往Blog首頁,前往文章內容頁"
 				},
 				{
@@ -217,7 +217,7 @@ $(function () {
 					"CaseType": "web",
 					"CoverImg": "web_14.png",
 					"PhotoCount": "3",
-					"webLink": "webLink/wine95/index.html,webLink/wine95/cart.html,webLink/wine95/wine_detail.html",
+					"webLink": "http://brianlin224.theweb.tw/webLink/wine95/index.html,webLink/wine95/cart.html,webLink/wine95/wine_detail.html",
 					"webDesc": "前往wine95首頁,前往購物車,前往詳目頁"
 				},
 				{
@@ -370,7 +370,7 @@ $(function () {
 					"CaseType": "web",
 					"CoverImg": "web_18.png",
 					"PhotoCount": "3",
-					"webLink": "webLink/AL/demo01.html,webLink/AL/demo02.html,webLink/AL/demo03.html",
+					"webLink": "http://brianlin224.theweb.tw/webLink/AL/demo01.html,webLink/AL/demo02.html,webLink/AL/demo03.html",
 					"webDesc": "前往airitiLibrary首頁,前往詳目頁,前往列表頁"
 				},
 				{

@@ -54,7 +54,7 @@ $(function () {
 					"PhotoCount": "3",
 					"SpecialTech": "Parallax Scrolling",
 					"Time": "2014年 7月",
-					"webLink": "http://event.yungching.com.tw/brand/201409brand"
+					"webLink": "http://brianlin224.theweb.tw/webLink/yc_brand/index.html"
 				},
 				{
 					"CaseName": "中國信託 保險經紀人",
