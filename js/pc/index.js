@@ -28,7 +28,7 @@
 
 	// 由本機開啟檔案
 	if (window.location.href.split('http')[1] === undefined) {
-		_host = 'http://brianlin224.theweb.tw/';
+		_host = 'http://brian224.github.io/';
 	}
 
 	// 判斷是否為手機 / 平板
