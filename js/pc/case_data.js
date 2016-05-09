@@ -99,7 +99,7 @@ $(function () {
 					"CoverImg": "web_42.png",
 					"PhotoCount": "1",
 					"webLink": "",
-					"webDesc": "※ 此專案尚未上線，不便公開"
+					"webDesc": ""
 				},
 				{
 					"CaseName": "好房網<br>物件即時通",
