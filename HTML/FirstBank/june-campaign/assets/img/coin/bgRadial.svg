@@ -1,0 +1,22 @@
+<svg width="375" height="366" viewBox="0 0 375 366" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="v94ln5gdpa" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="375" height="324">
+        <path d="M375 .85H0v322.34h375V.85z" fill="#fff"/>
+    </mask>
+    <g mask="url(#v94ln5gdpa)">
+        <path opacity=".11" d="m-343.03-141.98 530.23-99.19h-534.95l4.72 99.19zm1065.79-99.19H187.98l530.55 95.87 4.23-95.87zM707.32-63.28 187.84-241.15v-.02h-.5v.02L-331.55-60.03l23.05 97.14 495.81-278.17v.05l-469.93 353.55 39.82 86.16 430.11-439.66s.01.02.01.05l-391.48 503.8 54.06 69.78 337.45-573.51s0 .07.03.07l-288.49 622.32 64.94 49.04 223.59-671.31s.03.03.04.05L20.08 461.12l71.74 25.19 95.69-726.98s.03.02.05.02L151.8 496.58l74.01-.23-38.17-736.99s0-.02.02-.02l98.1 726.37 71.64-25.63-169.69-700.75s.04-.02.05-.05l225.78 669.88 64.79-49.43-290.53-620.5.02-.07 339.33 571.38L581 260.43 187.84-240.91s.01-.02.02-.05l431.56 436.97 39.53-86.43-471.07-350.59-.02-.06L684.58 34.01l22.73-97.29h.01z" fill="url(#o1cm856dlb)"/>
+    </g>
+    <defs>
+        <radialGradient id="o1cm856dlb" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(199.58 -224.17) scale(576.22)">
+            <stop stop-color="#fff"/>
+            <stop offset=".19" stop-color="#fff" stop-opacity=".99"/>
+            <stop offset=".32" stop-color="#fff" stop-opacity=".95"/>
+            <stop offset=".44" stop-color="#fff" stop-opacity=".89"/>
+            <stop offset=".54" stop-color="#fff" stop-opacity=".81"/>
+            <stop offset=".64" stop-color="#fff" stop-opacity=".69"/>
+            <stop offset=".74" stop-color="#fff" stop-opacity=".56"/>
+            <stop offset=".83" stop-color="#fff" stop-opacity=".39"/>
+            <stop offset=".91" stop-color="#fff" stop-opacity=".21"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </radialGradient>
+    </defs>
+</svg>

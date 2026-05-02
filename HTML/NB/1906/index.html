@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+  <head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta property="og:title" content="NB 1906 復刻潮！">
+    <meta property="og:description" name="description" content="玩心蠢蠢欲動，翻玩復刻浪潮！NB 1906 復古之旅程，等你來闖">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://f2e.sugarfun.com.tw/NB/1906/static/img/FB.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="NB 1906 復刻潮！">
+    <title>NB 1906 復刻潮！</title>
+    <link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
+    <link rel="canonical alternate" href="">
+    <script type="text/javascript">
+      ! function(q, g, r, a, p, h, js) {
+        if (q.qg) return;
+        js = q.qg = function() {
+          js.callmethod ? js.callmethod.call(js, arguments) : js.queue.push(arguments);
+        };
+        js.queue = [];
+        p = g.createElement(r);
+        p.async = !0;
+        p.src = a;
+        h = g.getElementsByTagName(r)[0];
+        h.parentNode.insertBefore(p, h);
+      }(window, document, 'script', 'https://cdn.qgr.ph/qgraph.025f162c8c7c7b3615f2.js');
+    </script>
+    <link href="assets/css/home/index.css?37b758c3" rel="stylesheet">
+  </head>
+
+  <body class="bg-[#231815]">
+    <div class="l-wrap relative overflow-hidden jWrap" :data-curr="step" :data-box="showBox">
+      <header class="l-hd t:pr-[16px] t:pl-[22px] m:pr-[8px] m:pl-[15px] bg-[#231815] flex items-center justify-between w-full t:h-[60px] m:h-[40px] fixed top-0 left-0 right-0 z-[2]" :class="menu === true ? 'is-active' : ''">
+        <svg class="logo t:w-[69px] m:w-[46px] t:h-[33px] m:h-[22px] transition-all ease-in-out duration-500">
+          <use class="fill-current" xlink:href="#ico-logo">
+          </use>
+        </svg>
+        <nav class="l-nav flex items-center justify-center w-full h-full fixed inset-0 overflow-y-scroll box-border transition-all ease-in-out duration-500">
+          <ul class="menu-list max-h-screen">
+            <li class="list t:my-[45px] m:my-[30px]">
+              <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:w-[375px] m:w-[250px] t:h-[78px] m:h-[52px]" @click="goSelect('index')">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">活動首頁</span>
+                <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+                <i class="ico-shadow absolute inset-0"></i>
+                <svg class="t:w-[39px] m:w-[26px] t:h-[39px] m:h-[26px] absolute t:top-[-18px] m:top-[-12px] t:right-[48px] m:right-[32px]">
+                  <use class="fill-current" xlink:href="#ico-capsule-all">
+                  </use>
+                </svg>
+              </button>
+
+            </li>
+            <li class="list t:my-[45px] m:my-[30px]">
+              <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:w-[375px] m:w-[250px] t:h-[78px] m:h-[52px]" @click="goSelect('quest')">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">1906 復刻 潮！遊戲關卡</span>
+                <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+                <i class="ico-shadow absolute inset-0"></i>
+                <svg class="t:w-[78px] m:w-[52px] t:h-[38px] m:h-[25px] absolute t:bottom-[-15px] m:bottom-[-10px] t:left-[-15px] m:left-[-10px] -scaleX-1">
+                  <use class="fill-current" xlink:href="#ico-shoes">
+                  </use>
+                </svg>
+              </button>
+
+            </li>
+            <li class="list t:my-[45px] m:my-[30px]">
+              <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:w-[375px] m:w-[250px] t:h-[78px] m:h-[52px]" @click="callBox(true, 'bind')">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">開通數位會員</span>
+                <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+                <i class="ico-shadow absolute inset-0"></i>
+                <svg class="t:w-[42px] m:w-[28px] t:h-[42px] m:h-[28px] absolute t:top-[-18px] m:top-[-12px] t:right-[-9px] m:right-[-6px] -scaleX-1">
+                  <use class="fill-current" xlink:href="#ico-darts">
+                  </use>
+                </svg>
+              </button>
+
+            </li>
+            <li class="list t:my-[45px] m:my-[30px]">
+              <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:w-[375px] m:w-[250px] t:h-[78px] m:h-[52px]" @click="goSelect('directions')">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">會員權利說明</span>
+                <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+                <i class="ico-shadow absolute inset-0"></i>
+                <figure class="t:w-[45px] m:w-[30px] t:h-[30px] m:h-[20px] absolute t:top-[-17px] m:top-[-11px] t:left-[52px] m:left-[35px] -rotate-12">
+
+                  <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-tape.svg?4c199e8d">
+                </figure>
+              </button>
+
+            </li>
+            <li class="list t:my-[45px] m:my-[30px]">
+              <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:w-[375px] m:w-[250px] t:h-[78px] m:h-[52px]" @click="goSelect('activity')">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">活動辦法</span>
+                <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+                <i class="ico-shadow absolute inset-0"></i>
+                <svg class="t:w-[36px] m:w-[24px] t:h-[36px] m:h-[24px] absolute t:top-[-15px] m:top-[-10px] t:right-[90px] m:right-[60px] -rotate-45">
+                  <use class="fill-current" xlink:href="#ico-cube">
+                  </use>
+                </svg>
+              </button>
+
+            </li>
+            <li class="list t:my-[45px] m:my-[30px]">
+              <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:w-[375px] m:w-[250px] t:h-[78px] m:h-[52px]" @click="shareTargetPicker('website')">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">分享給 LINE 好友</span>
+                <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+                <i class="ico-shadow absolute inset-0"></i>
+                <figure class="ico-camera t:w-[45px] m:w-[30px] t:h-[45px] m:h-[30px] absolute t:top-[12px] m:top-[8px] t:right-[-27px] m:right-[-18px]">
+
+                  <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-camera.svg?4c199e8d">
+                </figure>
+              </button>
+
+            </li>
+          </ul>
+        </nav>
+        <button class="btn-menu w-[40px] h-[40px] relative" @click="callMenu">
+          <i class="ico"></i>
+          <span class="BHT">Menu</span>
+        </button>
+      </header>
+      <div class="l-main t:pt-[60px] m:pt-[40px]" :style="{minHeight:innerHeight}">
+        <section class="t:pb-[36px] m:pb-[36px]" data-page="index">
+          <h1 class="BHT">NB 1906 復刻潮!!注目登場 等你來闖!!</h1>
+          <div class="kv-wrap t:mt-[32px] m:mt-[16px] t:px-[30px] m:px-[15px] t:h-[984px] m:h-[492px] relative">
+            <svg class="mx-auto t:w-[688px] m:w-[344px] t:h-[152px] m:h-[76px]">
+              <use class="fill-current" xlink:href="#tit-nb1906">
+              </use>
+            </svg>
+            <div class="pacman-wrap t:mt-[40px] m:mt-[20px] t:w-[380px] m:w-[190px] t:h-[696px] m:h-[348px] relative">
+              <svg class="w-full h-full">
+                <use class="fill-current" xlink:href="#kv-txt">
+                </use>
+              </svg>
+              <svg class="ico-pacman t:w-[20px] m:w-[10px] t:h-[20px] m:h-[10px] absolute t:top-[296px] m:top-[148px] t:right-[128px] m:right-[64px] ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-mouth">
+                </use>
+              </svg>
+              <svg class="ico-pacman t:w-[20px] m:w-[10px] t:h-[24px] m:h-[12px] absolute t:top-[360px] m:top-[180px] t:left-[56px] m:left-[28px] ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-monster-g">
+                </use>
+              </svg>
+              <svg class="ico-pacman t:w-[20px] m:w-[10px] t:h-[24px] m:h-[12px] absolute t:bottom-[252px] m:bottom-[126px] t:right-[192px] m:right-[96px] ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-monster-b">
+                </use>
+              </svg>
+            </div>
+            <div class="capsule-wrap t:w-[480px] m:w-[240px] t:h-[616px] m:h-[308px] absolute t:bottom-[92px] m:bottom-[46px] t:left-[186px] m:left-[93px] ease-in-out duration-500 transition-all">
+              <i class="ico-shoes t:w-[144px] m:w-[72px] t:h-[70px] m:h-[35px] absolute t:top-[54px] m:top-[27px] t:right-[58px] m:right-[29px] ease-in-out duration-500 transition-all">
+                <svg class="anim-rotate w-full h-full">
+                  <use class="fill-current" xlink:href="#ico-shoes">
+                  </use>
+                </svg>
+              </i>
+              <figure class="ico-gameboy t:w-[80px] m:w-[40px] t:h-[104px] m:h-[52px] absolute t:top-[196px] m:top-[98px] t:right-[216px] m:right-[108px] ease-in-out duration-500 transition-all">
+
+                <img class="anim-floating" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-gameboy.svg?fdfd439c">
+              </figure>
+              <svg class="ico-egg t:w-[40px] m:w-[20px] t:h-[84px] m:h-[42px] absolute t:top-[292px] m:top-[146px] t:right-[134px] m:right-[67px] rotate-45 ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-egg">
+                </use>
+              </svg>
+              <figure class="ico-tape t:w-[44px] m:w-[22px] t:h-[30px] m:h-[15px] absolute t:top-[136px] m:top-[68px] t:right-[76px] m:right-[38px] ease-in-out duration-500 transition-all">
+
+                <img class="anim-floating" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-tape.svg?7fe962f7">
+              </figure>
+              <figure class="ico-radio t:w-[256px] m:w-[128px] t:h-[136px] m:h-[68px] absolute t:top-[212px] m:top-[106px] t:right-[60px] m:right-[30px] -rotate-45 ease-in-out duration-500 transition-all">
+
+                <img class="anim-floating" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-radio.svg?7fe962f7">
+              </figure>
+              <i class="ico-cube t:w-[84px] m:w-[42px] t:h-[84px] m:h-[42px] absolute t:top-[220px] m:top-[110px] t:right-[236px] m:right-[118px] ease-in-out duration-500 transition-all">
+                <svg class="anim-floating w-full h-full">
+                  <use class="fill-current" xlink:href="#ico-cube">
+                  </use>
+                </svg>
+              </i>
+              <div class="half-b t:w-[346px] m:w-[173px] t:h-[380px] m:h-[190px] absolute bottom-0 left-0 ease-in-out duration-500 delay-500 transition-all">
+                <svg class="ico-before w-full h-full absolute inset-0">
+                  <use class="fill-current" xlink:href="#ico-capsule-b-1">
+                  </use>
+                </svg>
+                <svg class="ico-after anim-floating w-full h-full absolute inset-0">
+                  <use class="fill-current" xlink:href="#ico-capsule-b">
+                  </use>
+                </svg>
+              </div>
+              <div class="half-t t:w-[344px] m:w-[172px] t:h-[380px] m:h-[190px] absolute top-0 right-0 ease-in-out duration-500 delay-500 transition-all">
+                <svg class="ico-before w-full h-full absolute inset-0">
+                  <use class="fill-current" xlink:href="#ico-capsule-t-1">
+                  </use>
+                </svg>
+                <svg class="ico-after anim-floating w-full h-full absolute inset-0">
+                  <use class="fill-current" xlink:href="#ico-capsule-t-2">
+                  </use>
+                </svg>
+              </div>
+              <i class="ico-timer t:w-[128px] m:w-[64px] t:h-[128px] m:h-[64px] absolute t:bottom-[188px] m:bottom-[94px] t:left-[140px] m:left-[70px] ease-in-out duration-500 delay-500 transition-all">
+                <svg class="anim-floating w-full h-full">
+                  <use class="fill-current" xlink:href="#ico-timer">
+                  </use>
+                </svg>
+              </i>
+            </div>
+            <div class="pop-wrap anim-floating absolute inset-0 ease-in-out duration-500 transition-all">
+              <svg class="ico-darts t:w-[88px] m:w-[44px] t:h-[88px] m:h-[44px] absolute top-1/2 left-1/2 ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-darts">
+                </use>
+              </svg>
+              <svg class="ico-tetris-b t:w-[44px] m:w-[22px] t:h-[40px] m:h-[20px] absolute top-1/2 left-1/2 z-[-1] ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-tetris-b">
+                </use>
+              </svg>
+              <svg class="ico-tetris-r t:w-[44px] m:w-[22px] t:h-[28px] m:h-[14px] absolute top-1/2 left-1/2 ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-tetris-r">
+                </use>
+              </svg>
+              <svg class="ico-tetris-y t:w-[28px] m:w-[14px] t:h-[40px] m:h-[20px] absolute top-1/2 left-1/2 ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-tetris-y">
+                </use>
+              </svg>
+              <svg class="t:w-[16px] m:w-[8px] t:h-[144px] m:h-[72px] absolute t:top-[452px] m:top-[226px] t:left-[304px] m:left-[152px]">
+                <use class="fill-current" xlink:href="#ico-line-1">
+                </use>
+              </svg>
+              <svg class="t:w-[120px] m:w-[60px] t:h-[104px] m:h-[52px] absolute t:top-[452px] m:top-[226px] t:right-[24px] m:right-[12px]">
+                <use class="fill-current" xlink:href="#ico-line-2">
+                </use>
+              </svg>
+              <svg class="t:w-[42px] m:w-[21px] t:h-[36px] m:h-[18px] absolute t:top-[600px] m:top-[300px] t:right-[320px] m:right-[160px] -rotate-110">
+                <use class="fill-current" xlink:href="#ico-noise-1">
+                </use>
+              </svg>
+              <svg class="t:w-[84px] m:w-[42px] t:h-[72px] m:h-[36px] absolute t:top-[544px] m:top-[272px] t:right-[64px] m:right-[32px]">
+                <use class="fill-current" xlink:href="#ico-noise-1">
+                </use>
+              </svg>
+              <svg class="t:w-[128px] m:w-[64px] t:h-[64px] m:h-[32px] absolute t:top-[648px] m:top-[324px] t:right-[40px] m:right-[20px]">
+                <use class="fill-current" xlink:href="#ico-noise-2">
+                </use>
+              </svg>
+              <figure class="ico-camera t:w-[92px] m:w-[46px] t:h-[92px] m:h-[46px] absolute top-1/2 left-1/2 ease-in-out duration-500 transition-all">
+
+                <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-camera.svg?7fe962f7">
+              </figure>
+              <svg class="ico-cd t:w-[112px] m:w-[56px] t:h-[72px] m:h-[36px] absolute top-1/2 left-1/2 ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-cd">
+                </use>
+              </svg>
+              <svg class="ico-note t:w-[48px] m:w-[24px] t:h-[40px] m:h-[20px] absolute top-1/2 left-1/2 ease-in-out duration-500 transition-all">
+                <use class="fill-current" xlink:href="#ico-note">
+                </use>
+              </svg>
+            </div>
+            <svg class="t:w-[336px] m:w-[168px] t:h-[180px] m:h-[90px] absolute t:bottom-[88px] m:bottom-[44px] t:right-[30px] m:right-[15px]">
+              <use class="fill-current" xlink:href="#tit-sub">
+              </use>
+            </svg>
+            <svg class="monster-move t:ml-[-14px] m:ml-[-7px] t:w-[28px] m:w-[14px] t:h-[32px] m:h-[16px] absolute t:bottom-[5px] m:bottom-[3px] left-1/2">
+              <use class="fill-current" xlink:href="#ico-monster-r">
+              </use>
+            </svg>
+          </div>
+          <div class="btn-wrap t:px-[25px] m:px-[17px] flex flex-col relative z-[0]">
+            <button type="button" class="mBtn is-rev bg-[#231815] flex items-center justify-center w-full t:h-[99px] m:h-[66px] relative box-border z-[1]" @click="callBox(true, 'challenge')">
+              <div class="txt flex items-center justify-center relative z-[1] font-bold t:text-[25px] m:text-[17px] text-[#fff]">
+                <em class="not-italic"><span class="text-[#2c8fdc] t:text-[33px] m:text-[22px]">解鎖</span>遊戲關卡 - 即享 <span class="text-[#2c8fdc]">$100 購物金</span></em>
+              </div>
+              <i class="ico-bg bg-[#231815] absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+            <button type="button" class="mBtn t:mt-[30px] m:mt-[20px] bg-[#231815] flex items-center justify-center w-full t:h-[99px] m:h-[66px] relative box-border z-[1]" @click="callBox(true, 'bind', 'bind account')">
+              <div class="txt flex items-center justify-center relative z-[1] font-bold t:text-[25px] m:text-[17px] text-[#fff]">
+                <em class="not-italic"><span class="text-[#F14E2C] t:text-[33px] m:text-[22px]">開通</span>會員禮遇 - 綁定再抽 <span class="text-[#F14E2C]">$1,906 購物金</span></em>
+              </div>
+              <i class="ico-bg bg-[#231815] absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+          </div>
+          <div class="deco-wrap t:mt-[45px] m:mt-[30px] flex items-center justify-start w-full t:h-[30px] m:h-[20px] relative">
+            <i class="arr mt-[-4px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-75"></i>
+            <i class="arr mt-[-1px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-50"></i>
+            <i class="arr mt-[2px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-30"></i>
+            <i class="arr mt-[5px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-15"></i>
+            <i class="t:mr-[6px] m:mr-[4px] bg-[#F2CE4D] t:w-[640px] m:w-[320px] h-[1px]"></i>
+            <svg class="anim-rotate t:w-[30px] m:w-[20px] t:h-[30px] m:h-[20px]">
+              <use class="fill-current" xlink:href="#ico-smile">
+              </use>
+            </svg>
+          </div>
+          <div class="desc-wrap is-inset t:mt-[72px] m:mt-[48px] mr-[-2px] t:ml-[45px] m:ml-[30px] t:pt-[45px] m:pt-[30px] t:pb-[83px] m:pb-[55px] t:pl-[30px] m:pl-[20px] t:pr-[54px] m:pr-[36px] relative border-[2px] border-solid border-[#fff] text-center">
+            <h3 class="mb-[-1px] absolute bottom-full left-0 t:right-[45px] m:right-[30px] text-[#fff] t:text-[45px] m:text-[30px] t:leading-[45px] m:leading-[30px] font-bold">致敬經典 復刻潮流</h3>
+            <em class="text-[#F2CE4D] t:text-[30px] m:text-[20px] t:leading-[42px] m:leading-[28px] not-italic font-bold">NB 1906 潮流形象店<br>北高盛大開幕</em>
+            <em class="t:mt-[15px] m:mt-[10px] block text-[#F2CE4D] t:text-[22px] m:text-[15px] t:leading-[38px] m:leading-[25px] not-italic">10 / 1 (六) 信義旗艦店<br>10 / 7 (五) 高雄巨蛋店</em>
+            <p class="desc t:mt-[15px] m:mt-[10px] text-[#fff] t:text-[22px] m:text-[15px] t:leading-[38px] m:leading-[25px]">跨越世代對運動品牌的想像<br><span class="text-[#F2CE4D]">NB 1906 全新形象店態</span><br>集結最出眾、多元與時髦的趨勢選品<br>致敬創始年來不變的初衷<br>以「<span class="text-[#F2CE4D]">轉變、創新</span>」演繹新世代的獨特</p>
+            <em class="has-breakline t:mt-[52px] m:mt-[35px] flex items-center text-[#F2CE4D] t:text-[27px] m:text-[18px] t:leading-[39px] m:leading-[26px] not-italic font-bold"><span class="t:mx-[10px] m:mx-[7px] flex-shrink-0">召集注意!!</span></em>
+            <em class="text-[#F2CE4D] t:text-[27px] m:text-[18px] t:leading-[39px] m:leading-[26px] not-italic font-bold">NB 1906 復刻潮基地快閃信義區</em>
+            <p class="desc t:mt-[15px] m:mt-[10px] text-[#F2CE4D] t:text-[22px] m:text-[15px] t:leading-[38px] m:leading-[25px]">10 / 2 (日) - 10 / 16 (日) 信義威秀中庭廣場</p>
+            <p class="desc t:mt-[15px] m:mt-[10px] text-[#fff] t:text-[22px] m:text-[15px] t:leading-[38px] m:leading-[25px]">以懷舊音樂元素勾勒出的潮流空間插旗信義威秀，各路潮流玩家不能錯過的 NB 1906 潮流連拍、飛鏢機及桌上足球台，體驗經典玩趣符號，玩出各世代新樣貌。</p>
+            <em class="has-breakline t:mt-[52px] m:mt-[35px] flex items-center text-[#2c8fdc] t:text-[27px] m:text-[18px] t:leading-[39px] m:leading-[26px] not-italic font-bold"><span class="t:mx-[10px] m:mx-[7px] flex-shrink-0">LINE 好友限定</span></em>
+            <p class="desc t:mt-[15px] m:mt-[10px] text-[#fff] t:text-[22px] m:text-[15px] t:leading-[38px] m:leading-[25px]">挑戰 NB 遊戲關卡，解鎖 1906 的數字密碼，即贈 <span class="text-[#2c8fdc]">NT$100 購物金</span>。</p>
+            <em class="has-breakline t:mt-[52px] m:mt-[35px] flex items-center text-[#f14e2c] t:text-[27px] m:text-[18px] t:leading-[39px] m:leading-[26px] not-italic font-bold"><span class="t:mx-[10px] m:mx-[7px] flex-shrink-0">數位會員加碼</span></em>
+            <p class="desc t:mt-[15px] m:mt-[10px] text-[#fff] t:text-[22px] m:text-[15px] t:leading-[38px] m:leading-[25px]">凡為 New Balance LINE 數位會員的好友，即可享<span class="text-[#f14e2c]">復刻扭蛋遊戲機會乙次</span>，有機會獲得<span class="text-[#f14e2c]">加碼 NT$1,906 購物金</span>，還沒上車的朋朋，立即手刀綁定！</p>
+            <svg class="anim-floating t:w-[195px] m:w-[130px] t:h-[93px] m:h-[62px] absolute t:bottom-[-24px] m:bottom-[-16px] t:right-[30px] m:right-[20px] z-[1]">
+              <use class="fill-current" xlink:href="#ico-shoes">
+              </use>
+            </svg>
+          </div>
+          <div class="deco-line t:mt-[36px] m:mt-[24px] t:ml-[-45px] m:ml-[-30px] block t:w-[480px] m:w-[240px] t:h-[24px] m:h-[16px] relative">
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-0 left-0"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[3Px] left-[6Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[6Px] left-[12Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[9Px] left-[18Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[12Px] left-[24Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[15Px] left-[30Px]"></i>
+          </div>
+        </section>
+        <section class="" data-page="quest">
+          <div class="step-wrap t:mt-[33px] m:mt-[22px] t:mx-[307px] m:mx-[124px] relative" :data-step="questIdx + 1">
+            <ol class="step-list flex items-center justify-between">
+              <li class="list t:w-[27px] m:w-[18px] relative">
+                <i class="t:mt-[-6px] m:mt-[-4px] t:ml-[-6px] m:ml-[-4px] bg-[#f2ce4d] inline-block t:w-[12px] m:w-[8px] t:h-[12px] m:h-[8px] absolute top-1/2 left-1/2 rounded-full transition-opacity ease-in-out duration-500"></i>
+              </li>
+              <li class="list relative">
+                <i class="t:mt-[-6px] m:mt-[-4px] t:ml-[-6px] m:ml-[-4px] bg-[#f2ce4d] inline-block t:w-[12px] m:w-[8px] t:h-[12px] m:h-[8px] absolute top-1/2 left-1/2 rounded-full transition-opacity ease-in-out duration-500"></i>
+                <svg class="t:w-[27px] m:w-[18px] t:h-[33px] m:h-[22px] relative z-[1] transition-opacity ease-in-out duration-500">
+                  <use class="fill-current" xlink:href="#ico-monster-g">
+                  </use>
+                </svg>
+              </li>
+              <li class="list relative">
+                <i class="t:mt-[-6px] m:mt-[-4px] t:ml-[-6px] m:ml-[-4px] bg-[#f2ce4d] inline-block t:w-[12px] m:w-[8px] t:h-[12px] m:h-[8px] absolute top-1/2 left-1/2 rounded-full transition-opacity ease-in-out duration-500"></i>
+                <svg class="t:w-[27px] m:w-[18px] t:h-[33px] m:h-[22px] relative z-[1] transition-opacity ease-in-out duration-500">
+                  <use class="fill-current" xlink:href="#ico-monster-b">
+                  </use>
+                </svg>
+              </li>
+            </ol>
+            <div class="ico-mouth t:mt-[-14px] m:mt-[-9px] t:w-[27px] m:w-[18px] t:h-[27px] m:h-[18px] absolute top-1/2 z-[1] transition-all ease-in-out duration-500">
+              <svg class="w-full h-full -scaleX-1">
+                <use class="fill-current" xlink:href="#ico-mouth">
+                </use>
+              </svg>
+              <svg class="anim-neon w-full h-full absolute inset-0">
+                <use class="fill-current" xlink:href="#ico-mouth-c">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="desc-wrap is-inset t:mt-[72px] m:mt-[48px] t:mr-[-3px] m:mr-[-2px] t:ml-[45px] m:ml-[30px] t:pt-[66px] m:pt-[44px] t:pr-[84px] m:pr-[56px] t:pb-[102px] m:pb-[68px] t:pl-[39px] m:pl-[26px] relative border-[2px] border-solid border-[#fff] transition-opacity ease-in-out duration-500 text-[#fff]">
+            <h3 class="absolute bottom-full left-0 t:text-[33px] m:text-[22px] t:leading-[33px] m:leading-[22px] font-bold">快問快答 #{{questIdx + 1}}</h3>
+            <h4 class="t:text-[27px] m:text-[18px]">{{questArr[questIdx].quest}}</h4>
+            <ul class="">
+              <li class="t:mt-[45px] m:mt-[30px]" v-for="(item, idx) in questArr[questIdx].ansArr" :key="idx">
+                <label class="mLab relative font-bold">
+                  <input type="radio" class="w-0 h-0 overflow-hidden hidden" :name="`quest${questIdx + 1}`" @click="setIdx(idx)">
+                  <span class="mAddon flex items-start justify-start t:text-[27px] m:text-[18px]">{{item}}</span>
+                </label>
+              </li>
+            </ul>
+            <div v-if="questIdx === 0">
+              <svg class="anim-floating t:w-[84px] m:w-[56px] t:h-[54px] m:h-[36px] absolute t:top-[-24px] m:top-[-16px] t:right-[45px] m:right-[30px] z-[1]">
+                <use class="fill-current" xlink:href="#ico-cd">
+                </use>
+              </svg>
+              <svg class="anim-floating t:w-[192px] m:w-[128px] t:h-[234px] m:h-[156px] absolute t:bottom-[-75px] m:bottom-[-50px] t:right-[33px] m:right-[22px] z-[1]">
+                <use class="fill-current" xlink:href="#ico-house">
+                </use>
+              </svg>
+            </div>
+            <div v-if="questIdx === 1">
+              <svg class="anim-floating t:w-[75px] m:w-[50px] t:h-[75px] m:h-[50px] absolute t:top-[-45px] m:top-[-30px] t:right-[45px] m:right-[30px] z-[1] rotate-90">
+                <use class="fill-current" xlink:href="#ico-capsule-all">
+                </use>
+              </svg>
+              <svg class="anim-floating t:w-[264px] m:w-[176px] t:h-[126px] m:h-[84px] absolute t:bottom-[-21px] m:bottom-[-14px] t:right-[24px] m:right-[16px] z-[1] rotate-12">
+                <use class="fill-current" xlink:href="#ico-shoes">
+                </use>
+              </svg>
+            </div>
+            <div v-if="questIdx === 2">
+              <svg class="anim-floating t:w-[78px] m:w-[52px] t:h-[78px] m:h-[52px] absolute t:top-[-45px] m:top-[-30px] t:right-[45px] m:right-[30px] z-[1] -rotate-45">
+                <use class="fill-current" xlink:href="#ico-cube">
+                </use>
+              </svg>
+              <svg class="anim-floating t:w-[114px] m:w-[76px] t:h-[234px] m:h-[156px] absolute t:bottom-[-105px] m:bottom-[-70px] t:right-[36px] m:right-[24px] z-[1]">
+                <use class="fill-current" xlink:href="#ico-light">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="deco-line t:mt-[36px] m:mt-[24px] t:ml-[-45px] m:ml-[-30px] block t:w-[480px] m:w-[240px] t:h-[24px] m:h-[16px] relative">
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-0 left-0"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[3Px] left-[6Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[6Px] left-[12Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[9Px] left-[18Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[12Px] left-[24Px]"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[15Px] left-[30Px]"></i>
+          </div>
+          <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] btnSend t:mt-[60px] m:mt-[40px] mx-auto t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px] transition-opacity ease-in-out duration-500" @click="sendAns" disabled="disabled">
+            <span class="txt relative z-[1] font-bold t:text-[36px] m:text-[24px] text-[#ffffff] tracking-widest">確認</span>
+            <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+            <i class="ico-shadow absolute inset-0"></i>
+          </button>
+
+        </section>
+        <section class="t:pb-[90px] m:pb-[60px] relative" data-page="complete-1">
+          <div class="sec-kv t:mt-[42px] m:mt-[28px] relative">
+            <figure class="mx-auto t:w-[396px] m:w-[264px] t:h-[300px] m:h-[200px]">
+
+              <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-rock-bg.svg?7fe962f7">
+            </figure>
+            <svg class="ico-rock-hand t:ml-[-109px] m:ml-[-73px] t:w-[242px] m:w-[161px] t:h-[290px] m:h-[193px] absolute bottom-0 left-1/2">
+              <use class="fill-current" xlink:href="#ico-rock-hand">
+              </use>
+            </svg>
+            <i class="ico-shoes t:ml-[105px] m:ml-[70px] t:w-[120px] m:w-[80px] t:h-[57px] m:h-[38px] absolute t:top-[75px] m:top-[50px] left-1/2">
+              <svg class="anim-floating w-full h-full">
+                <use class="fill-current" xlink:href="#ico-shoes">
+                </use>
+              </svg>
+            </i>
+            <svg class="t:ml-[121px] m:ml-[82px] t:w-[63px] m:w-[42px] t:h-[54px] m:h-[36px] absolute t:bottom-[84px] m:bottom-[56px] left-1/2 -rotate-45">
+              <use class="fill-current" xlink:href="#ico-noise-1">
+              </use>
+            </svg>
+            <svg class="t:ml-[150px] m:ml-[100px] t:w-[60px] m:w-[40px] t:h-[23px] m:h-[15px] absolute t:bottom-[66px] m:bottom-[44px] left-1/2">
+              <use class="fill-current" xlink:href="#ico-noise-3">
+              </use>
+            </svg>
+            <i class="anim-floating t:mr-[198px] m:mr-[132px] t:w-[30px] m:w-[20px] t:h-[30px] m:h-[20px] absolute t:bottom-[27px] m:bottom-[18px] right-1/2">
+              <svg class="w-full h-full -rotate-6">
+                <use class="fill-current" xlink:href="#ico-note">
+                </use>
+              </svg>
+            </i>
+            <svg class="anim-floating t:mr-[96px] m:mr-[64px] t:w-[135px] m:w-[90px] t:h-[90px] m:h-[60px] absolute t:bottom-[51px] m:bottom-[37px] right-1/2">
+              <use class="fill-current" xlink:href="#ico-cd-player">
+              </use>
+            </svg>
+            <svg class="anim-floating t:mr-[90px] m:mr-[60px] t:mb-[8px] m:mb-[5px] t:w-[18px] m:w-[12px] t:h-[30px] m:h-[20px] absolute bottom-full right-1/2">
+              <use class="fill-current" xlink:href="#ico-mark">
+              </use>
+            </svg>
+            <figure class="anim-floating t:mr-[90px] m:mr-[60px] t:w-[60px] m:w-[40px] t:h-[78px] m:h-[52px] absolute t:top-[18px] m:top-[12px] right-1/2">
+
+              <img class="-rotate-45" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-gameboy.svg?7fe962f7">
+            </figure>
+          </div>
+          <svg class="t:mt-[60px] m:mt-[40px] mx-auto t:w-[366px] m:w-[244px] t:h-[171px] m:h-[114px]">
+            <use class="fill-current" xlink:href="#tit-complete">
+            </use>
+          </svg>
+          <p class="t:mt-[30px] m:mt-[20px] text-[#fff] t:text-[22px] m:text-[15px] t:leading-[42px] m:leading-[28px] text-center">先喘口氣、喝口水，<br>準備好就<span class="text-[#f14e2c]">繼續挑戰下一關</span>，<br>往購物金邁進，GOOOO！</p>
+          <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:mt-[48px] m:mt-[32px] mx-auto t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="goSelect('game')">
+            <span class="txt relative z-[1] font-bold t:text-[30px] m:text-[20px] text-[#ffffff]">前往下一關</span>
+            <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+            <i class="ico-shadow absolute inset-0"></i>
+          </button>
+
+          <i class="anim-floating t:mr-[96px] m:mr-[64px] t:w-[84px] m:w-[56px] t:h-[84px] m:h-[56px] absolute t:bottom-[150px] m:bottom-[100px] t:left-[27px] m:left-[18px]">
+            <svg class="w-full h-full -rotate-70">
+              <use class="fill-current" xlink:href="#ico-darts">
+              </use>
+            </svg>
+          </i>
+          <figure class="anim-floating t:w-[60px] m:w-[40px] t:h-[60px] m:h-[40px] absolute t:bottom-[318px] m:bottom-[212px] t:right-[42px] m:right-[28px]">
+
+            <img class="rotate-65" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-camera.svg?7fe962f7">
+          </figure>
+        </section>
+        <section class="relative box-border overflow-hidden" data-page="game" :style="{height:gameHeight}">
+          <div class="game-wrap w-full h-full relative" :class="gameBg">
+            <figure class="w-full t:h-[942px] m:h-[628px] absolute bottom-0 left-0 right-0">
+
+              <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/bg-gradient.svg?7fe962f7">
+            </figure>
+            <svg class="capsule-inner t:ml-[-266px] m:ml-[-177px] t:w-[531px] m:w-[354px] t:h-[150px] m:h-[100px] absolute t:bottom-[174px] m:bottom-[116px] left-1/2 z-[1]">
+              <use class="fill-current" xlink:href="#bg-capsule-inner">
+              </use>
+            </svg>
+            <canvas id="catchGame" class="t:ml-[-261px] m:ml-[-174px] absolute t:top-[135px] m:top-[90px] left-1/2 z-[1]"></canvas>
+            <i class="pillar t:ml-[255px] m:ml-[169px] t:w-[9px] m:w-[6px] absolute t:top-[22px] m:top-[15px] t:bottom-[177px] m:bottom-[118px] left-1/2 z-[1] border-2 border-solid border-[#231815] box-border pointer-events-none"></i>
+            <i class="pillar t:mr-[255px] m:mr-[169px] t:w-[9px] m:w-[6px] absolute t:top-[22px] m:top-[15px] t:bottom-[177px] m:bottom-[118px] right-1/2 z-[1] border-2 border-solid border-[#231815] box-border -scaleY-1 pointer-events-none"></i>
+            <figure class="bg-capsule t:ml-[-266px] m:ml-[-177px] t:w-[532px] m:w-[355px] t:h-[252px] m:h-[168px] absolute bottom-0 left-1/2 z-[1] pointer-events-none">
+
+              <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/bg-capsule.svg?7fe962f7">
+            </figure>
+            <div class="timer t:ml-[-75px] m:ml-[-50px] flex items-center justify-center t:w-[150px] m:w-[100px] t:h-[150px] m:h-[100px] absolute t:bottom-[75px] m:bottom-[50px] left-1/2 z-[1]">
+              <svg class="w-full h-full absolute inset-0">
+                <use class="fill-current" xlink:href="#ico-light-spin-1">
+                </use>
+              </svg>
+              <svg class="anim-neon w-full h-full absolute inset-0">
+                <use class="fill-current" xlink:href="#ico-light-spin-2">
+                </use>
+              </svg>
+              <svg class="w-full h-full absolute inset-0">
+                <use class="fill-current" xlink:href="#ico-light-spin-cover">
+                </use>
+              </svg>
+              <svg class="red-light w-full h-full absolute inset-0 opacity-0">
+                <use class="fill-current" xlink:href="#ico-light-red">
+                </use>
+              </svg>
+              <i class="relative z-[1] text-[#fff] t:text-[45px] m:text-[30px] not-italic font-bold">{{currTime > 9 ? currTime : '0' + currTime}}</i>
+            </div>
+            <div class="flag-wrap t:ml-[-261px] m:ml-[-174px] t:w-[522px] m:w-[348px] absolute t:top-[22px] m:top-[15px] left-1/2 z-[1]">
+              <div class="flag bg-[#284e69] flex items-center justify-center w-full t:h-[112px] m:h-[75px] border-2 border-solid border-[#231815]">
+                <ul class="score-wrap flex items-center justify-center">
+                  <li class="t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <figure class="w-full h-full absolute inset-0">
+
+                      <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?7fe962f7">
+                    </figure>
+                    <svg class="anim-neon w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-neon-light">
+                      </use>
+                    </svg>
+                    <svg class="w-full h-full relative z-[1]">
+                      <use class="fill-current" xlink:href="#ico-neon-nb">
+                      </use>
+                    </svg>
+                  </li>
+                  <li class="num-1 t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <svg class="w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-light-n-1">
+                      </use>
+                    </svg>
+                    <div class="light-on w-full h-full absolute inset-0 opacity-0">
+                      <figure class="w-full h-full absolute inset-0">
+
+                        <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?7fe962f7">
+                      </figure>
+                      <svg class="anim-neon w-full h-full absolute inset-0">
+                        <use class="fill-current" xlink:href="#ico-neon-light">
+                        </use>
+                      </svg>
+                      <svg class="w-full h-full relative z-[1]">
+                        <use class="fill-current" xlink:href="#ico-neon-1">
+                        </use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="num-9 t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <svg class="w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-light-n-9">
+                      </use>
+                    </svg>
+                    <div class="light-on w-full h-full absolute inset-0 opacity-0">
+                      <figure class="w-full h-full absolute inset-0">
+
+                        <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?7fe962f7">
+                      </figure>
+                      <svg class="anim-neon w-full h-full absolute inset-0">
+                        <use class="fill-current" xlink:href="#ico-neon-light">
+                        </use>
+                      </svg>
+                      <svg class="w-full h-full relative z-[1]">
+                        <use class="fill-current" xlink:href="#ico-neon-9">
+                        </use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="num-0 t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <svg class="w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-light-n-0">
+                      </use>
+                    </svg>
+                    <div class="light-on w-full h-full absolute inset-0 opacity-0">
+                      <figure class="w-full h-full absolute inset-0">
+
+                        <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?7fe962f7">
+                      </figure>
+                      <svg class="anim-neon w-full h-full absolute inset-0">
+                        <use class="fill-current" xlink:href="#ico-neon-light">
+                        </use>
+                      </svg>
+                      <svg class="w-full h-full relative z-[1]">
+                        <use class="fill-current" xlink:href="#ico-neon-0">
+                        </use>
+                      </svg>
+                    </div>
+                  </li>
+                  <li class="num-6 t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <svg class="w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-light-n-6">
+                      </use>
+                    </svg>
+                    <div class="light-on w-full h-full absolute inset-0 opacity-0">
+                      <figure class="w-full h-full absolute inset-0">
+
+                        <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?7fe962f7">
+                      </figure>
+                      <svg class="anim-neon w-full h-full absolute inset-0">
+                        <use class="fill-current" xlink:href="#ico-neon-light">
+                        </use>
+                      </svg>
+                      <svg class="w-full h-full relative z-[1]">
+                        <use class="fill-current" xlink:href="#ico-neon-6">
+                        </use>
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="countDown-wrap bg-[#231815] bg-opacity-90 flex items-center justify-center fixed inset-0 z-[1]" :class="countDownAnim === true ? 'anim-countDown': ''">
+            <svg class="t:mt-[-152px] m:mt-[-101px] t:ml-[-111px] m:ml-[-74px] t:w-[222px] m:w-[148px] t:h-[303px] m:h-[202px] absolute top-1/2 left-1/2 opacity-0 scale-0">
+              <use class="fill-current" xlink:href="#ico-num-3">
+              </use>
+            </svg>
+            <svg class="t:mt-[-152px] m:mt-[-101px] t:ml-[-105px] m:ml-[-70px] t:w-[210px] m:w-[140px] t:h-[303px] m:h-[202px] absolute top-1/2 left-1/2 opacity-0 scale-0">
+              <use class="fill-current" xlink:href="#ico-num-2">
+              </use>
+            </svg>
+            <svg class="t:mt-[-152px] m:mt-[-101px] t:ml-[-74px] m:ml-[-49px] t:w-[147px] m:w-[98px] t:h-[303px] m:h-[202px] absolute top-1/2 left-1/2 opacity-0 scale-0">
+              <use class="fill-current" xlink:href="#ico-num-1">
+              </use>
+            </svg>
+          </div>
+          <div class="result-wrap flex items-center justify-center absolute inset-0 z-[1]" v-if="gameResult === 'win'">
+            <svg class="t:w-[511px] m:w-[274px] t:h-[291px] m:h-[194px]">
+              <use class="fill-current" xlink:href="#txt-nj">
+              </use>
+            </svg>
+          </div>
+          <div class="result-wrap flex items-center justify-center absolute inset-0 z-[1]" v-if="gameResult === 'lose'">
+            <svg class="t:w-[435px] m:w-[290px] t:h-[69px] m:h-[46px]">
+              <use class="fill-current" xlink:href="#txt-timesup">
+              </use>
+            </svg>
+          </div>
+        </section>
+        <section class="t:pb-[90px] m:pb-[60px]" data-page="complete-2">
+          <div class="tit-wrap t:mt-[52px] m:mt-[35px] text-[#f2ce4d] t:text-[117px] m:text-[78px] leading-none font-bold">
+            <div class="relative" v-if="gameResult === 'win'">
+              <svg class="mx-auto t:w-[492px] m:w-[328px] t:h-[57px] m:h-[38px]">
+                <use class="fill-current" xlink:href="#tit-complete-3">
+                </use>
+              </svg>
+              <i class="t:w-[150px] m:w-[100px] t:mr-[48px] m:mr-[32px] absolute t:bottom-[-12px] m:bottom-[-8px] right-1/2 text-center">{{completeTime}}</i>
+            </div>
+            <em class="mx-auto block text-center leading-none" v-if="gameResult === 'lose'">O<span class="t:text-[105px] m:text-[70px]">ooops</span><span class="t:text-[45px] m:text-[30px]">…</span></em>
+          </div>
+          <figure class="t:mt-[30px] m:mt-[20px] w-full">
+            <img class="" alt="" width="100%" height="100%" :src="resultArr[winIdx].imgUrl">
+          </figure>
+          <p class="t:mt-[30px] m:mt-[20px] text-[#fff] t:text-[27px] m:text-[18px] t:leading-[42px] m:leading-[28px] text-center font-bold" v-html="resultArr[winIdx].congratulate"></p>
+          <div class="deco-wrap t:mt-[22px] m:mt-[15px] flex items-center justify-start w-full t:h-[30px] m:h-[20px] relative">
+            <i class="arr mt-[-4px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-75"></i>
+            <i class="arr mt-[-1px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-50"></i>
+            <i class="arr mt-[2px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-30"></i>
+            <i class="arr mt-[5px] ml-[-7px] w-[14px] h-[14px] absolute top-1/2 left-1/2 box-border border border-t-0 border-l-0 border-solid border-[#fff] rotate-45 opacity-15"></i>
+            <i class="t:mr-[6px] m:mr-[4px] bg-[#F2CE4D] t:w-[640px] m:w-[320px] h-[1px]"></i>
+            <svg class="anim-rotate t:w-[30px] m:w-[20px] t:h-[30px] m:h-[20px]">
+              <use class="fill-current" xlink:href="#ico-smile">
+              </use>
+            </svg>
+          </div>
+          <div class="t:mt-[60px] m:mt-[40px] flex flex-col items-center" v-if="gameResult === 'win'">
+            <div class="block relative text-[#f2ce4d] t:text-[36px] m:text-[24px] t:leading-[45px] m:leading-[30px] font-bold">
+              <svg class="t:w-[45px] m:w-[30px] t:h-[42px] m:h-[28px] bottom-0 absolute right-full rotate-90">
+                <use class="fill-current" xlink:href="#ico-pullgun">
+                </use>
+              </svg>
+              <span class="t:px-[7px] m:px-[5px]">恭喜你闖關成功</span>
+              <svg class="t:w-[45px] m:w-[30px] t:h-[42px] m:h-[28px] bottom-0 absolute left-full rotate-180">
+                <use class="fill-current" xlink:href="#ico-pullgun">
+                </use>
+              </svg>
+            </div>
+            <svg class="t:mt-[30px] m:mt-[20px] mx-auto t:w-[428px] m:w-[285px] t:h-[143px] m:h-[95px]">
+              <use class="fill-current" xlink:href="#tit-complete-2">
+              </use>
+            </svg>
+            <h3 class="BHT">NB復刻潮達人就是你！！！</h3>
+            <p class="t:mt-[30px] m:mt-[20px] text-[#fff] t:text-[30px] m:text-[20px] t:leading-[42px] m:leading-[28px] text-center"><span class="text-[#f14e2c]">獲得 <b>New Balance</b> 購物金</span><br>快到聊天室內領取</p>
+          </div>
+          <div class="btn-wrap flex flex-col items-center justify-center">
+            <div class="" v-if="bind === false">
+              <a href="https://liff.line.me/1655995729-K0knWPlB" target="_blank" rel="noopener noreferrer" class="mBtn flex items-center justify-center relative box-border z-[1] t:mt-[60px] m:mt-[40px] mx-auto t:w-[312px] m:w-[208px] t:h-[78px] m:h-[52px]" @click="">
+                <span class="txt relative z-[1] font-bold t:text-[30px] m:text-[20px] text-[#f14e2c]">綁定</span>
+                <span class="txt relative z-[1] font-bold t:text-[30px] m:text-[20px] text-[#ffffff]">再抽加碼購物金</span>
+                <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+                <i class="ico-shadow absolute inset-0"></i>
+              </a>
+
+            </div>
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:mt-[52px] m:mt-[35px] mx-auto t:w-[312px] m:w-[208px] t:h-[78px] m:h-[52px]" @click="shareTargetPicker()">
+              <span class="txt relative z-[1] font-bold t:text-[30px] m:text-[20px] text-[#ffffff]">與朋友分享戰績</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] btnAgain t:mt-[52px] m:mt-[35px] mx-auto t:w-[312px] m:w-[208px] t:h-[78px] m:h-[52px]" @click="goSelect('game')">
+              <span class="txt relative z-[1] font-bold t:text-[30px] m:text-[20px] text-[#ffffff]">再玩一次</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+          </div>
+          <div class="deco-line t:mt-[75px] m:mt-[50px] t:mr-[-45px] m:mr-[-30px] t:ml-[333px] m:ml-[165px] block t:w-[480px] m:w-[240px] t:h-[24px] m:h-[16px] relative -scaleX-1">
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-0 left-0"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[3Px] left-[6Px] opacity-75"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[6Px] left-[12Px] opacity-50"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[9Px] left-[18Px] opacity-30"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[12Px] left-[24Px] opacity-15"></i>
+            <i class="bg-[#F2CE4D] w-full h-[1Px] absolute top-[15Px] left-[30Px] opacity-10"></i>
+            <svg class="t:mt-[-20px] m:mt-[-13px] t:ml-[171px] m:ml-[114px] t:w-[33px] m:w-[22px] t:h-[39px] m:h-[26px] absolute top-0 left-full">
+              <use class="fill-current" xlink:href="#ico-monster-r">
+              </use>
+            </svg>
+          </div>
+        </section>
+        <section class="t:pb-[90px] m:pb-[60px]" data-page="activity">
+          <h3 class="t:mt-[30px] m:mt-[20px] text-[#fff] t:text-[36px] m:text-[24px] t:leading-[54px] m:leading-[36px] font-bold text-center">活動辦法</h3>
+          <div class="desc-wrap t:mt-[30px] m:mt-[20px] mr-[-2px] t:ml-[45px] m:ml-[30px] t:py-[45px] m:py-[30px] t:pl-[67px] m:pl-[45px] t:pr-[84px] m:pr-[56px] relative border-[2px] border-solid border-[#fff]">
+            <svg class="anim-floating t:w-[78px] m:w-[52px] t:h-[78px] m:h-[52px] absolute t:top-[-48px] m:top-[-32px] t:left-[30px] m:left-[20px] z-[1]">
+              <use class="fill-current" xlink:href="#ico-cube">
+              </use>
+            </svg>
+            <ol class="order-list text-[#fff] t:text-[24px] m:text-[16px] t:leading-[42px] m:leading-[28px] list-decimal list-outside">
+              <li>活動期間為 2022 年 <span class="text-[#F2CE4D] font-bold">09 月 26 日</span>起至 2022 年 <span class="text-[#F2CE4D] font-bold">10 月 16 日</span>止，逾期未參加視同放棄。</li>
+              <li class="mt-[12px]">活動期間為 New Balance LINE 官方帳號好友，即可參與遊戲關卡，並在闖關完成後獲得 $100 購物金，一組 LINE 帳號限領取乙次; 具有 New Balance 數位會員綁定資格者，可再參與復刻幸運扭蛋抽獎乙次，有機會獲得 $1,906 購物金或 NB 1906 主題桌布，一組 LINE 帳號限抽獎乙次。</li>
+              <li class="mt-[12px]">New Balance LINE 官方帳號將會透過推播訊息，傳送抵用券給上述購物金得獎者。得獎者須於 2022/10/16 前至 NB 1906 潮流形象店指定據點–台北信義旗艦或高雄漢神巨蛋店 3F，依照每張電子票券頁面上的活動辦法使用購物金，即完成本次活動的領獎程序。</li>
+              <li class="mt-[12px]">本活動贈獎資格皆以電腦系統紀錄為準。若參加人有涉及不正當得利及非法行為，台灣紐巴倫股份有限公司有權取消參與活動之相關資格。</li>
+              <li class="mt-[12px]">台灣紐巴倫股份有限公司保留隨時更改使用條款的權利，而無須另行通知。</li>
+            </ol>
+            <figure class="anim-floating t:w-[153px] m:w-[102px] t:h-[117px] m:h-[78px] absolute t:bottom-[-60px] m:bottom-[-40px] t:right-[6px] m:right-[4px] z-[1]">
+
+              <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-loudspeaker.svg?4c199e8d">
+            </figure>
+          </div>
+          <div class="btn-wrap t:mt-[75px] m:mt-[50px] t:px-[25px] m:px-[17px] flex justify-between relative z-[0]">
+            <button type="button" class="mBtn bg-[#231815] flex items-center justify-center t:w-[336px] m:w-[158px] t:h-[78px] m:h-[52px] relative box-border z-[1]" @click="callBox(true, 'bind')">
+              <div class="txt flex items-center justify-center relative z-[1] font-bold t:text-[30px] m:text-[20px] text-[#fff]">
+                <em class="not-italic">立即<span class="text-[#F14E2C]">綁定</span></em>
+              </div>
+              <i class="ico-corner absolute top-[2Px] left-[2Px] z-[1] text-[#DF5A3B]"></i>
+              <i class="ico-bg bg-[#231815] absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+            <button type="button" class="mBtn is-rev bg-[#231815] flex items-center justify-center t:w-[336px] m:w-[158px] t:h-[78px] m:h-[52px] relative box-border z-[1]" @click="callBox(true, 'challenge')">
+              <div class="txt flex items-center justify-center relative z-[1] font-bold t:text-[30px] m:text-[20px] text-[#fff]">
+                <em class="not-italic">前往<span class="text-[#67BCFF]">遊戲</span></em>
+              </div>
+              <i class="ico-corner absolute top-[2Px] right-[2Px] z-[1] text-[#2c8fdc]"></i>
+              <i class="ico-bg bg-[#231815] absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+          </div>
+        </section>
+        <section class="t:pb-[90px] m:pb-[60px]" data-page="directions">
+          <h3 class="t:mt-[33px] m:mt-[22px] text-[#fff] t:text-[33px] m:text-[22px] t:leading-[54px] m:leading-[36px] font-bold text-center">數位會員權利說明</h3>
+          <div class="t:mt-[30px] m:mt-[20px] t:px-[12px] m:px-[8px] flex items-stretch">
+            <div class="pb-[15px] flex items-end justify-center w-1/2">
+              <svg class="t:w-[252px] m:w-[168px] t:h-[140px] m:h-[93px]">
+                <use class="fill-current" xlink:href="#ico-shoes-friend">
+                </use>
+              </svg>
+            </div>
+            <div class="pb-[15px] flex items-end justify-center w-1/2">
+              <svg class="t:w-[252px] m:w-[168px] t:h-[177px] m:h-[118px]">
+                <use class="fill-current" xlink:href="#ico-shoes-vip">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <h4 class="t:mt-[33px] m:mt-[22px] text-[#fff] t:text-[27px] m:text-[18px] t:leading-[42px] m:leading-[28px] font-bold text-center">入會方式</h4>
+          <div class="compare-wrap t:mt-[6px] m:mt-[4px] t:px-[12px] m:px-[8px] flex items-stretch relative text-[#fff] t:text-[21px] m:text-[14px] t:leading-[36px] m:leading-[24px]">
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#2c8fdc] border-solid">
+              <p>凡至全台直營據點消費，並填寫會員資料卡可即成為 NB 之友。<br>於 LINE 官方帳號註冊綁定即可成為 NB 之友。</p>
+            </div>
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#f14e2c] border-solid">
+              <p>於直營據點<span class="text-[#F2CE4D] font-bold">首次單筆消費滿 NT$5,000</span>，或<span class="text-[#F2CE4D] font-bold">年度累積消費達 NT$8,000</span>。</p>
+            </div>
+            <figure class="w-[33px] h-[44px] absolute bottom-[-21px] right-[30px] -rotate-25">
+
+              <img class="anim-floating" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-gameboy.svg?4c199e8d">
+            </figure>
+          </div>
+          <h4 class="t:mt-[33px] m:mt-[22px] text-[#fff] t:text-[27px] m:text-[18px] t:leading-[42px] m:leading-[28px] font-bold text-center">品牌通知</h4>
+          <div class="compare-wrap t:mt-[6px] m:mt-[4px] t:px-[12px] m:px-[8px] flex items-stretch relative text-[#fff] t:text-[21px] m:text-[14px] t:leading-[36px] m:leading-[24px]">
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#2c8fdc] border-solid"><i class="ico-yes"></i></div>
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#f14e2c] border-solid"><i class="ico-yes"></i></div>
+            <svg class="anim-floating w-[38px] h-[38px] absolute bottom-[-18px] left-[27px]">
+              <use class="fill-current" xlink:href="#ico-darts">
+              </use>
+            </svg>
+          </div>
+          <h4 class="t:mt-[33px] m:mt-[22px] text-[#fff] t:text-[27px] m:text-[18px] t:leading-[42px] m:leading-[28px] font-bold text-center">專屬禮遇</h4>
+          <div class="compare-wrap t:mt-[6px] m:mt-[4px] t:px-[12px] m:px-[8px] flex items-stretch relative text-[#fff] t:text-[21px] m:text-[14px] t:leading-[36px] m:leading-[24px]">
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#2c8fdc] border-solid"><i class="ico-no w-[20px] h-[20px] relative"></i></div>
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#f14e2c] border-solid">
+              <p>全台直營據點享新品原價 9 折，8 折(含)以上商品可<span class="text-[#F2CE4D] font-bold">再享 95 折優惠</span>。<br>暢貨中心 OUTLET 享 5 折(含)以上商品<span class="text-[#F2CE4D] font-bold">再 9 折優惠</span>。</p>
+            </div>
+            <svg class="anim-floating w-[46px] h-[42px] absolute bottom-[-36px] right-[27px]">
+              <use class="fill-current" xlink:href="#ico-pullgun">
+              </use>
+            </svg>
+          </div>
+          <h4 class="t:mt-[33px] m:mt-[22px] text-[#fff] t:text-[27px] m:text-[18px] t:leading-[42px] m:leading-[28px] font-bold text-center">生日禮遇</h4>
+          <div class="compare-wrap t:mt-[6px] m:mt-[4px] t:px-[12px] m:px-[8px] flex items-stretch relative text-[#fff] t:text-[21px] m:text-[14px] t:leading-[36px] m:leading-[24px]">
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#2c8fdc] border-solid"><i class="ico-no w-[20px] h-[20px] relative"></i></div>
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#f14e2c] border-solid">
+              <p>原價商品享<span class="text-[#F2CE4D] font-bold">75 折禮遇</span> (同款商品限購 5 件)。<br>英美訂製鞋或特殊商品，限購乙件享 8 折禮遇。<br>指定限量商品恕不在優惠範圍內，請依現場門市夥伴說明為主。</p>
+            </div>
+            <svg class="anim-floating w-[38px] h-[24px] absolute bottom-[-14px] left-[39px]">
+              <use class="fill-current" xlink:href="#ico-cd">
+              </use>
+            </svg>
+          </div>
+          <h4 class="t:mt-[33px] m:mt-[22px] text-[#fff] t:text-[27px] m:text-[18px] t:leading-[42px] m:leading-[28px] font-bold text-center">會籍效期</h4>
+          <div class="compare-wrap t:mt-[6px] m:mt-[4px] t:px-[12px] m:px-[8px] flex items-stretch relative text-[#fff] t:text-[21px] m:text-[14px] t:leading-[36px] m:leading-[24px]">
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#2c8fdc] border-solid"><i class="ico-no w-[20px] h-[20px] relative"></i></div>
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px] border-b-[2px] border-[#f14e2c] border-solid">
+              <p class="w-full">隔日起 VIP 會籍即生效至隔年 12 月底。</p>
+            </div>
+            <figure class="w-[32px] h-[20px] absolute bottom-[-14px] right-[43px] rotate-12">
+
+              <img class="anim-floating" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-tape.svg?4c199e8d">
+            </figure>
+          </div>
+          <h4 class="t:mt-[33px] m:mt-[22px] text-[#fff] t:text-[27px] m:text-[18px] t:leading-[42px] m:leading-[28px] font-bold text-center">續會資格</h4>
+          <div class="compare-wrap t:mt-[6px] m:mt-[4px] t:px-[12px] m:px-[8px] flex items-stretch relative text-[#fff] t:text-[21px] m:text-[14px] t:leading-[36px] m:leading-[24px]">
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px]"><i class="ico-no w-[20px] h-[20px] relative"></i></div>
+            <div class="t:mx-[18px] m:mx-[12px] t:pb-[22px] m:pb-[15px] flex items-center justify-center w-1/2 t:min-h-[82px] m:min-h-[75px]">
+              <p>會籍有效期間內<span class="text-[#F2CE4D] font-bold">累積消費達 NT$3,000</span>，即可延長 VIP 資格一年。</p>
+            </div>
+          </div>
+          <div class="t:mt-[22px] m:mt-[15px] t:mx-[30px] m:mx-[20px] t:text-[18px] m:text-[12px] text-[#fff]">*指定限量商品恕不在會員優惠範圍內，請依現場門市夥伴說明為主。</div>
+          <div class="btn-wrap t:px-[25px] m:px-[17px] flex flex-col justify-center relative z-[0]">
+            <button type="button" class="mBtn is-rev t:mt-[30px] m:mt-[20px] bg-[#231815] flex items-center justify-center w-full t:h-[99px] m:h-[66px] relative box-border z-[1]" @click="callBox(true, 'challenge')">
+              <div class="txt flex items-center justify-center relative z-[1] font-bold t:text-[25px] m:text-[17px] text-[#fff]">
+                <em class="not-italic"><span class="text-[#2c8fdc] t:text-[33px] m:text-[22px]">解鎖</span>遊戲關卡 - 即享 <span class="text-[#2c8fdc]">$100 購物金</span></em>
+              </div>
+              <i class="ico-bg bg-[#231815] absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+            <button type="button" class="mBtn t:mt-[30px] m:mt-[20px] bg-[#231815] flex items-center justify-center w-full t:h-[99px] m:h-[66px] relative box-border z-[1]" @click="callBox(true, 'bind')">
+              <div class="txt flex items-center justify-center relative z-[1] font-bold t:text-[25px] m:text-[17px] text-[#fff]">
+                <em class="not-italic"><span class="text-[#F14E2C] t:text-[33px] m:text-[22px]">開通</span>會員禮遇 - 綁定再抽 <span class="text-[#F14E2C]">$1,906 購物金</span></em>
+              </div>
+              <i class="ico-bg bg-[#231815] absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+          </div>
+        </section>
+      </div>
+      <div class="lBox t:px-[48px] m:px-[32px] flex items-center justify-center fixed inset-0 z-[3] transition-opacity ease-in-out duration-500" :data-type="boxType">
+        <div class="mBox is-shadow t:px-[30px] m:px-[20px] t:py-[75px] m:py-[50px] bg-[#231815] flex-col items-center justify-center w-full relative border-[2px] border-solid border-[#fff]" data-target="bind">
+          <header class="boxHd">
+            <h4 class="t:text-[36px] m:text-[24px] text-[#fff] t:leading-[60px] m:leading-[40px] text-center font-bold">綁定數位會員</h4>
+            <button type="button" class="btn-close w-[50px] h-[50px] absolute top-0 right-0" @click="callBox(false, 'bind')"><span class="BHT">關閉</span></button>
+          </header>
+          <p class="mt-[10px] t:text-[27px] m:text-[18px] text-[#fff] t:leading-[42px] m:leading-[28px] text-center">完成 LINE 數位會員綁定
+            <br>即可享<span class="text-[#f14e2c]">復刻扭蛋遊戲機會乙次</span>！
+          </p>
+          <div class="btn-wrap" v-if="bind === false">
+            <a href="https://liff.line.me/1655995729-K0knWPlB" target="_blank" rel="noopener noreferrer" class="mBtn flex items-center justify-center relative box-border z-[1] t:mt-[45px] m:mt-[30px] t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="callBox('bind digital account')">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">立即綁定會員</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </a>
+
+          </div>
+          <div class="btn-wrap" v-if="bind === true">
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:mt-[45px] m:mt-[30px] t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="callBox(true, 'membership', 'login')">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">我已經是會員</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+          </div>
+          <i class="ico-corner absolute top-0 left-0 z-[1] text-[#DF5A3B]"></i>
+          <svg class="t:w-[156px] m:w-[104px] t:h-[120px] m:h-[80px] absolute t:bottom-[-72px] m:bottom-[-48px] t:right-[-18px] m:right-[-12px]">
+            <use class="fill-current" xlink:href="#ico-egg-2">
+            </use>
+          </svg>
+        </div>
+        <div class="mBox is-shadow t:px-[30px] m:px-[20px] t:py-[75px] m:py-[50px] bg-[#231815] flex-col items-center justify-center w-full relative border-[2px] border-solid border-[#fff]" data-target="membership">
+          <header class="boxHd">
+            <h4 class="t:text-[36px] m:text-[24px] text-[#fff] t:leading-[60px] m:leading-[40px] text-center font-bold">Hello！會員好友<br>歡迎挑戰</h4>
+            <button type="button" class="btn-close w-[50px] h-[50px] absolute top-0 right-0" @click="callBox(false, 'membership')"><span class="BHT">關閉</span></button>
+          </header>
+          <p class="t:mt-[15px] m:mt-[10px] t:text-[27px] m:text-[18px] text-[#fff] t:leading-[42px] m:leading-[28px] text-center"><span class="text-[#f14e2c]">復刻扭蛋機的遊戲券</span><br>已經推播至 LINE 聊天室視窗，<br>快去試試手氣！</p>
+          <div class="btn-wrap">
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:mt-[45px] m:mt-[30px] t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="callBox(true, 'challenge')">
+              <span class="txt font-bold t:text-[36px] m:text-[24px] text-[#ffffff] relative z-[1]">立即挑戰</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+          </div>
+          <i class="ico-corner absolute top-0 left-0 z-[1] text-[#DF5A3B]"></i>
+          <figure class="t:w-[153px] m:w-[102px] t:h-[117px] m:h-[78px] absolute t:bottom-[-48px] m:bottom-[-32px] t:right-[-14px] m:right-[-9px]">
+
+            <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-loudspeaker.svg?4c199e8d">
+          </figure>
+        </div>
+        <div class="mBox is-shadow t:py-[75px] m:py-[50px] bg-[#231815] flex-col items-center justify-center w-full relative border-[2px] border-solid border-[#fff]" data-target="challenge">
+          <header class="boxHd t:px-[30px] m:px-[20px]">
+            <h4 class="t:text-[30px] m:text-[20px] text-[#f2ce4d] t:leading-[48px] m:leading-[32px] text-center font-bold">用與眾不同的眼光看待世界<br>NB 1906 致敬經典，放膽出色</h4>
+            <button type="button" class="btn-close w-[50px] h-[50px] absolute top-0 right-0" @click="callBox(false, 'challenge')"><span class="BHT">關閉</span></button>
+          </header>
+          <p class="t:mt-[30px] m:mt-[20px] t:px-[30px] m:px-[20px] w-full t:text-[27px] m:text-[18px] text-[#fff] t:leading-[42px] m:leading-[28px] text-center">HEY 朋朋！<br>New Balance 對你下戰帖<br>眼明手快的你，<br>準備好接受 4 關挑戰了嗎？<br><span class="text-[#f14e2c]">百元購物金</span>，等你來解鎖！</p>
+          <div class="btn-wrap">
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:mt-[45px] m:mt-[30px] t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="goSelect('quest')">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] text-[#ffffff] relative z-[1]">開始闖關</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+          </div>
+          <i class="ico-corner absolute top-0 left-0 z-[1] text-[#2c8fdc]"></i>
+        </div>
+        <div class="mBox t:py-[60px] m:py-[40px] bg-[#f14e2c] flex-col items-center justify-center w-full relative border-[2px] border-solid border-[#fff]" data-target="error">
+          <header class="boxHd">
+            <button type="button" class="btn-close w-[50px] h-[50px] absolute top-0 right-0" @click="callBox(false, 'error')"><span class="BHT">關閉</span></button>
+          </header>
+          <span class="text-[#fff] t:text-[22px] m:text-[15px] text-center">HUMMMM … 要不要再想一下！</span>
+        </div>
+        <div class="mBox is-shadow bg-[#fff] t:pr-[84px] m:pr-[56px] t:pl-[45px] m:pl-[30px] t:py-[48px] m:py-[32px] flex-col items-start justify-center w-full max-h-[90vh] relative" data-target="exp">
+          <em class="text-[#f14e2c] t:text-[32px] m:text-[21px] font-bold not-italic">{{questArr[questIdx].ansCnt.ansTit}}</em>
+          <div class="flex-grow overflow-scroll">
+            <p class="t:mt-[30px] m:mt-[20px] t:text-[22px] m:text-[15px] t:leading-[42px] m:leading-[28px]" v-html="questArr[questIdx].ansCnt.ansDesc"></p>
+          </div>
+          <div class="btn-wrap mx-auto" v-if="questIdx !== questArr.length - 1">
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] is-light t:mt-[45px] m:mt-[30px] t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="nextQuest">
+              <span class="txt font-bold t:text-[36px] m:text-[24px] text-[#231815] relative z-[1]">挑戰下一關</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+          </div>
+          <div class="btn-wrap mx-auto" v-else-if="questIdx === questArr.length - 1">
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] is-light t:mt-[45px] m:mt-[30px] t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="nextQuest">
+              <span class="txt font-bold t:text-[36px] m:text-[24px] text-[#231815] relative z-[1]">完成關卡</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+          </div>
+        </div>
+        <div class="mBox is-shadow t:px-[30px] m:px-[20px] t:pt-[45px] m:pt-[30px] t:pb-[84px] m:pb-[56px] flex-col items-center justify-center t:w-[468px] m:w-[312px] max-h-[80vh] relative border-[2px] border-solid border-[#fff]" data-target="hint">
+          <em class="absolute bottom-full left-0 text-[#fff] t:text-[36px] m:text-[24px] leading-none font-bold not-italic"><span class="t:text-[39px] m:text-[26px]">1906</span>數字挑戰</em>
+          <div class="flex-grow overflow-scroll">
+            <p class="w-full text-[#f2ce4d] t:text-[27px] m:text-[18px] text-left">遊戲說明</p>
+            <ol class="t:mt-[22px] m:mt-[15px] t:pl-[27px] m:pl-[18px] text-[#f2ce4d] t:text-[27px] m:text-[18px] list-decimal list-outside">
+              <li class="t:leading-[36px] m:leading-[24px]">
+                <span class="text-[#fff]">互動方式：</span><br><span class="text-[#fff] t:text-[24px] m:text-[16px]">限時 <em class="text-[#f2ce4d] not-italic"><b>20</b> 秒，手指進行左右拖曳</em>鞋盒</span>
+                <div class="img-wrap t:mt-[15px] m:mt-[10px] flex items-center justify-between w-full t:h-[135px] m:h-[90px] relative">
+                  <svg class="t:w-[66px] m:w-[44px] t:h-[48px] m:h-[32px]">
+                    <use class="fill-current" xlink:href="#ico-arr">
+                    </use>
+                  </svg>
+                  <i class="t:mx-[7px] m:mx-[5px] flex-grow h-[1px] border-t border-[#fff] border-dashed"></i>
+                  <figure class="anim-moving t:ml-[-59px] m:ml-[-39px] t:w-[117px] m:w-[78px] t:h-[135px] m:h-[90px] absolute top-0 left-1/2 z-[1]">
+
+                    <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-drag.svg?4c199e8d">
+                  </figure>
+                  <svg class="t:w-[66px] m:w-[44px] t:h-[48px] m:h-[32px] -scaleX-1">
+                    <use class="fill-current" xlink:href="#ico-arr">
+                    </use>
+                  </svg>
+                </div>
+              </li>
+              <li class="t:mt-[15px] m:mt-[10px] t:leading-[36px] m:leading-[24px]">
+                <span class="text-[#fff]">通關條件：</span><br><span class="text-[#fff] t:text-[24px] m:text-[16px]">完成<em class="text-[#f2ce4d] not-italic">收集數字</em> <em class="text-[#f2ce4d] not-italic font-bold">1906</em></span>
+                <ul class="img-wrap t:mt-[15px] m:mt-[10px] flex items-center justify-center">
+                  <li class="t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <figure class="w-full h-full absolute inset-0">
+
+                      <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?4c199e8d">
+                    </figure>
+                    <svg class="anim-neon w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-neon-light">
+                      </use>
+                    </svg>
+                    <svg class="w-full h-full relative z-[1]">
+                      <use class="fill-current" xlink:href="#ico-neon-1">
+                      </use>
+                    </svg>
+                  </li>
+                  <li class="t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <figure class="w-full h-full absolute inset-0">
+
+                      <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?9909c5bd">
+                    </figure>
+                    <svg class="anim-neon w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-neon-light">
+                      </use>
+                    </svg>
+                    <svg class="w-full h-full relative z-[1]">
+                      <use class="fill-current" xlink:href="#ico-neon-9">
+                      </use>
+                    </svg>
+                  </li>
+                  <li class="t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <figure class="w-full h-full absolute inset-0">
+
+                      <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?9909c5bd">
+                    </figure>
+                    <svg class="anim-neon w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-neon-light">
+                      </use>
+                    </svg>
+                    <svg class="w-full h-full relative z-[1]">
+                      <use class="fill-current" xlink:href="#ico-neon-0">
+                      </use>
+                    </svg>
+                  </li>
+                  <li class="t:w-[96px] m:w-[64px] t:h-[96px] m:h-[64px] relative">
+                    <figure class="w-full h-full absolute inset-0">
+
+                      <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-neon-bg.svg?9909c5bd">
+                    </figure>
+                    <svg class="anim-neon w-full h-full absolute inset-0">
+                      <use class="fill-current" xlink:href="#ico-neon-light">
+                      </use>
+                    </svg>
+                    <svg class="w-full h-full relative z-[1]">
+                      <use class="fill-current" xlink:href="#ico-neon-6">
+                      </use>
+                    </svg>
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div class="btn-wrap t:mt-[52px] m:mt-[35px]">
+            <button type="button" class="mBtn flex items-center justify-center relative box-border z-[1] t:w-[237px] m:w-[158px] t:h-[78px] m:h-[52px]" @click="callBox(false, 'hint')">
+              <span class="txt font-bold t:text-[36px] m:text-[24px] text-[#ffffff] relative z-[1]">START</span>
+              <i class="ico-bg absolute top-[2Px] bottom-[2Px] left-[2Px] right-[2Px] z-[0]"></i>
+              <i class="ico-shadow absolute inset-0"></i>
+            </button>
+
+          </div>
+          <i class="ico-corner absolute top-0 left-0 z-[1] text-[#2c8fdc]"></i>
+        </div>
+      </div>
+    </div>
+    <div class="lLock fixed inset-0 items-center justify-center">
+      <div class="mLock flex flex-col items-center justify-center relative font-bold">
+        <div class="relative">
+          <svg class="w-[195px] h-[140px]">
+            <use class="fill-current" xlink:href="#ico-rotate">
+            </use>
+          </svg>
+          <svg class="w-[66px] h-[56px] absolute bottom-0 left-full -rotate-12">
+            <use class="fill-current" xlink:href="#ico-noise-1">
+            </use>
+          </svg>
+          <svg class="w-[66px] h-[56px] absolute bottom-0 right-full -scaleX-1">
+            <use class="fill-current" xlink:href="#ico-noise-1">
+            </use>
+          </svg>
+        </div>
+        <strong class="lock-tit mt-[20px] flex items-center justify-center w-full text-[#f2ce4d] text-[24px] text-center"><b class="mx-[10px]">貼心提醒</b></strong>
+        <span class="text-[#fff] text-[20px]">將手機轉為直式瀏覽，享受更好的互動體驗</span>
+      </div>
+    </div>
+    <div class="lNSup items-center justify-center">
+      <div class="mNSup mx-auto w-[600px] h-[894px] relative">
+        <svg class="mx-auto w-[592px] h-[131px]">
+          <use class="fill-current" xlink:href="#tit-nb1906">
+          </use>
+        </svg>
+        <div class="mt-[32px] ml-[24px] w-[296px] h-[542px] relative">
+          <svg class="w-full h-full">
+            <use class="fill-current" xlink:href="#kv-txt">
+            </use>
+          </svg>
+          <svg class="w-[20px] h-[20px] absolute top-[230px] right-[96px]">
+            <use class="fill-current" xlink:href="#ico-mouth">
+            </use>
+          </svg>
+          <svg class="w-[18px] h-[22px] absolute top-[280px] left-[48px]">
+            <use class="fill-current" xlink:href="#ico-monster-g">
+            </use>
+          </svg>
+          <svg class="w-[18px] h-[22px] absolute bottom-[190px] right-[150px]">
+            <use class="fill-current" xlink:href="#ico-monster-b">
+            </use>
+          </svg>
+        </div>
+        <div class="bg-[#fff] flex flex-col items-center justify-center w-[282px] h-[358px] absolute bottom-[183px] right-[77px] border-[3px] border-solid border-[#231815] box-border z-[1] text-center font-bold">
+          <figure class="w-[254px] h-[254px]">
+
+            <img class="" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/qr-code.svg?9909c5bd">
+          </figure>
+          <em class="mt-[15px] text-[#cc5337] text-[20px] not-italic">掃描 QR CODE 立即體驗<br>NB 1906 期間限定活動</em>
+        </div>
+        <svg class="w-[248px] h-[298px] absolute top-[130px] right-[12px]">
+          <use class="fill-current" xlink:href="#ico-capsule-t-2">
+          </use>
+        </svg>
+        <svg class="anim-rotate w-[192px] h-[92px] absolute top-[164px] right-[94px] rotate-45">
+          <use class="fill-current" xlink:href="#ico-shoes">
+          </use>
+        </svg>
+        <svg class="w-[266px] h-[292px] absolute bottom-[-16px] left-[56px]">
+          <use class="fill-current" xlink:href="#ico-capsule-b">
+          </use>
+        </svg>
+        <svg class="w-[38px] h-[93px] absolute bottom-[253px] left-[152px] -rotate-12">
+          <use class="fill-current" xlink:href="#ico-line-1">
+          </use>
+        </svg>
+        <svg class="w-[97px] h-[97px] absolute bottom-[129px] left-[163px] z-[1]">
+          <use class="fill-current" xlink:href="#ico-timer">
+          </use>
+        </svg>
+        <figure class="w-[70px] h-[89px] absolute bottom-[243px] left-[184px] -rotate-25">
+
+          <img class="ico-gameboy anim-floating" alt=" | © 2022 New Balance" width="100%" height="100%" src="assets/img/ico-gameboy.svg?9909c5bd">
+        </figure>
+        <svg class="w-[325px] h-[174px] absolute bottom-0 right-[47px]">
+          <use class="fill-current" xlink:href="#tit-sub">
+          </use>
+        </svg>
+        <svg class="anim-floating w-[107px] h-[102px] absolute bottom-[77px] left-[-80px] rotate-90">
+          <use class="fill-current" xlink:href="#ico-cube">
+          </use>
+        </svg>
+        <svg class="anim-floating w-[97px] h-[60px] absolute bottom-[275px] right-[-40px]">
+          <use class="fill-current" xlink:href="#ico-cd">
+          </use>
+        </svg>
+        <svg class="ml-[17px] w-[44px] h-[36px] absolute bottom-[325px] left-full">
+          <use class="fill-current" xlink:href="#ico-note">
+          </use>
+        </svg>
+      </div>
+    </div>
+    <script defer="defer" src="scripts/home/index.js?37b758c3"></script>
+  </body>
+
+</html>

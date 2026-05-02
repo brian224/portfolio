@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+  <head>
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width,minimal-ui,initial-scale=1,viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta property="og:title" content="深夜聊心室 現在觀眾友幾位？​">
+    <meta property="og:description" name="description" content="LINE 來來談心，好禮抖內你！LINELINELINE～談心抽好禮">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://firstbank-campaign.azurewebsites.net/">
+    <meta property="og:image" content="https://firstbank-campaign.azurewebsites.net/static/img/FB.png">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="深夜聊心室 現在觀眾友幾位？​">
+    <title>深夜聊心室 現在觀眾友幾位？​</title>
+    <link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.png">
+    <link rel="canonical alternate" href="https://firstbank-campaign.azurewebsites.net/">
+    <link href="assets/css/home/index.css?49429057" rel="stylesheet">
+  </head>
+
+  <body class="bg-[#271c3c]">
+    <div class="l-wrap flex flex-col relative overflow-hidden jWrap" :data-curr="step" :style="{minHeight:innerHeight}">
+      <header class="l-hd bg-[#41187e] flex items-center justify-between w-full t:h-[60px] m:h-[40px] fixed top-0 left-0 right-0 z-[3]" :class="menu === true ? 'is-active' : ''">
+        <a href="javascript:;" class="">
+          <h2 class="BHT">第一銀行</h2>
+          <figure class="t:ml-[15px] m:ml-[10px] t:w-[150px] m:w-[100px] t:h-[38px] m:h-[25px]">
+
+            <img class="" alt="第一銀行 | © 第一商業銀行股份有限公司" width="100%" height="100%" src="assets/img/logo.svg?eab75122">
+          </figure>
+        </a>
+        <nav class="l-nav bg-[#271c3c] bg-opacity-95 flex items-center justify-center w-full h-full fixed inset-0 box-border transition-all ease-in-out duration-500">
+          <ul class="menu-list max-h-screen t:text-[35px] m:text-[23px] font-bold">
+            <li class="list t:my-[63px] m:my-[42px] opacity-0 ease-in-out transition-all duration-500">
+              <button class="t:pr-[93px] m:pr-[62px] flex items-center w-full text-[#fff]" @click="scrollToAnchor('idx')" ga:click="{'cat': '選單', 'event': 'click', 'label': '回到首頁'}">
+                <i class="ico-idx menu-idx t:w-[72px] m:w-[48px] t:h-[72px] m:h-[48px]"></i>
+                <span class="t:ml-[15px] m:ml-[10px] font-bold tracking-wider">首頁</span>
+              </button>
+            </li>
+            <li class="list t:my-[63px] m:my-[42px] opacity-0 ease-in-out transition-all duration-500">
+              <button class="t:pr-[93px] m:pr-[62px] flex items-center w-full text-[#fff]" @click="scrollToAnchor('mission')" ga:click="{'cat': '選單', 'event': 'click', 'label': '分享任務資訊'}">
+                <i class="ico-idx menu-mission t:w-[72px] m:w-[48px] t:h-[72px] m:h-[48px]"></i>
+                <span class="t:ml-[15px] m:ml-[10px] font-bold tracking-wider">小粉獅撒幣抖內你</span>
+              </button>
+            </li>
+            <li class="list t:my-[63px] m:my-[42px] opacity-0 ease-in-out transition-all duration-500">
+              <button class="t:pr-[93px] m:pr-[62px] flex items-center w-full text-[#fff]" @click="scrollToAnchor('coin')" ga:click="{'cat': '選單', 'event': 'click', 'label': '了解粉獅幣'}">
+                <i class="ico-idx menu-coin t:w-[72px] m:w-[48px] t:h-[72px] m:h-[48px]"></i>
+                <span class="t:ml-[15px] m:ml-[10px] font-bold tracking-wider">如何獲得粉獅幣？</span>
+              </button>
+            </li>
+            <li class="list t:my-[63px] m:my-[42px] opacity-0 ease-in-out transition-all duration-500">
+              <button class="t:pr-[93px] m:pr-[62px] flex items-center w-full text-[#fff]" @click="goSelect('share')" ga:click="{'cat': '選單', 'event': 'click', 'label': '好友進度'}">
+                <i class="ico-idx menu-inquire t:w-[72px] m:w-[48px] t:h-[72px] m:h-[48px]"></i>
+                <span class="t:ml-[15px] m:ml-[10px] font-bold tracking-wider">查詢分享進度</span>
+              </button>
+            </li>
+            <li class="list t:my-[63px] m:my-[42px] opacity-0 ease-in-out transition-all duration-500">
+              <button class="t:pr-[93px] m:pr-[62px] flex items-center w-full text-[#fff]" @click="scrollToAnchor('act')" ga:click="{'cat': '選單', 'event': 'click', 'label': '活動辦法'}">
+                <i class="ico-idx menu-act t:w-[72px] m:w-[48px] t:h-[72px] m:h-[48px]"></i>
+                <span class="t:ml-[15px] m:ml-[10px] font-bold tracking-wider">活動辦法</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn-menu t:w-[60px] m:w-[40px] t:h-[60px] m:h-[40px] relative" @click="callMenu">
+          <i class="ico"></i>
+          <span class="BHT">Menu</span>
+        </button>
+      </header>
+      <div class="l-main t:pt-[60px] m:pt-[40px] flex flex-col flex-grow box-border">
+        <section class="flex-col flex-grow" data-page="index">
+          <div class="kv-wrap bg-idx t:py-[36px] m:py-[24px] flex flex-col items-center justify-center relative" data-target="idx">
+            <h1 class="BHT">深夜聊心室</h1>
+            <div class="main-deco t:w-[482px] m:w-[321px] t:h-[297px] m:h-[198px] relative z-[1]">
+              <i class="ico-idx neon-shadow t:w-[498px] m:w-[332px] t:h-[314px] m:h-[209px] absolute top-0 left-0"></i>
+              <i class="ico-idx neon-on anim-neon t:w-[554px] m:w-[369px] t:h-[371px] m:h-[247px] absolute t:top-[-30px] m:top-[-20px] t:left-[-33px] m:left-[-22px]"></i>
+              <i class="ico-idx neon-off absolute inset-0"></i>
+            </div>
+            <p class="text-neon t:mt-[21px] m:mt-[14px] relative z-[2] t:text-[21px] m:text-[14px] text-center font-bold t:leading-[32px] m:leading-[21px]">
+              <span class="text-[#fff]">LINE LINE LINE～來跟小粉獅談心</span><br><span class="text-[#fafd02] italic"><i class="t:text-[38px] m:text-[25px] text-[#03fbac]">抽</i> AirPods 第 3 代、三軸穩定器，把好禮帶回家！</span>
+            </p>
+            <div class="sub-deco bg-idx t:mt-[30px] m:mt-[10px] flex items-end justify-center w-full t:h-[474px] m:h-[316px] relative z-[1]">
+              <i class="ico-idx note-1 anim-note-floating t:ml-[96px] m:ml-[64px] t:w-[37px] m:w-[23px] t:h-[39px] m:h-[26px] absolute top-0 left-1/2 opacity-0"></i>
+              <i class="ico-idx note-2 anim-note-floating t:mt-[-6px] m:mt-[-4px] t:ml-[66px] m:ml-[44px] t:w-[26px] m:w-[17px] t:h-[44px] m:h-[29px] absolute top-0 left-1/2 opacity-0"></i>
+              <i class="ico-idx note-3 anim-note-floating t:ml-[72px] m:ml-[48px] t:w-[54px] m:w-[36px] t:h-[42px] m:h-[28px] absolute top-0 left-1/2 opacity-0"></i>
+              <i class="ico-idx hand-l anim-swing-hand-l t:ml-[12px] m:ml-[8px] t:mb-[3px] m:mb-[2px] t:w-[84px] m:w-[56px] t:h-[65px] m:h-[43px] absolute bottom-1/2 left-1/2"></i>
+              <i class="ico-idx body t:mt-[-59px] m:mt-[-39px] t:ml-[-96px] m:ml-[-64px] t:w-[155px] m:w-[103px] t:h-[144px] m:h-[96px] absolute top-1/2 left-1/2"></i>
+              <i class="ico-idx desk t:ml-[-267px] m:ml-[-178px] absolute t:w-[534px] m:w-[356px] t:h-[420px] m:h-[280px] bottom-0 left-1/2"></i>
+              <i class="ico-idx head anim-shake-hd t:ml-[-161px] m:ml-[-107px] t:w-[231px] m:w-[154px] t:h-[227px] m:h-[151px] absolute top-0 left-1/2"></i>
+              <i class="ico-idx tie t:mb-[-6px] m:mb-[-4px] t:mr-[-6px] m:mr-[-4px] t:w-[44px] m:w-[29px] t:h-[32px] m:h-[21px] absolute bottom-1/2 right-1/2"></i>
+              <i class="ico-idx hand-r anim-swing-hand-r t:mt-[-59px] m:mt-[-39px] t:mr-[26px] m:mr-[17px] t:w-[92px] m:w-[61px] t:h-[86px] m:h-[57px] absolute top-1/2 right-1/2"></i>
+              <div class="btn-wrap t:pb-[49px] m:pb-[33px] flex flex-col items-center justify-center relative">
+                <em class="t:text-[30px] m:text-[20px] not-italic font-bold"><span class="text-[#03fbac]">完成遊戲，</span><span class="text-[#fafd02]">抽好禮</span></em>
+                <button type="button" ga:click="{'cat': '首頁', 'event': 'click', 'label': '談心問答'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[9px] m:mt-[6px] t:w-[224px] m:w-[148px] t:h-[63px] m:h-[42px] relative text-[#37195d]" @click="goSelect('prepare')">
+                  <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1]">開始談心</span>
+                </button>
+
+              </div>
+              <svg class="filter-neon t:w-[48px] m:w-[32px] t:h-[51px] m:h-[34px] absolute t:bottom-[30px] m:bottom-[20px] t:left-[210px] m:left-[70px]">
+                <use class="fill-current" xlink:href="#ico-gift">
+                </use>
+              </svg>
+              <svg class="filter-neon t:w-[48px] m:w-[32px] t:h-[51px] m:h-[34px] absolute t:bottom-[30px] m:bottom-[20px] t:right-[210px] m:right-[70px]">
+                <use class="fill-current" xlink:href="#ico-gift">
+                </use>
+              </svg>
+            </div>
+            <div class="arr-wrap anim-floating t:ml-[-12px] m:ml-[-8px] t:w-[24px] m:w-[16px] t:h-[24px] m:h-[16px] absolute t:bottom-[15px] m:bottom-[10px] left-1/2 z-[1]">
+              <i class="arr t:ml-[-7.5px] m:ml-[-5px] t:w-[15px] m:w-[10px] t:h-[15px] m:h-[10px] absolute bottom-1/2 left-1/2 -rotate-45"></i>
+              <i class="arr t:ml-[-7.5px] m:ml-[-5px] t:w-[15px] m:w-[10px] t:h-[15px] m:h-[10px] absolute bottom-0 left-1/2 -rotate-45"></i>
+            </div>
+          </div>
+          <div class="cnt-wrap bg-idx t:px-[6px] m:px-[4px] t:pb-[51px] m:pb-[34px] flex flex-col items-center justify-center relative">
+            <div class="flex w-full">
+              <div class="info-wrap t:mr-[9px] m:mr-[6px] t:px-[22px] m:px-[15px] t:pt-[18px] m:pt-[12px] t:pb-[30px] m:pb-[20px] bg-[#000] bg-opacity-40 flex flex-col items-center justify-center w-1/2 relative t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px] tracking-tighter">
+                <p class="m:mx-[-4px] t:text-[30px] m:text-[20px] t:leading-[36px] m:leading-[24px] font-bold text-center"><span class="text-[#03fbac]">活動期間內</span><br><span class="text-[#fafd02]">完成首次綁定</span></p>
+                <p class="t:text-[21px] m:text-[14px] font-bold"><span class="text-[#03fbac]">抽</span><span class="text-[#fafd02]"> 粉獅幣 20 點</span></p>
+                <button type="button" ga:click="{'cat': '首頁', 'event': 'click', 'label': 'LINE綁定'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[6px] m:mt-[4px] w-full t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="goSelect('bind')">
+                  <span class="txt font-bold t:text-[21px] m:text-[14px] relative z-[1]">綁定 LINE 個人化服務</span>
+                </button>
+
+                <i class="ico-neon bg-[#421773] flex items-center justify-center t:w-[33px] m:w-[22px] t:h-[33px] m:h-[22px] absolute t:top-[-17px] m:top-[-11px] t:left-[26px] m:left-[17px] t:border-[2px] m:border-[1px] border-solid border-[#fff] rounded-full box-border">
+                  <svg class="t:w-[24px] m:w-[16px] t:h-[24px] m:h-[16px]">
+                    <use class="fill-current" xlink:href="#ico-friend">
+                    </use>
+                  </svg>
+                </i>
+              </div>
+              <div class="info-wrap t:ml-[9px] m:ml-[6px] t:px-[22px] m:px-[15px] t:pt-[18px] m:pt-[12px] t:pb-[30px] m:pb-[20px] bg-[#000] bg-opacity-40 flex flex-col items-center justify-center w-1/2 relative t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px] tracking-tighter">
+                <p class="t:mt-[6px] m:mt-[4px] t:text-[30px] m:text-[20px] font-bold"><span class="text-[#03fbac]">邀請</span><span class="text-[#fafd02]"> 15 位好友</span></p>
+                <p class="t:mt-[6px] m:mt-[4px] t:text-[21px] m:text-[14px] font-bold"><span class="text-[#03fbac]">抽</span><span class="text-[#fafd02]"> AirPods 第 3 代</span></p>
+                <button type="button" ga:click="{'cat': '首頁', 'event': 'click', 'label': '分享好友'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[21px] m:mt-[14px] w-full t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="goSelect('share')">
+                  <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1]">分享給好友</span>
+                </button>
+
+                <i class="ico-neon bg-[#421773] flex items-center justify-center t:w-[33px] m:w-[22px] t:h-[33px] m:h-[22px] absolute t:top-[-17px] m:top-[-11px] t:right-[26px] m:right-[17px] t:border-[2px] m:border-[1px] border-solid border-[#fff] rounded-full box-border">
+                  <svg class="t:mt-[3px] m:mt-[2px] t:w-[23px] m:w-[15px] t:h-[20px] m:h-[13px]">
+                    <use class="fill-current" xlink:href="#ico-send">
+                    </use>
+                  </svg>
+                </i>
+              </div>
+            </div>
+            <div class="info-wrap t:mx-[9px] m:mx-[6px] t:mt-[20px] m:mt-[13px] t:pt-[18px] m:pt-[12px] t:pb-[30px] m:pb-[20px] bg-[#000] bg-opacity-40 flex flex-col items-center justify-center w-full relative t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px]">
+              <p class="t:text-[30px] m:text-[20px] font-bold"><span class="text-[#03fbac]">粉絲</span><span class="text-[#fafd02]">紅利</span></p>
+              <p class="t:mt-[6px] m:mt-[4px] t:text-[21px] m:text-[14px] font-bold text-center"><span class="text-[#03fbac]">Follow IG 完成粉絲紅利任務</span><br><span class="text-[#03fbac]">抽</span><span class="text-[#fafd02]"> 小粉獅抱枕 2 名、小粉獅 2023 年桌曆 8 名</span></p>
+              <a href="https://www.instagram.com/p/Cj6wUdVhkzn/?openExternalBrowser=1" target="_blank" rel="noopener noreferrer" ga:click="{'cat': '首頁', 'event': 'click', 'label': '前往IG'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[21px] m:mt-[14px] t:w-[210px] m:w-[140px] t:h-[63px] m:h-[42px] relative text-[#37195d]" @click="">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1]">前往 IG</span>
+              </a>
+
+              <i class="ico-neon bg-[#421773] flex items-center justify-center t:w-[93px] m:w-[62px] t:h-[93px] m:h-[62px] absolute t:bottom-[-17px] m:bottom-[-11px] t:left-[42px] m:left-[28px] t:border-[2px] m:border-[1px] border-solid border-[#fff] rounded-full box-border">
+                <svg class="t:w-[60px] m:w-[40px] t:h-[60px] m:h-[40px] -rotate-15">
+                  <use class="fill-current" xlink:href="#ico-ig">
+                  </use>
+                </svg>
+              </i>
+            </div>
+          </div>
+          <div class="list-wrap t:pt-[39px] m:pt-[26px] t:pb-[57px] m:pb-[38px] bg-[#271c3c] relative" ga:scroll="{'cat': '首頁', 'event': 'scroll', 'label': '了解任務'}" data-target="mission">
+            <h3 class="is-dash flex items-center justify-center t:text-[45px] m:text-[30px] font-bold text-center"><span class="text-[#03fbac]">小粉獅</span><span class="text-[#fafd02]">撒幣</span><span class="text-[#03fbac]">抖內你</span></h3>
+            <p class="t:mt-[6px] m:mt-[4px] text-[#fff] t:text-[21px] m:text-[14px] font-bold text-center">團長就是你！邀請的親朋好友人數越多 獎品越好</p>
+            <ol class="order-list t:mt-[39px] m:mt-[26px] t:px-[24px] m:px-[16px]">
+              <li class="t:mt-[26px] m:mt-[17px] relative">
+                <em class="num-wrap flex items-center justify-start relative t:text-[30px] m:text-[20px] font-bold">
+            <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px]">1</i></span>
+            <span class="bg-gradient scroll-show t:ml-[-24px] m:ml-[-16px] t:px-[30px] m:px-[20px] t:h-[48px] m:h-[32px] t:rounded-[24px] m:rounded-[16px] tm:rounded-tl-none tm:rounded-bl-none text-[#37195d] t:leading-[48px] m:leading-[32px]">#朋友</span>
+          </em>
+                <div class="t:mt-[24px] m:mt-[16px] t:ml-[30px] m:ml-[20px] t:pl-[15px] m:pl-[10px] t:border-l-[2px] m:border-l-[1px] border-solid border-[#fff]">
+                  <p class="text-[#03fbac] t:text-[24px] m:text-[16px] tracking-tighter font-bold">活動期間內，完成<span class="text-[#fafd02]">綁定 LINE 個人化服務</span><br>抽 <span class="text-[#fafd02] t:text-[30px] m:text-[20px]">粉獅幣 20 點</span><span class="t:text-[21px] m:text-[14px]">（抽 4,500 名）</span></p>
+                </div>
+                <i class="coin-1 anim-whirling ico-idx filter-neon t:w-[62px] m:w-[41px] t:h-[62px] m:h-[41px] absolute t:top-[-3px] m:top-[-2px] t:right-[30px] m:right-[20px]"></i>
+                <i class="coin-3 anim-whirling ico-idx filter-neon t:w-[41px] m:w-[27px] t:h-[42px] m:h-[28px] absolute t:top-[45px] m:top-[30px] t:right-[90px] m:right-[60px]"></i>
+              </li>
+              <li class="t:mt-[26px] m:mt-[17px] relative">
+                <em class="num-wrap flex items-center justify-start relative t:text-[30px] m:text-[20px] font-bold">
+            <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px]">2</i></span>
+            <span class="bg-gradient scroll-show t:ml-[-24px] m:ml-[-16px] t:px-[30px] m:px-[20px] t:w-[330px] m:w-[165px] t:h-[48px] m:h-[32px] t:rounded-[24px] m:rounded-[16px] tm:rounded-tl-none tm:rounded-bl-none text-[#37195d] t:leading-[48px] m:leading-[32px]">#好朋友</span>
+          </em>
+                <div class="t:mt-[24px] m:mt-[16px] t:ml-[30px] m:ml-[20px] t:pl-[15px] m:pl-[10px] t:border-l-[2px] m:border-l-[1px] border-solid border-[#fff]">
+                  <p class="text-[#03fbac] t:text-[24px] m:text-[16px] tracking-tighter font-bold">成功<span class="text-[#fafd02]">分享 <i class="text-[#fff] t:text-[30px] m:text-[20px] not-italic">5</i> 位好友</span>，成為 <span class="text-[#fafd02]">一銀 LINE 好友</span><br>抽 <span class="text-[#fafd02] t:text-[30px] m:text-[20px]">LINE POINTS 30 點</span><span class="t:text-[21px] m:text-[14px]">（抽 300 名）</span></p>
+                </div>
+                <div class="anim-floating t:w-[74px] m:w-[49px] t:h-[45px] m:h-[30px] absolute t:top-[27px] m:top-[18px] t:right-[30px] m:right-[20px]">
+                  <i class="card-30 ico-idx filter-neon anim-shake absolute inset-0"></i>
+                </div>
+              </li>
+              <li class="t:mt-[26px] m:mt-[17px] relative">
+                <em class="num-wrap flex items-center justify-start relative t:text-[30px] m:text-[20px] font-bold">
+            <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px]">3</i></span>
+            <span class="bg-gradient scroll-show t:ml-[-24px] m:ml-[-16px] t:px-[30px] m:px-[20px] t:w-[460px] m:w-[230px] t:h-[48px] m:h-[32px] t:rounded-[24px] m:rounded-[16px] tm:rounded-tl-none tm:rounded-bl-none text-[#37195d] t:leading-[48px] m:leading-[32px]">#好麻吉</span>
+          </em>
+                <div class="t:mt-[24px] m:mt-[16px] t:ml-[30px] m:ml-[20px] t:pl-[15px] m:pl-[10px] t:border-l-[2px] m:border-l-[1px] border-solid border-[#fff]">
+                  <p class="text-[#03fbac] t:text-[24px] m:text-[16px] tracking-tighter font-bold">成功<span class="text-[#fafd02]">分享 <i class="text-[#fff] t:text-[30px] m:text-[20px] not-italic">10</i> 位好友</span>，成為 <span class="text-[#fafd02]">一銀 LINE 好友</span><br>抽 <span class="text-[#fafd02] t:text-[30px] m:text-[20px]">LINE POINTS 100 點</span><span class="t:text-[21px] m:text-[14px]">（抽 150 名）</span></p>
+                </div>
+                <div class="anim-floating t:w-[75px] m:w-[50px] t:h-[45px] m:h-[30px] absolute t:top-[12px] m:top-[8px] t:right-[21px] m:right-[14px]">
+                  <i class="card-100 ico-idx filter-neon anim-shake2 absolute inset-0"></i>
+                </div>
+              </li>
+              <li class="t:mt-[26px] m:mt-[17px] relative">
+                <em class="num-wrap flex items-center justify-start relative t:text-[30px] m:text-[20px] font-bold">
+            <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px]">4</i></span>
+            <span class="bg-gradient scroll-show t:ml-[-24px] m:ml-[-16px] t:px-[30px] m:px-[20px] t:w-[612px] m:w-[306px] t:h-[48px] m:h-[32px] t:rounded-[24px] m:rounded-[16px] tm:rounded-tl-none tm:rounded-bl-none text-[#37195d] t:leading-[48px] m:leading-[32px]">#鋼鐵粉</span>
+          </em>
+                <div class="t:mt-[24px] m:mt-[16px] t:ml-[30px] m:ml-[20px] t:pl-[15px] m:pl-[10px] t:border-l-[2px] m:border-l-[1px] border-solid border-[#fff]">
+                  <p class="text-[#03fbac] t:text-[24px] m:text-[16px] tracking-tighter font-bold whitespace-nowrap">成功<span class="text-[#fafd02]">分享 <i class="text-[#fff] t:text-[30px] m:text-[20px] not-italic">15</i> 位好友</span>，成為 <span class="text-[#fafd02]">一銀 LINE 好友</span><br>抽 <span class="text-[#fafd02] t:text-[30px] m:text-[20px]">AirPods 第 3 代</span>、<span class="text-[#fafd02] t:text-[30px] m:text-[20px]">三軸穩定器</span><br><span class="t:text-[21px] m:text-[14px]">（抽各 1 名）</span></p>
+                  <ul class="awards-list t:mt-[24px] m:mt-[16px] t:mr-[45px] m:mr-[30px] flex items-start justify-center">
+                    <li class="t:mx-[20px] m:mx-[13px] flex flex-col items-center justify-center">
+                      <i class="airpod ico-idx t:w-[175px] m:w-[117px] t:h-[197px] m:h-[131px]"></i>
+                      <span class="t:mt-[6px] m:mt-[4px] text-[#03fbac] t:text-[18px] m:text-[12px] font-bold text-center">AirPods 第 3 代<br>市價 NT $5,990</span>
+                    </li>
+                    <li class="t:mx-[20px] m:mx-[13px] flex flex-col items-center justify-center">
+                      <i class="stabilizer ico-idx t:w-[175px] m:w-[117px] t:h-[195px] m:h-[130px]"></i>
+                      <span class="t:mt-[6px] m:mt-[4px] text-[#03fbac] t:text-[18px] m:text-[12px] font-bold text-center">【ZHIYUN 智雲】<br class="t:hidden">手機穩定器<br>市價 NT $3,000</span>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="ig-wrap t:pt-[15px] m:pt-[10px] t:pb-[54px] m:pb-[36px] bg-[#271c3c] relative">
+            <h3 class="is-dash flex items-center justify-center t:text-[45px] m:text-[30px] font-bold text-center"><span class="text-[#03fbac]">IG 粉絲</span><span class="text-[#fafd02]">紅利任務</span></h3>
+            <p class="t:mt-[6px] m:mt-[4px] text-[#fff] t:text-[21px] m:text-[14px] font-bold text-center">2022. 10. 20 - 2022. 11. 20. 23：59 止</p>
+            <p class="t:mt-[24px] m:mt-[16px] text-[#03fbac] t:text-[24px] m:text-[16px] font-bold text-center">於指定貼文回覆問題，<span class="text-[#fafd02]">完成留言分享並 Tag 好友</span><br>抽 <span class="text-[#fafd02] t:text-[30px] m:text-[20px]">小粉獅限定禮！</span></p>
+            <ul class="awards-list t:mt-[24px] m:mt-[16px] flex items-end justify-center text-center">
+              <li class="t:mx-[8px] m:mx-[5px] flex flex-col items-center justify-center">
+                <i class="pillow ico-idx t:w-[200px] m:w-[133px] t:h-[180px] m:h-[120px]"></i>
+                <span class="t:mt-[6px] m:mt-[4px] text-[#03fbac] t:text-[18px] m:text-[12px] font-bold">小粉獅抱枕<br>( 抽 2 名 )</span>
+              </li>
+              <li class="t:mx-[20px] m:mx-[13px] flex flex-col items-center justify-center">
+                <i class="calendar ico-idx t:w-[175px] m:w-[117px] t:h-[198px] m:h-[132px]"></i>
+                <span class="t:mt-[6px] m:mt-[4px] text-[#03fbac] t:text-[18px] m:text-[12px] font-bold">小粉獅 2023 年桌曆<br>( 抽 8 名 )</span>
+              </li>
+            </ul>
+          </div>
+          <div class="qa-wrap t:pt-[39px] m:pt-[26px] t:pb-[95px] m:pb-[63px] bg-[#37195d] relative" data-target="coin" ga:scroll="{'cat': '首頁', 'event': 'scroll', 'label': '了解粉獅幣'}">
+            <h3 class="is-dash flex items-center justify-center t:text-[45px] m:text-[30px] font-bold text-center"><span class="text-[#03fbac]">如何獲得</span><span class="text-[#fafd02]">粉獅幣</span></h3>
+            <ol class="step-list t:mt-[27px] m:mt-[18px] t:mx-[14px] m:mx-[9px] flex items-center justify-center t:text-[21px] m:text-[14px] font-bold tracking-tighter">
+              <li class="t:mx-[21px] m:mx-[14px] flex items-center justify-center t:w-[171px] m:w-[114px] t:h-[171px] m:h-[114px] relative t:border-[2px] m:border-[1px] border-solid border-[#febcff] rounded-full text-[#03fbac] text-center">
+                <p class="t:mb-[18px] m:mb-[12px]"><em>1.</em><br>成為<br><span class="text-[#fafd02]">LINE 好友</span></p>
+              </li>
+              <li class="t:mx-[21px] m:mx-[14px] flex items-center justify-center t:w-[171px] m:w-[114px] t:h-[171px] m:h-[114px] relative t:border-[2px] m:border-[1px] border-solid border-[#febcff] rounded-full text-[#03fbac] text-center">
+                <p class="t:mb-[18px] m:mb-[12px]"><em>2.</em><br>完成<br><span class="text-[#fafd02]">LINE 好友綁定</span></p>
+              </li>
+            </ol>
+            <div class="info-wrap t:mx-[14px] m:mx-[9px] t:mt-[30px] m:mt-[20px] t:pt-[32px] m:pt-[21px] t:pb-[68px] m:pb-[45px] t:px-[24px] m:px-[16px] flex flex-col items-center justify-center relative t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px]">
+              <div class="flex items-start justify-start w-full">
+                <i class="bg-[#271c3c] flex items-center justify-center t:w-[76px] m:w-[52px] t:h-[76px] m:h-[52px] t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full">
+                  <svg class="t:w-[48px] m:w-[32px] t:h-[56px] m:h-[37px]">
+                    <use class="fill-current" xlink:href="#ico-face">
+                    </use>
+                  </svg>
+                </i>
+                <div class="dialog t:mt-[9px] m:mt-[6px] t:mx-[15px] m:mx-[10px] t:px-[24px] m:px-[16px] t:py-[12px] m:py-[8px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] t:rounded-[15px] m:rounded-[10px] box-border text-[#fff] t:text-[21px] m:text-[14px] font-bold">什麼是粉獅幣？</div>
+                <i class="coin-2 anim-whirling ico-idx filter-neon t:mt-[-6px] m:mt-[-4px] t:ml-[-38px] m:ml-[-25px] t:w-[47px] m:w-[31px] t:h-[47px] m:h-[31px] relative"></i>
+              </div>
+              <div class="t:mt-[3px] m:mt-[2px] flex flex-row-reverse items-start justify-start w-full">
+                <i class="bg-[#271c3c] flex items-center justify-center t:w-[76px] m:w-[52px] t:h-[76px] m:h-[52px] t:border-[2px] m:border-[1px] border-solid border-[#03fbac] rounded-full">
+                  <svg class="t:w-[60px] m:w-[40px] t:h-[59px] m:h-[39px]">
+                    <use class="fill-current" xlink:href="#ico-lion">
+                    </use>
+                  </svg>
+                </i>
+                <div class="dialog t:mt-[9px] m:mt-[6px] t:mx-[15px] m:mx-[10px] t:px-[24px] m:px-[16px] t:py-[12px] m:py-[8px] t:w-[508px] m:w-[200px] relative t:border-[2px] m:border-[1px] border-solid border-[#03fbac] t:rounded-[15px] m:rounded-[10px] box-border text-[#fff] t:text-[21px] m:text-[14px] font-bold">是第一銀行 LINE 官方帳號內專屬的會員點數（粉獅幣一點＝新台幣一元）。</div>
+              </div>
+              <div class="t:mt-[3px] m:mt-[2px] flex items-start justify-start w-full">
+                <i class="bg-[#271c3c] flex items-center justify-center t:w-[76px] m:w-[52px] t:h-[76px] m:h-[52px] t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full">
+                  <svg class="t:w-[48px] m:w-[32px] t:h-[56px] m:h-[37px]">
+                    <use class="fill-current" xlink:href="#ico-face">
+                    </use>
+                  </svg>
+                </i>
+                <div class="dialog t:mt-[9px] m:mt-[6px] t:mx-[15px] m:mx-[10px] t:px-[24px] m:px-[16px] t:py-[12px] m:py-[8px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] t:rounded-[15px] m:rounded-[10px] box-border text-[#fff] t:text-[21px] m:text-[14px] font-bold">粉獅幣的作用？</div>
+              </div>
+              <div class="t:mt-[3px] m:mt-[2px] flex flex-row-reverse items-start justify-start w-full">
+                <i class="bg-[#271c3c] flex items-center justify-center t:w-[76px] m:w-[52px] t:h-[76px] m:h-[52px] t:border-[2px] m:border-[1px] border-solid border-[#03fbac] rounded-full">
+                  <svg class="t:w-[60px] m:w-[40px] t:h-[59px] m:h-[39px]">
+                    <use class="fill-current" xlink:href="#ico-lion">
+                    </use>
+                  </svg>
+                </i>
+                <div class="dialog t:mt-[9px] m:mt-[6px] t:mx-[15px] m:mx-[10px] t:px-[24px] m:px-[16px] t:py-[12px] m:py-[8px] m:w-[200px] relative t:border-[2px] m:border-[1px] border-solid border-[#03fbac] t:rounded-[15px] m:rounded-[10px] box-border text-[#fff] t:text-[21px] m:text-[14px] font-bold">可集點、兌點，換取限量小粉獅週邊商品與異業優惠券。</div>
+                <i class="coin-2 anim-whirling ico-idx filter-neon tm:mt-[44px] t:mr-[-24px] m:mr-[-16px] t:w-[47px] m:w-[31px] t:h-[47px] m:h-[31px]"></i>
+              </div>
+              <a href="https://firstbk.tw/ileocoin-main4/" target="_blank" rel="noopener noreferrer" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mb-[-31px] m:mb-[-21px] t:ml-[-105px] m:ml-[-70px] t:w-[210px] m:w-[140px] t:h-[63px] m:h-[42px] absolute bottom-0 left-1/2 text-[#37195d]" @click="">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1]">前往兌換</span>
+              </a>
+
+              <i class="coin-2 anim-whirling ico-idx filter-neon t:w-[47px] m:w-[31px] t:h-[47px] m:h-[31px] absolute t:bottom-[-21px] m:bottom-[-14px] t:right-[168px] m:right-[56px]"></i>
+            </div>
+          </div>
+          <div class="act-wrap t:py-[39px] m:py-[26px] t:pb-[57px] m:pb-[38px] bg-[#271c3c] relative" data-target="act" ga:scroll="{'cat': '首頁', 'event': 'scroll', 'label': '活動辦法'}">
+            <h3 class="is-dash flex items-center justify-center text-[#03fbac] t:text-[45px] m:text-[30px] font-bold text-center">活動辦法</h3>
+            <div class="term-wrap t:mt-[39px] m:mt-[26px] t:mx-[22px] m:mx-[15px] t:pt-[38px] m:pt-[25px] t:pb-[45px] m:pb-[30px] t:px-[18px] m:px-[12px] bg-[#37195d] t:h-[750px] m:h-[500px] t:rounded-[15px] m:rounded-[10px] overflow-hidden text-[#fff] t:text-[21px] m:text-[14px]">
+              <div class="scroll-wrap t:pr-[18px] m:pr-[12px] h-full overflow-y-scroll">
+                <ol class="t:ml-[54px] m:ml-[36px] list-cjk-ideographic list-outside font-bold">
+                  <li class="t:text-[27px] m:text-[18px]">
+                    <p class="text-[#03fbac]">深夜聊心室 - 現在觀眾友幾位</p>
+                    <ol class="t:ml-[24px] m:ml-[16px] t:text-[21px] m:text-[14px] text-[#fafd02] list-decimal list-outside">
+                      <li class="t:mt-[15px] m:mt-[10px]">活動名稱：<span class="text-[#fff]">深夜聊心室 - 現在觀眾友幾位</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動期間：<span class="text-[#fff]">2022/10/20 起至 2022/11/30 止。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動對象：<span class="text-[#fff]">第一銀行 LINE 官方帳號好友之本國自然人，惟排除第一銀行行員。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動辦法：<span class="text-[#fff]">凡進入「深夜聊心室」活動頁，點擊「開始談心」之測驗按鈕並完成指定任務者，即可獲得抽獎資格。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動任務：
+                        <ul class="t:ml-[27px] m:ml-[18px] list-disc list-outside">
+                          <li class="t:mt-[9px] m:mt-[6px]">2022/10/20 起新綁定 LINE 個人化服務，即符合<span class="text-[#03fbac]">粉獅幣 20 點抽獎資格</span><span class="text-[#fff]">（價值 20 元，共抽出 4,500 名）</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">凡邀請 5 人（含）以上成為新好友，即符合 <span class="text-[#03fbac]">LINE POINTS 30 點抽獎資格</span><span class="text-[#fff]">（共抽出 300 名）</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">凡邀請 10 人（含）以上成為新好友，即符合 <span class="text-[#03fbac]">LINE POINTS 100 點抽獎資格</span><span class="text-[#fff]">（共抽出 150 名）</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">凡邀請 15 人（含）以上成為新好友，即符合 <span class="text-[#03fbac]">【ZHIYUN 智雲】SMOOTH Q3 手機穩定器及 AirPods 第 3 代抽獎資格</span><span class="text-[#fff]">（共抽出各 1 名）</span></li>
+                        </ul>
+                      </li>
+                      <li class="t:mt-[15px] m:mt-[10px]">
+                        <p class="">抽獎說明：</p>
+                        <ol class="t:ml-[32px] m:ml-[21px] t:indent-[-32px] m:indent-[-21px]">
+                          <li class="t:mt-[9px] m:mt-[6px]">(1) <span class="text-[#fff]">推薦 5 ~ 9 人加入第一銀行 LINE 官方帳號者，計入 5 人抽獎資格門檻，即得擁有 LINE POINTS 30 點抽獎資格。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(2) <span class="text-[#fff]">推薦 10 人成功加入第一銀行 LINE 官方帳號者，將擁有 LINE POINTS 30 點、100 點各一次之抽獎資格（即可獲得 2 次抽獎資格）。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(3) <span class="text-[#fff]">推薦 15 人成功加入第一銀行 LINE 官方帳號者，將擁有 LINE POINTS 30 點、100 點、【ZHIYUN 智雲】SMOOTH Q3 手機穩定器 、AirPods 第 3 代各一次之抽獎資格（即可擁有 4 次抽獎資格）。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(4) 抽獎公布：<span class="text-[#fff]">2022/12/26 前透過第一銀行 LINE 官方帳號推播得獎訊息給得獎人，請得獎人於 2023/01/06 前回覆中獎資料，始符合中獎資格。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(5) 派獎時間：<span class="text-[#fff]">2023/01/19 前透過第一銀行 LINE 官方帳號推播 LINE POINTS 序號或郵寄獎項給得獎人。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(6) <span class="text-[#fff]">若於活動註明的中獎者資料回覆時間內，無法取得中獎者資料回覆或資料不齊全者，即視為喪失得獎資格，恕不另行補發。</span></li>
+                        </ol>
+                      </li>
+                    </ol>
+                  </li>
+                  <li class="t:mt-[30px] m:mt-[20px] t:text-[27px] m:text-[18px]">
+                    <p class="text-[#03fbac]">深夜聊心室，觀眾友幾位 - IG 粉絲活動辦法</p>
+                    <ol class="t:ml-[24px] m:ml-[16px] t:text-[21px] m:text-[14px] text-[#fafd02] list-decimal list-outside">
+                      <li class="t:mt-[15px] m:mt-[10px]">活動名稱：<span class="text-[#fff]">深夜聊心室，觀眾友幾位 -IG 粉絲活動</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動對象：<span class="text-[#fff]">凡擁有 IG 社群帳號之本國自然人。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動時間：<span class="text-[#fff]">2022/10/20 起至 2022/11/20 止。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動辦法：<span class="text-[#fff]">於活動期間內追蹤第一銀行 IG 官方帳號並於指定貼文留言回覆問題，且標註一位朋友，即可獲得抽獎資格。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動獎項：
+                        <ol class="t:ml-[32px] m:ml-[21px] t:indent-[-32px] m:indent-[-21px]">
+                          <li class="t:mt-[9px] m:mt-[6px]">(1) <span class="text-[#03fbac]">小粉獅抱枕（共 2 名）</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(2) <span class="text-[#03fbac]">小粉獅 2023 年桌曆（共 8 名）</span></li>
+                        </ol>
+                        <span class="text-[#fff]">獎項將依順序抽出</span>
+                      </li>
+                      <li class="t:mt-[15px] m:mt-[10px]">活動注意事項：<span class="text-[#fff]">如取消追蹤第一銀行官方 IG 帳號、或未完成留言回覆且標註好友者，視同放棄抽獎資格。中獎人用戶帳號須與參與活動時的用戶帳號一致，如有更改造成第一銀行無法識別者，視同放棄抽獎資格。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">深夜聊心事，觀眾友幾位 -IG 粉絲活動之中獎名單將於 2022/12/26 前於第一銀行官方 IG 限時動態、小粉獅部落格公告。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">深夜聊心事，觀眾友幾位 -IG 粉絲活動之中獎者，請於公告中獎名單 7 日內（含例假日）私訊第一銀行官方 IG 帳號，並提供本人「活動留言截圖」與「追蹤第一銀行官方IG帳號 @firstbank.tw 成功截圖」，逾期視同放棄得獎資格。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">「小粉獅抱枕」與「小粉獅 2023 年桌曆」之中獎者，第一銀行將透過第一銀行 IG 官方帳號傳送「中獎回覆函」以供填寫。中獎者須在收到該「中獎回覆函」後 7 日內（含例假日）完整填寫後回覆第一銀行，上列實體贈品將於 2023/01/19 前寄發獎項，若因封鎖、取消追蹤第一銀行 IG 官方帳號，或 IG 用戶帳號更改、註銷、刪除或重新註冊等原因而無法收到「中獎回覆函」填寫通知，將視同放棄，恕不補發。</span></li>
+                    </ol>
+                  </li>
+                  <li class="t:mt-[30px] m:mt-[20px] t:text-[27px] m:text-[18px]">
+                    <p class="text-[#03fbac]">領獎方式及注意事項</p>
+                    <ol class="t:ml-[24px] m:ml-[16px] t:text-[21px] m:text-[14px] text-[#fafd02] list-decimal list-outside">
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">本活動限居住於臺、澎、金、馬地區之本國國民參加，第一銀行保留審核參加者資格之權利。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">本活動之實體贈品寄送地點限臺、澎、金、馬。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">本活動所有獎項恕不提供交換、挑選、轉讓及折現，亦不得更換參加者或中獎人。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">參加者應保證所有填寫或提出之資料均為真實且正確，且未冒用或盜用任何第三人之資料。第一銀行保留審核參加者資格之權利，參加者如有資料不實或不正確之情事，第一銀行得取消其參加或獲獎資格；若因資料不正確，而導致無法聯繫以及收取獎品，恕無法要求補發。如致損害於第一銀行或第三人，參加者應負一切法律責任。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">主辦方（即第一銀行）保留隨時修改、變更、終止本活動及替換其他等值獎項之權利；本活動如有變更或終止時，將於本網站公告。若有其他未盡事宜，悉依主辦方相關規定或解釋辦理。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]">
+                        <p class="text-[#fff]">第一銀行因舉辦本活動之需要得蒐集、處理及利用參加者之個人資料，並依據個人資料保護法（下稱個資法）第 8 條第 1 項規定，向您告知下列事項，請您詳閱：</p>
+                        <ol class="t:ml-[32px] m:ml-[21px] t:indent-[-32px] m:indent-[-21px]">
+                          <li class="t:mt-[9px] m:mt-[6px]">(1) 蒐集之目的：<span class="text-[#fff]">為確認參加者是否達成活動條件，以利進行後續點數發放及獎項發放事宜。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(2) 個人資料之類別：<span class="text-[#fff]">身分證字號、姓名、電話、LINE 帳號及地址等。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(3) 個人資料利用之期間、對象、地區及方式：
+                            <ol class="t:ml-[36px] m:ml-[24px] list-upper-alpha list-outside indent-0">
+                              <li class="">期間：<span class="text-[#fff]">個人資料蒐集之特定目的存續期間/依相關法令規定或契約約定之保存年限（如：商業會計法等）/第一銀行因執行活動所必須之保存期間（以期限最長者為準）。</span></li>
+                              <li class="">對象：<span class="text-[#fff]">第一銀行。</span></li>
+                              <li class="">地區：<span class="text-[#fff]">我國境內。</span></li>
+                              <li class="">方式：<span class="text-[#fff]">符合個人資料保護相關法令以自動化機器或其他非自動化之利用方式。</span></li>
+                            </ol>
+                          </li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(4) <span class="text-[#fff]">依個資法第 3 條規定，您得行使查詢、更正等權利。</span></li>
+                          <li class="t:mt-[9px] m:mt-[6px]">(5) <span class="text-[#fff]">您得自由選擇是否提供上述個人資料，惟若您拒絕提供，將無法參加此活動，敬請見諒。</span></li>
+                        </ol>
+                      </li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">如有任何因電腦、網路、電話、技術等不可歸責於主辦方之事由，而使參加者所寄出或登錄之資料有遺失、錯誤、無法辨識或毀損等情況，致影響活動結果者，主辦方不負任何責任。若有其他明顯違反活動公平性之方式或行為，經主辦方發現或因第三人檢舉且查證屬實，主辦方除有權立即取消其獲獎資格追回獎品外，並對於任何破壞本活動之行為保留法律追訴權，且主辦方就上揭事項不負任何法律上之責任，參加本活動者亦不得因此異議或對主辦方有任何主張。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">第一銀行非本活動獎品「【ZHIYUN 智雲】SMOOTH Q3 手機穩定器」、「AirPods 第 3 代」及「LINE POINT 點數」之製造者，且與該獎品之提供廠商並無任何代理或合夥關係；中獎人如因使用該獎品發生任何爭議或相關限制，請逕洽該獎品之實際製造或提供廠商處理。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">本活動屬機會中獎所得，中獎人年度累積贈品價值若超過新臺幣 1,000 元整，應列入其年度綜合所得，若中獎價值超過新臺幣 20,000 元整，中獎人須自行負擔 10% 之所得稅（非境內居住之個人，以獎金或獎品價值之金額，扣取 20% 稅額），並配合第一銀行辦理代扣繳相關事宜。中獎人另須提供姓名、戶籍地址及身分證正、反面影本，以供第一銀行向主管機關進行年度列單申報作業，依所得稅法第 94-1 條，第一銀行依法得免填發各類所得扣繳暨免扣繳憑單予中獎人，中獎人若有需求，請另提出申請。若中獎人不願提供相關資料或未依限如期繳納應繳稅額並配合辦理領獎手續等相關事宜者，即視為放棄中獎資格。其他未盡事宜，悉依中華民國法律辦理。</span></li>
+                      <li class="t:mt-[15px] m:mt-[10px]"><span class="text-[#fff]">參加本活動即表示同意接受本活動條款及粉獅幣相關規定，更多使用內容請參考「粉獅幣集點平台使用規則與條款」，網址：<a href="https://firstbk.tw/ileocoin-3/" target="_blank" rel="noopener noreferrer" class="">https://firstbk.tw/ileocoin-3/</a>。若有違反者，主辦方有權取消參加者之參加資格，如對本活動內容有其他疑義，請聯繫第一銀行 24 小時客服專線：<a href="tel:0221811111" class="">(02)2181-1111</a>。</span></li>
+                    </ol>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="bg-idx flex-col flex-grow" data-page="prepare" :class="(step === 'prepare') ? 'run-ani' : ''">
+          <div class="kv-wrap bg-idx t:pt-[36px] m:pt-[24px] t:pb-[24px] m:pb-[16px] flex flex-col items-center justify-center relative">
+            <h3 class="BHT">深夜聊心室</h3>
+            <div class="main-deco t:w-[482px] m:w-[321px] t:h-[297px] m:h-[198px] relative z-[1]">
+              <i class="ico-idx neon-shadow t:w-[498px] m:w-[332px] t:h-[314px] m:h-[209px] absolute top-0 left-0"></i>
+              <i class="ico-idx neon-on anim-neon t:w-[554px] m:w-[369px] t:h-[371px] m:h-[247px] absolute t:top-[-30px] m:top-[-20px] t:left-[-33px] m:left-[-22px]"></i>
+              <i class="ico-idx neon-off absolute inset-0"></i>
+            </div>
+            <p class="text-neon t:mt-[21px] m:mt-[14px] relative z-[2] t:text-[21px] m:text-[14px] text-center font-bold t:leading-[32px] m:leading-[21px]">
+              <span class="text-[#fff]">LINE LINE LINE～來跟小粉獅談心</span><br><span class="text-[#fafd02] italic"><i class="t:text-[38px] m:text-[25px] text-[#03fbac]">抽</i> AirPods 第 3 代、三軸穩定器，把好禮帶回家！</span>
+            </p>
+            <div class="sub-deco bg-idx flex items-end justify-center w-full t:h-[474px] m:h-[316px] absolute t:top-[454px] m:top-[296px] left-0 right-0 z-[1] pointer-events-none">
+              <i class="ico-idx note-1 anim-note-floating t:ml-[96px] m:ml-[64px] t:w-[37px] m:w-[23px] t:h-[39px] m:h-[26px] absolute top-0 left-1/2 opacity-0"></i>
+              <i class="ico-idx note-2 anim-note-floating t:mt-[-6px] m:mt-[-4px] t:ml-[66px] m:ml-[44px] t:w-[26px] m:w-[17px] t:h-[44px] m:h-[29px] absolute top-0 left-1/2 opacity-0"></i>
+              <i class="ico-idx note-3 anim-note-floating t:ml-[72px] m:ml-[48px] t:w-[54px] m:w-[36px] t:h-[42px] m:h-[28px] absolute top-0 left-1/2 opacity-0"></i>
+              <i class="ico-idx hand-l anim-swing-hand-l t:ml-[12px] m:ml-[8px] t:mb-[3px] m:mb-[2px] t:w-[84px] m:w-[56px] t:h-[65px] m:h-[43px] absolute bottom-1/2 left-1/2"></i>
+              <i class="ico-idx body t:mt-[-59px] m:mt-[-39px] t:ml-[-96px] m:ml-[-64px] t:w-[155px] m:w-[103px] t:h-[144px] m:h-[96px] absolute top-1/2 left-1/2"></i>
+              <i class="ico-idx desk t:ml-[-267px] m:ml-[-178px] absolute t:w-[534px] m:w-[356px] t:h-[420px] m:h-[280px] bottom-0 left-1/2"></i>
+              <i class="ico-idx head anim-shake-hd t:ml-[-161px] m:ml-[-107px] t:w-[231px] m:w-[154px] t:h-[227px] m:h-[151px] absolute top-0 left-1/2"></i>
+              <i class="ico-idx tie t:mb-[-6px] m:mb-[-4px] t:mr-[-6px] m:mr-[-4px] t:w-[44px] m:w-[29px] t:h-[32px] m:h-[21px] absolute bottom-1/2 right-1/2"></i>
+              <i class="ico-idx hand-r anim-swing-hand-r t:mt-[-59px] m:mt-[-39px] t:mr-[26px] m:mr-[17px] t:w-[92px] m:w-[61px] t:h-[86px] m:h-[57px] absolute top-1/2 right-1/2"></i>
+              <div class="btn-wrap t:pb-[49px] m:pb-[33px] flex flex-col items-center justify-center relative">
+                <em class="t:text-[30px] m:text-[20px] not-italic font-bold"><span class="text-[#03fbac]">完成遊戲，</span><span class="text-[#fafd02]">抽好禮</span></em>
+                <button type="button" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[9px] m:mt-[6px] t:w-[224px] m:w-[148px] t:h-[63px] m:h-[42px] relative text-[#37195d]" @click="">
+                  <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1]">開始談心</span>
+                </button>
+
+              </div>
+              <svg class="filter-neon t:w-[48px] m:w-[32px] t:h-[51px] m:h-[34px] absolute t:bottom-[30px] m:bottom-[20px] t:left-[210px] m:left-[70px]">
+                <use class="fill-current" xlink:href="#ico-gift">
+                </use>
+              </svg>
+              <svg class="filter-neon t:w-[48px] m:w-[32px] t:h-[51px] m:h-[34px] absolute t:bottom-[30px] m:bottom-[20px] t:right-[210px] m:right-[70px]">
+                <use class="fill-current" xlink:href="#ico-gift">
+                </use>
+              </svg>
+            </div>
+          </div>
+          <div class="desc-cnt t:pb-[140px] m:pb-[93px] flex-grow relative opacity-0">
+            <p class="typerTxt text-[#fff] t:text-[21px] m:text-[14px] t:leading-[38px] m:leading-[25px] text-center font-bold">大粉絲、小粉絲，大小粉絲愛粉獅*#你有心情上的煩惱嗎？*你有理財上的疑惑嗎？*你有財富上的擔憂嗎？*$小粉獅收到各種疑難雜症*因此 #2022 全新企劃$ 誕生</p>
+            <div class="btn-wrap t:mt-[32px] m:mt-[21px] flex flex-col items-center justify-center relative">
+              <em class="t:text-[27px] m:text-[18px] not-italic font-bold text-[#fafd02]">小粉獅要來開室解惑囉！</em>
+              <button type="button" ga:click="{'cat': '過場頁', 'event': 'click', 'label': '談心首頁'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[41px] m:mt-[27px] t:w-[224px] m:w-[148px] t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="goSelect('game')">
+                <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1] tracking-tighter">立即加入聊天</span>
+              </button>
+
+              <i class="ico-pointer t:ml-[132px] m:ml-[88px] t:w-[136px] m:w-[84px] t:h-[106px] m:h-[71px] absolute t:top-[-8px] m:top-[-5px] left-1/2"></i>
+              <i class="ico-pointer t:mr-[132px] m:mr-[88px] t:w-[136px] m:w-[84px] t:h-[106px] m:h-[71px] absolute t:top-[-8px] m:top-[-5px] right-1/2 -scale-x-100"></i>
+            </div>
+          </div>
+        </section>
+        <section class="t:pb-[53px] m:pb-[35px] bg-[#391f56] flex-col" data-page="bind">
+          <h3 class="is-dash t:mt-[29px] m:mt-[19px] flex items-center justify-center t:text-[45px] m:text-[30px] font-bold text-center"><span class="text-[#03fbac]">60 秒</span><span class="text-[#fafd02]">完成綁定</span></h3>
+          <ol class="t:mt-[21px] m:mt-[14px] t:text-[21px] m:text-[14px] text-center font-bold">
+            <li class="">
+              <p class=""><span class="text-[#fff]">Step 1</span><br><span class="text-[#fafd02]">輸入身分證字號、手機 OTP 驗證</span></p>
+              <div class="flex items-center justify-center">
+                <div class="ico-neon t:mt-[18px] m:mt-[12px] t:mx-[11px] m:mx-[7px] t:p-[5px] m:p-[3px] t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px]">
+                  <i class="ico-result img-1 block t:w-[233px] m:w-[155px] t:h-[543px] m:h-[362px]"></i>
+                </div>
+                <div class="ico-neon t:mt-[18px] m:mt-[12px] t:mx-[11px] m:mx-[7px] t:p-[5px] m:p-[3px] t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px]">
+                  <i class="ico-result img-2 block t:w-[233px] m:w-[155px] t:h-[543px] m:h-[362px]"></i>
+                </div>
+              </div>
+            </li>
+            <li class="t:mt-[30px] m:mt-[20px]">
+              <p class=""><span class="text-[#fff]">Step 2</span><br><span class="text-[#fafd02]">恭喜完成綁定！你已獲得抽獎資格</span></p>
+              <div class="flex items-center justify-center">
+                <div class="ico-neon t:mt-[18px] m:mt-[12px] t:mx-[11px] m:mx-[7px] t:p-[5px] m:p-[3px] t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px]">
+                  <i class="ico-result img-3 block t:w-[233px] m:w-[155px] t:h-[415px] m:h-[277px]"></i>
+                </div>
+              </div>
+              <p class="t:mt-[24px] m:mt-[16px]"><span class="text-[#fafd02]">原先已綁定 LINE 個人化服務者，<br>則會顯示「開啟訊息通知」畫面。</span></p>
+            </li>
+          </ol>
+          <div class="btn-wrap t:mt-[60px] m:mt-[40px] flex flex-col items-center justify-center w-full relative" ga:scroll="{'cat': '綁定教學', 'event': 'scroll', 'label': '前往綁定'}">
+            <a href="https://line.firstbank.com.tw/member/linelogin?channelsource=LINEBC" target="_blank" rel="noopener noreferrer" ga:click="{'cat': '綁定教學', 'event': 'click', 'label': '前往綁定'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:w-[210px] m:w-[140px] t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1] tracking-tighter">前往綁定</span>
+            </a>
+
+            <button type="button" ga:click="{'cat': '分享好友進度', 'event': 'click', 'label': '回首頁'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[30px] m:mt-[20px] t:w-[210px] m:w-[140px] t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="scrollToAnchor('idx')">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1] tracking-tighter">回首頁</span>
+            </button>
+
+            <i class="ico-pointer t:ml-[132px] m:ml-[88px] t:w-[136px] m:w-[84px] t:h-[106px] m:h-[71px] absolute t:top-[-75px] m:top-[-50px] left-1/2"></i>
+            <i class="ico-pointer t:mr-[132px] m:mr-[88px] t:w-[136px] m:w-[84px] t:h-[106px] m:h-[71px] absolute t:top-[-75px] m:top-[-50px] right-1/2 -scale-x-100"></i>
+          </div>
+        </section>
+        <section class="t:pb-[59px] m:pb-[39px] bg-[#391f56] flex-col" data-page="share">
+          <h3 class="is-dash t:mt-[29px] m:mt-[19px] flex items-center justify-center t:text-[45px] m:text-[30px] font-bold text-center"><span class="text-[#03fbac]">全台粉絲</span><span class="text-[#fafd02]">聊起來</span></h3>
+          <p class="t:mt-[24px] m:mt-[16px] text-[#03fbac] t:text-[38px] m:text-[25px] t:leading-[75px] m:leading-[50px] font-bold text-center">你成功分享給 <i class="anim-flipInX t:px-[6px] m:px-[4px] inline-block t:text-[68px] m:text-[45px] text-[#fafd02]">{{count}}</i> 個人</p>
+          <p class="t:mt-[-6px] m:mt-[-4px] text-[#fafd02] t:text-[21px] m:text-[14px] t:leading-[32px] m:leading-[21px] font-bold text-center">*好友點點名，小粉獅預計在 2 個工作天內會更新喔</p>
+          <p class="t:mt-[30px] m:mt-[20px] text-[#fff] t:text-[21px] m:text-[14px] t:leading-[38px] m:leading-[25px] font-bold text-center">團長就是你！快邀請好友一起來談心<br>小粉獅撒幣「<span class="text-[#fafd02]">抖內你</span>！」</p>
+          <ol class="t:mt-[36px] m:mt-[24px] t:mx-[24px] m:mx-[16px] t:border-[2px] m:border-[1px] border-solid border-[#fff] tm:border-r-0 tm:border-b-0 tm:border-l-0 tracking-tighter">
+            <li class="t:py-[11px] m:py-[7px] flex items-center t:border-[2px] m:border-[1px] border-solid border-[#fff] tm:border-t-0 tm:border-r-0 tm:border-l-0">
+              <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px] t:text-[30px] m:text-[20px] font-bold">1</i></span>
+              <p class="t:ml-[11px] m:ml-[7px] t:text-[24px] m:text-[16px] t:leading-[45px] m:leading-[30px] text-[#03fbac] font-bold">活動期間內，綁定 <span class="text-[#fafd02]">LINE 個人化服務</span><br>抽 <span class="t:text-[30px] m:text-[20px] text-[#fafd02]">粉獅幣 20 點</span></p>
+            </li>
+            <li class="t:py-[11px] m:py-[7px] flex items-center t:border-[2px] m:border-[1px] border-solid border-[#fff] tm:border-t-0 tm:border-r-0 tm:border-l-0">
+              <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px] t:text-[30px] m:text-[20px] font-bold">2</i></span>
+              <p class="t:ml-[11px] m:ml-[7px] t:text-[24px] m:text-[16px] t:leading-[45px] m:leading-[30px] text-[#03fbac] font-bold">成功<span class="text-[#fafd02]">分享</span><span class="t:text-[30px] m:text-[20px] text-[#fff]"> 5 </span><span class="text-[#fafd02]">位好友</span>，成為 <span class="text-[#fafd02]">一銀 LINE 好友</span><br>抽 <span class="t:text-[30px] m:text-[20px] text-[#fafd02]">LINE POINTS 30 點</span></p>
+            </li>
+            <li class="t:py-[11px] m:py-[7px] flex items-center t:border-[2px] m:border-[1px] border-solid border-[#fff] tm:border-t-0 tm:border-r-0 tm:border-l-0">
+              <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px] t:text-[30px] m:text-[20px] font-bold">3</i></span>
+              <p class="t:ml-[11px] m:ml-[7px] t:text-[24px] m:text-[16px] t:leading-[45px] m:leading-[30px] text-[#03fbac] font-bold">成功<span class="text-[#fafd02]">分享</span><span class="t:text-[30px] m:text-[20px] text-[#fff]"> 10 </span><span class="text-[#fafd02]">位好友</span>，成為 <span class="text-[#fafd02]">一銀 LINE 好友</span><br>抽 <span class="t:text-[30px] m:text-[20px] text-[#fafd02]">LINE POINTS 100 點</span></p>
+            </li>
+            <li class="t:py-[11px] m:py-[7px] flex items-center t:border-[2px] m:border-[1px] border-solid border-[#fff] tm:border-t-0 tm:border-r-0 tm:border-l-0">
+              <span class="num bg-[#271c3c] flex items-center justify-center t:w-[63px] m:w-[42px] t:h-[63px] m:h-[42px] relative t:border-[2px] m:border-[1px] border-solid border-[#fafd02] rounded-full z-[1] text-[#fafd02]"><i class="t:ml-[-5px] m:ml-[-3px] t:text-[30px] m:text-[20px] font-bold">4</i></span>
+              <p class="t:ml-[11px] m:ml-[7px] t:text-[24px] m:text-[16px] t:leading-[45px] m:leading-[30px] text-[#03fbac] font-bold">成功<span class="text-[#fafd02]">分享</span><span class="t:text-[30px] m:text-[20px] text-[#fff]"> 15 </span><span class="text-[#fafd02]">位好友</span>，成為 <span class="text-[#fafd02]">一銀 LINE 好友</span><br>抽 <span class="t:text-[30px] m:text-[20px] text-[#fafd02]">AirPods 第 3 代、三軸穩定器</span></p>
+            </li>
+          </ol>
+          <div class="btn-wrap t:mt-[39px] m:mt-[26px] flex flex-col items-center justify-center w-full relative">
+            <em class="text-neon t:text-[21px] m:text-[14px] not-italic font-bold text-[#fff]">來聊天收打賞，粉絲就是拿來寵的</em>
+            <button type="button" ga:click="{'cat': '分享好友進度', 'event': 'click', 'label': '立即分享'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[63px] m:mt-[42px] t:w-[210px] m:w-[140px] t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="shareTargetPicker()">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1] tracking-tighter">立即分享</span>
+            </button>
+
+            <button type="button" ga:click="{'cat': '分享好友進度', 'event': 'click', 'label': '回首頁'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[30px] m:mt-[20px] t:w-[210px] m:w-[140px] t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="scrollToAnchor('idx')">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1] tracking-tighter">回首頁</span>
+            </button>
+
+            <i class="ico-pointer t:ml-[132px] m:ml-[88px] t:w-[136px] m:w-[84px] t:h-[106px] m:h-[71px] absolute t:top-[30px] m:top-[20px] left-1/2"></i>
+            <i class="ico-pointer t:mr-[132px] m:mr-[88px] t:w-[136px] m:w-[84px] t:h-[106px] m:h-[71px] absolute t:top-[30px] m:top-[20px] right-1/2 -scale-x-100"></i>
+          </div>
+        </section>
+        <div class="t:pt-[48px] m:pt-[32px] t:pb-[285px] m:pb-[190px] t:px-[37px] m:px-[25px] flex-col relative" data-page="game" :data-idx="questIdx">
+          <div class="chat-wrap ico-neon t:p-[21px] m:p-[14px] relative t:border-[2px] m:border-[1px] border-solid border-[#febcff] t:rounded-[15px] m:rounded-[10px]">
+            <div class="paper-wrap t:py-[30px] m:py-[20px] t:h-[588px] m:h-[392px] relative t:border-[2px] m:border-[1px] border-solid border-[#82f9fe] t:rounded-[6px] m:rounded-[4px]">
+              <div class="scroll-wrap w-full h-full flex flex-col justify-end overflow-y-scroll" :class="reactionSwitch === false ? 'is-locked': ''">
+                <div class="msg-wrap t:pr-[21px] m:pr-[14px] t:pl-[11px] m:pl-[7px] flex w-full" data-quest="1">
+                  <i class="bg-[#271c3c] flex items-center justify-center flex-shrink-0 t:w-[76px] m:w-[52px] t:h-[76px] m:h-[52px] t:border-[2px] m:border-[1px] border-solid border-[#03fbac] rounded-full">
+                    <svg class="t:w-[60px] m:w-[40px] t:h-[59px] m:h-[39px]">
+                      <use class="fill-current" xlink:href="#ico-lion">
+                      </use>
+                    </svg>
+                  </i>
+                  <div class="dialog-wrap flex-grow">
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <div class="dialog t:mt-[9px] m:mt-[6px] t:px-[24px] m:px-[16px] t:py-[12px] m:py-[8px] w-full relative t:border-[2px] m:border-[1px] border-solid border-[#03fbac] t:rounded-[15px] m:rounded-[10px] box-border text-[#fafd02] t:text-[21px] m:text-[14px] font-bold">嗨！你來啦～<br>先來個小問答，暖場一下，PARTY TIME！！猜猜看小粉獅這裝扮是？</div>
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(1, 1, $event)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1] pointer-events-none">小氣鬼</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(1, 2, $event)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1] pointer-events-none">吝嗇鬼</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q1'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(1, 3, $event)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1] pointer-events-none">可愛鬼</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(1, 4, $event)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1] pointer-events-none">窮鬼</span>
+                      </button>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="msg-wrap t:pr-[21px] m:pr-[14px] t:pl-[11px] m:pl-[7px] flex w-full max-h-0 overflow-hidden" data-quest="2">
+                  <i class="bg-[#271c3c] flex items-center justify-center flex-shrink-0 t:w-[76px] m:w-[52px] t:h-[76px] m:h-[52px] t:border-[2px] m:border-[1px] border-solid border-[#03fbac] rounded-full">
+                    <svg class="t:w-[60px] m:w-[40px] t:h-[59px] m:h-[39px]">
+                      <use class="fill-current" xlink:href="#ico-lion">
+                      </use>
+                    </svg>
+                  </i>
+                  <div class="dialog-wrap flex-grow">
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <div class="dialog t:mt-[9px] m:mt-[6px] t:px-[24px] m:px-[16px] t:py-[12px] m:py-[8px] w-full relative t:border-[2px] m:border-[1px] border-solid border-[#03fbac] t:rounded-[15px] m:rounded-[10px] box-border text-[#fafd02] t:text-[21px] m:text-[14px] font-bold">隨著疫情趨緩，大家的護照都準備好了嗎？想問問大家邊境開放後最想去下列哪一個國家旅遊？</div>
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q2'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(2, 1)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">日本找安妮亞</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q2'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(2, 2)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">神祕的國度北韓</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q2'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(2, 3)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">美國搗蛋</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q2'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(2, 4)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">歐洲跨國 15 天</span>
+                      </button>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="msg-wrap t:pr-[21px] m:pr-[14px] t:pl-[11px] m:pl-[7px] flex w-full max-h-0 overflow-hidden" data-quest="3">
+                  <i class="bg-[#271c3c] flex items-center justify-center flex-shrink-0 t:w-[76px] m:w-[52px] t:h-[76px] m:h-[52px] t:border-[2px] m:border-[1px] border-solid border-[#03fbac] rounded-full">
+                    <svg class="t:w-[60px] m:w-[40px] t:h-[59px] m:h-[39px]">
+                      <use class="fill-current" xlink:href="#ico-lion">
+                      </use>
+                    </svg>
+                  </i>
+                  <div class="dialog-wrap flex-grow">
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <div class="dialog t:mt-[9px] m:mt-[6px] t:px-[24px] m:px-[16px] t:py-[12px] m:py-[8px] w-full relative t:border-[2px] m:border-[1px] border-solid border-[#03fbac] t:rounded-[15px] m:rounded-[10px] box-border text-[#fafd02] t:text-[21px] m:text-[14px] font-bold">一起為了出國那一刻做準備吧！1 天存 10 元，10 天就能存 100 元！理財就像內褲一樣，看不見卻很重要，你平常偏好用哪種方式管理財富？</div>
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q3'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(3, 1)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">活期存款</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q3'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(3, 1)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">定期定存</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q3'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(3, 0)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">基金股票</span>
+                      </button>
+
+                    </div>
+                    <div class="t:pl-[15px] m:pl-[10px]">
+                      <button type="button" ga:click="{'cat': '遊戲問題', 'event': 'click', 'label': 'Q3'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[24px] m:mt-[16px] t:w-[222px] m:w-[148px] t:h-[59px] m:h-[39px] relative ease-in-out duration-500 transition-all text-[#37195d] tracking-tighter" @click="ansQuest(3, 2)">
+                        <span class="txt font-bold t:text-[26px] m:text-[17px] relative z-[1]">專人財富管理</span>
+                      </button>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <i class="ico-game clip t:ml-[-91px] m:ml-[-60px] t:w-[182px] m:w-[121px] t:h-[99px] m:h-[66px] absolute t:top-[-42px] m:top-[-28px] left-1/2"></i>
+          </div>
+          <div class="deco-wrap pointer-events-none">
+            <i class="ico-game plant1 t:w-[117px] m:w-[78px] t:h-[255px] m:h-[170px] absolute bottom-0 left-0"></i>
+            <i class="ico-game plant2 t:w-[158px] m:w-[105px] t:h-[209px] m:h-[139px] absolute bottom-0 right-0"></i>
+            <div class="sec-deco absolute inset-0 ease-in-out duration-1500 transition-all" data-deco-idx="1">
+              <i class="ico-game desk t:ml-[-267px] m:ml-[-178px] t:w-[533px] m:w-[355px] t:h-[234px] m:h-[156px] absolute bottom-0 left-1/2"></i>
+              <i class="ico-game head t:mr-[14px] m:mr-[9px] t:w-[215px] m:w-[143px] t:h-[288px] m:h-[192px] absolute t:bottom-[119px] m:bottom-[79px] right-1/2"></i>
+              <i class="ico-game hand t:mr-[102px] m:mr-[68px] t:w-[92px] m:w-[61px] t:h-[86px] m:h-[57px] absolute t:bottom-[86px] m:bottom-[57px] right-1/2"></i>
+              <i class="ico-game light t:ml-[108px] m:ml-[72px] t:w-[107px] m:w-[71px] t:h-[95px] m:h-[63px] absolute t:bottom-[186px] m:bottom-[124px] left-1/2"></i>
+            </div>
+            <div class="sec-deco absolute inset-0 ease-in-out duration-1500 transition-all" data-deco-idx="2">
+              <i class="ico-game head t:ml-[-90px] m:ml-[-60px] t:w-[215px] m:w-[143px] t:h-[306px] m:h-[204px] absolute t:bottom-[15px] m:bottom-[10px] left-1/2"></i>
+              <i class="ico-game desk t:ml-[-267px] m:ml-[-178px] t:w-[533px] m:w-[355px] t:h-[251px] m:h-[167px] absolute bottom-0 left-1/2"></i>
+              <i class="ico-game hand t:ml-[-69px] m:ml-[-46px] t:w-[210px] m:w-[140px] t:h-[104px] m:h-[69px] absolute t:bottom-[86px] m:bottom-[57px] left-1/2"></i>
+              <i class="ico-game light t:ml-[135px] m:ml-[90px] t:w-[96px] m:w-[64px] t:h-[83px] m:h-[55px] absolute t:bottom-[192px] m:bottom-[128px] left-1/2"></i>
+            </div>
+            <div class="sec-deco absolute inset-0 ease-in-out duration-1500 transition-all" data-deco-idx="3">
+              <i class="ico-game lion t:mr-[9px] m:mr-[6px] t:w-[237px] m:w-[158px] t:h-[306px] m:h-[204px] absolute t:bottom-[30px] m:bottom-[20px] right-1/2"></i>
+              <i class="ico-game desk t:ml-[-267px] m:ml-[-178px] t:w-[533px] m:w-[355px] t:h-[215px] m:h-[143px] absolute bottom-0 left-1/2"></i>
+              <i class="ico-game light t:ml-[54px] m:ml-[36px] t:w-[90px] m:w-[60px] t:h-[90px] m:h-[60px] absolute t:bottom-[168px] m:bottom-[112px] left-1/2"></i>
+            </div>
+          </div>
+        </div>
+        <div class="bg-result t:pt-[45px] m:pt-[30px] t:pb-[53px] m:pb-[35px] flex-col items-center flex-grow relative" data-page="result" :data-selection="resultIdx">
+          <div class="dialog-wrap box-neon t:px-[27px] m:px-[18px] flex items-center justify-center t:h-[54px] m:h-[36px] relative z-[1] t:border-[2px] m:border-[1px] border-solid border-[#b5fbfe] t:rounded-[27px] m:rounded-[18px] box-border">
+            <p class="text-neon text-[#fff] t:text-[21px] m:text-[14px] text-center font-bold tracking-wide">{{resultArr[resultIdx].talk}}</p>
+          </div>
+          <div class="ico-result tit t:mt-[20px] m:mt-[13px] t:ml-[17px] m:ml-[11px] t:w-[452px] m:w-[301px] t:h-[122px] m:h-[81px] relative z-[1]">
+            <h2 class="BHT">{{resultArr[resultIdx].tit}}</h2>
+          </div>
+          <div class="bg-result kv t:mt-[-27px] m:mt-[-18px] w-full t:h-[432px] m:h-[216px] relative z-[1]">
+            <div class="doll-wrap hidden" data-doll="0">
+              <i class="ico-result body t:ml-[-165px] m:ml-[-110px] t:w-[345px] m:w-[230px] t:h-[168px] m:h-[112px] absolute bottom-0 left-1/2 z-[1]"></i>
+              <i class="ico-result head t:ml-[-93px] m:ml-[-62px] t:w-[174px] m:w-[116px] t:h-[165px] m:h-[110px] absolute t:bottom-[123px] m:bottom-[82px] left-1/2 z-[1]"></i>
+            </div>
+            <div class="doll-wrap hidden" data-doll="1">
+              <i class="ico-result hand anim-swing-hand-l t:ml-[45px] m:ml-[30px] t:w-[56px] m:w-[37px] t:h-[50px] m:h-[33px] absolute t:bottom-[120px] m:bottom-[80px] left-1/2 z-[1]"></i>
+              <i class="ico-result body t:ml-[-165px] m:ml-[-110px] t:w-[332px] m:w-[221px] t:h-[308px] m:h-[205px] absolute bottom-0 left-1/2 z-[1]"></i>
+              <i class="ico-result money1 anim-floating t:mb-[48px] m:mb-[32px] t:ml-[87px] m:ml-[58px] t:w-[23px] m:w-[15px] t:h-[41px] m:h-[27px] absolute bottom-1/2 left-1/2 z-[1]"></i>
+              <i class="ico-result money2 anim-floating t:mb-[69px] m:mb-[46px] t:ml-[129px] m:ml-[86px] t:w-[38px] m:w-[25px] t:h-[30px] m:h-[20px] absolute bottom-1/2 left-1/2 z-[1]"></i>
+              <i class="ico-result money3 anim-floating t:mb-[35px] m:mb-[23px] t:ml-[123px] m:ml-[82px] t:w-[32px] m:w-[21px] t:h-[24px] m:h-[16px] absolute bottom-1/2 left-1/2 z-[1]"></i>
+              <i class="ico-result money4 anim-floating t:mb-[48px] m:mb-[32px] t:ml-[168px] m:ml-[112px] t:w-[41px] m:w-[27px] t:h-[21px] m:h-[14px] absolute bottom-1/2 left-1/2 z-[1]"></i>
+              <i class="ico-result money5 anim-floating t:mb-[12px] m:mb-[8px] t:ml-[96px] m:ml-[64px] t:w-[41px] m:w-[27px] t:h-[23px] m:h-[15px] absolute bottom-1/2 left-1/2 z-[1]"></i>
+            </div>
+            <div class="doll-wrap hidden" data-doll="2">
+              <i class="ico-result hand anim-swing-hand-l t:mr-[14px] m:mr-[9px] t:mb-[-6px] m:mb-[-4px] t:w-[68px] m:w-[45px] t:h-[123px] m:h-[82px] absolute bottom-1/2 right-1/2 z-[1]"></i>
+              <i class="ico-result body t:ml-[-165px] m:ml-[-110px] t:w-[332px] m:w-[221px] t:h-[302px] m:h-[201px] absolute bottom-0 left-1/2 z-[1]"></i>
+              <i class="ico-result shiny t:mr-[23px] m:mr-[15px] t:w-[20px] m:w-[13px] t:h-[20px] m:h-[13px] absolute t:top-[27px] m:top-[18px] right-1/2 z-[1]"></i>
+              <i class="ico-result shiny t:ml-[132px] m:ml-[88px] t:w-[20px] m:w-[13px] t:h-[20px] m:h-[13px] absolute t:top-[57px] m:top-[38px] left-1/2 z-[1]"></i>
+              <i class="ico-result shiny t:mr-[102px] m:mr-[68px] t:w-[20px] m:w-[13px] t:h-[20px] m:h-[13px] absolute bottom-1/2 right-1/2 z-[1]"></i>
+              <i class="ico-result shiny t:ml-[117px] m:ml-[78px] t:w-[20px] m:w-[13px] t:h-[20px] m:h-[13px] absolute t:bottom-[84px] m:bottom-[56px] left-1/2 z-[1]"></i>
+            </div>
+          </div>
+          <div class="text-neon relative z-[1] t:leading-[38px] m:leading-[25px] text-center font-bold tracking-wide">
+            <p class="text-[#fafd02] t:text-[26px] m:text-[17px]">{{resultArr[resultIdx].target}}</p>
+            <p class="t:mt-[12px] m:mt-[8px] text-[#fff] t:text-[21px] m:text-[14px]" v-html="resultArr[resultIdx].desc"></p>
+          </div>
+          <div class="btn-wrap flex flex-col items-center justify-center relative z-[1]">
+            <button type="button" ga:click="{'cat': '遊戲結果', 'event': 'click', 'label': '分享給好友'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[27px] m:mt-[18px] t:w-[372px] m:w-[248px] t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="goSelect('share')">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1]">分享好友抽 LINE POINTS</span>
+            </button>
+
+            <button type="button" ga:click="{'cat': '遊戲結果', 'event': 'click', 'label': '瞭解其他活動'}" class="mBtn bg-gradient flex items-center justify-center rounded-full box-border z-[1] t:mt-[27px] m:mt-[18px] t:w-[372px] m:w-[248px] t:h-[63px] m:h-[42px] relative text-[#37195d] tracking-tighter" @click="goSelect('index')">
+              <span class="txt font-bold t:text-[30px] m:text-[20px] relative z-[1]">參加其他活動</span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+      <footer class="l-ft bg-[#170f27] flex items-center justify-center t:h-[105px] m:h-[70px] z-[1] text-center">
+        <small class="text-[#6f5590] t:text-[21px] m:text-[14px] font-bold">第一商業銀行股份有限公司<br>First Commercial Bank 版權所有</small>
+      </footer>
+    </div>
+    <div class="lLock fixed inset-0 items-center justify-center">
+      <div class="mLock flex flex-col items-center justify-center relative">
+        <em class="BHT">請將手機轉為直式瀏覽</em>
+        <figure class="flex w-auto h-screen">
+
+          <img class="" alt="請將手機轉為直式瀏覽 | © 第一商業銀行股份有限公司" width="100%" height="100%" src="assets/img/rotate.png?eab75122">
+        </figure>
+      </div>
+    </div>
+    <div class="lNSup items-center justify-center overflow-hidden">
+      <div class="mNSup pt-[472px] flex flex-col items-center flex-grow w-screen h-screen relative box-border">
+        <i class="ico-share kv ml-[-523px] w-[1046px] h-[804px] absolute top-0 left-1/2"></i>
+        <p class="promotion relative z-[1] text-[30px] text-center font-bold text-[#fff]">掃描 QR CODE 立即體驗深夜聊心室！</p>
+        <figure class="qrcode-wrap mt-[20px] p-[15px] relative border-[3px] border-solid border-[#fff] rounded-[20px] z-[1]">
+
+          <img class="w-[354px] h-[354px]" alt=" | © 第一商業銀行股份有限公司" width="100%" height="100%" src="assets/img/qr_code.png?47376b09">
+        </figure>
+        <div class="deco-wrap ml-[-429px] w-[858px] h-[298px] absolute bottom-0 left-1/2 z-[1]">
+          <i class="ico-share note-1 anim-note-floating ml-[256px] w-[46px] h-[52px] absolute top-[-88px] left-1/2 opacity-0"></i>
+          <i class="ico-share note-2 anim-note-floating ml-[217px] w-[34px] h-[58px] absolute top-[-88px] left-1/2 opacity-0"></i>
+          <i class="ico-share note-3 anim-note-floating mt-[24px] ml-[199px] w-[72px] h-[56px] absolute top-[-88px] left-1/2 opacity-0"></i>
+          <i class="ico-share hand-l anim-swing-hand-l mr-[158px] w-[92px] h-[70px] absolute bottom-[91px] right-1/2"></i>
+          <i class="ico-share body mr-[201px] w-[166px] h-[154px] absolute bottom-[-3px] right-1/2"></i>
+          <i class="ico-share desk w-[858px] h-[298px] absolute inset-0"></i>
+          <i class="ico-share head anim-shake-hd mr-[192px] w-[250px] h-[246px] absolute bottom-[99px] right-1/2"></i>
+          <i class="ico-share tie mr-[258px] w-[48px] h-[36px] absolute bottom-[82px] right-1/2"></i>
+          <i class="ico-share hand-r anim-swing-hand-r mr-[302px] w-[98px] h-[92px] absolute bottom-[60px] right-1/2"></i>
+        </div>
+      </div>
+    </div>
+    <input type="hidden" id="gaScript" value="UA-244063314-1,G-DWMJBYQSW6">
+    <script defer="defer" src="scripts/home/index.js?49429057"></script>
+  </body>
+
+</html>

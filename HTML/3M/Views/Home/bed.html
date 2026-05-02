@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="tw">
+<head>
+	<!--#include file="../../Views/Shared/_Meta.html" -->
+	<title>給我一個賴床理由</title>
+	<!--#include file="../../Views/Shared/_GlobalLink.html" -->
+	<!-- self link begin -->
+	<link rel="stylesheet" type="text/css" href="../../Content/css/bed.css?css=20180322" />
+	<!-- self link end -->
+</head>
+<body>
+	<div class="l-body is-full" data-page="index">
+		<!-- ==================== l-header begin ==================== -->
+		<!--#include file="../../Views/Shared/_Header.html" -->
+		<!-- ==================== l-header end ==================== -->
+		<main class="l-main">
+			<div class="l-content">
+				<div class="ui-content">
+					<div class="str-content">
+						<div class="txt-content">
+							<p class="txt-title">今天適合你的賴床理由是...</p>
+							<p class="txt-sub"></p>
+						</div>
+						<a href="javascript:;" class="get-btn"></a>
+					</div>
+					<div class="sheet-content">
+						<input type="radio" name="sheet" id="bd1" value="1" checked>
+						<label for="bd1" class="sheet-btn s1"></label>
+						<input type="radio" name="sheet" id="bd2" value="2">
+						<label for="bd2" class="sheet-btn s2"></label>
+					</div>
+					<div class="obj-content">
+						<div class="radio-group">
+							<input type="radio" name="type" id="type1" value="1" checked>
+							<label for="type1" class="type-btn t1"></label>
+							<input type="radio" name="type" id="type2" value="2">
+							<label for="type2" class="type-btn t2"></label>
+						</div>
+						<a href="javascript:;" class="arrow-btn left" data-arrow="left"></a>
+						<div class="msk">
+							<div class="list type1">
+								<a href="javascript:;" class="obj"><img src="../../Content/img/bed/boy_01.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/girl_01.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/boy_02.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/girl_02.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/hand_01.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/hand_02.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/foot_01.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/foot_02.png?img=20180322" alt=""></a>
+							</div>
+							<div class="list type2">
+								<a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_01.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_02.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_02.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_03.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_03.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_04.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_04.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_05.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_05.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_06.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_06.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_07.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_07.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_08.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/cat_08.png?img=20180322" alt=""></a><!-- 
+								 --><a href="javascript:;" class="obj"><img src="../../Content/img/bed/dog_09.png?img=20180322" alt=""></a>
+							</div>
+						</div>
+						<a href="javascript:;" class="arrow-btn right" data-arrow="right"></a>
+					</div>
+					<a href="javascript:;" class="btn-link b-bg-black b-text-white b-middle ok-btn ga_click_trace" data-url="http://3mbeddingnieh.azurewebsites.net/Api/Base64ToPic" ga_cat="Game" ga_event="click" ga_label="finish"><span class="text">完成</span></a>
+				</div>
+				<div class="canvas-content">
+				    <canvas id="myCanvas" width="600" height="600"></canvas>
+				    <em class="hint b-block b-text-center">本遊戲僅為參考，商品規格與設計請以實品或產品說明頁為準</em>
+				</div>
+			</div>
+		</main>
+		<!-- ==================== l-footer begin ==================== -->
+		<!--#include file="../../Views/Shared/_Footer.html" -->
+		<!-- ==================== l-footer end ==================== -->
+	</div>
+	<!-- ==================== not support begin ==================== -->
+	<!--#include file="../../Views/Shared/_Not-Support.html" -->
+	<!-- ==================== not support end ==================== -->
+	<!--#include file="../../Views/Shared/_GlobalScriptsGA.html" -->
+	<!--[if gt IE 9]><!-->
+	<!-- common script ft begin -->
+	<!--#include file="../../Views/Shared/_GlobalScriptsLibs.html" -->
+	<!--#include file="../../Views/Shared/_GlobalScriptsFt.html" -->
+	<!-- common script ft end -->
+	<!-- self script begin -->
+	<script defer src="../../Scripts/plugin/createjs/createjs-2015.11.26.min.js?js=20180322"></script>
+	<script defer src="../../Scripts/js/bed.js?js=20180322"></script>
+	<!-- self script end -->
+	<!--<![endif]-->
+</body>
+</html>
