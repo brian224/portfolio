@@ -1,1 +1,0 @@
-const store=window.PetiteVue.reactive({lazyLoad(){const e=new IntersectionObserver(((e,t)=>{for(const o of e)if(o.isIntersecting){const e=o.target;e.setAttribute("src",e.dataset.src),t.unobserve(e)}})),t=document.querySelectorAll("img.lazy");for(const o of t)e.observe(o)}});window.store=store;
